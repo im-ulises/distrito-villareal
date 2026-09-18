@@ -10,6 +10,19 @@ const highlights = [
   ["04", "Identidad", "premium"],
 ];
 
+const corridorStats = [
+  ["458,878", "Habitantes", "Área de influencia directa del corredor De Las Torres / Francisco Villarreal Torres.", "IMIP"],
+  ["80%", "Proximidad", "De la población del área de influencia vive a menos de 500 m del corredor.", "IMIP"],
+  ["1.6 M", "Ciudad Juárez", "Población reportada para el mercado de Ciudad Juárez.", "Cushman & Wakefield"],
+  ["1.1 M", "15–64 años", "Población en edad laboral en Ciudad Juárez.", "Cushman & Wakefield"],
+];
+
+const economicStats = [
+  ["269,238", "Personal IMMEX"],
+  ["302,638", "Empleo manufacturero"],
+  ["$27,619 MXN", "Ingreso mensual mediano por hogar"],
+];
+
 const advantages = [
   ["01", "Ubicación", "Contexto fronterizo estratégico", "Un desarrollo pensado para integrarse al entorno urbano de Ciudad Juárez."],
   ["02", "Arquitectura", "Imagen reconocible", "Una materialidad contemporánea que crea presencia, consistencia y valor visual."],
@@ -29,9 +42,9 @@ export default function Home() {
           <Logo />
           <nav className="nav__links" aria-label="Navegación principal">
             <a href="#proyecto">Proyecto</a>
+            <a href="#mercado">Mercado</a>
             <a href="#masterplan">Masterplan</a>
             <a href="#galeria">Galería</a>
-            <a href="#ubicacion">Ventajas</a>
           </nav>
           <ButtonLink href="#contacto">Solicitar información</ButtonLink>
         </header>
@@ -54,8 +67,8 @@ export default function Home() {
 
           <div className="hero__side-label" aria-hidden="true">
             <span>DV</span>
-            <span>25°39&apos;N</span>
-            <span>106°28&apos;W</span>
+            <span>Juárez / MX</span>
+            <span>Corredor / Villarreal</span>
           </div>
         </div>
 
@@ -108,11 +121,64 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="market" id="mercado">
+        <div className="shell market__head">
+          <div>
+            <p className="chapter">02 / Mercado</p>
+            <p className="eyebrow">El corredor</p>
+            <h2>El mercado detrás de la arquitectura.</h2>
+          </div>
+          <p className="market__intro">
+            Distrito Villarreal se integra al corredor De Las Torres / Francisco Villarreal Torres,
+            uno de los ejes urbanos de mayor importancia de Ciudad Juárez. Los datos de influencia
+            corresponden al corredor completo, no a un radio específico alrededor del predio.
+          </p>
+        </div>
+
+        <div className="shell market__stats" aria-label="Indicadores del corredor y Ciudad Juárez">
+          {corridorStats.map(([value, label, copy, source]) => (
+            <article className="market-stat" key={value}>
+              <span className="market-stat__value">{value}</span>
+              <div className="market-stat__meta">
+                <p className="market-stat__label">{label}</p>
+                <p className="market-stat__copy">{copy}</p>
+                <span className="market-stat__source">{source}</span>
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="market__economy">
+          <div className="shell market__economy-grid">
+            <div className="market__economy-copy">
+              <span>Contexto económico</span>
+              <p>Una ciudad con escala laboral, manufacturera y de consumo.</p>
+            </div>
+            {economicStats.map(([value, label]) => (
+              <div className="economy-stat" key={label}>
+                <strong>{value}</strong>
+                <span>{label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="shell market__sources">
+          <span>Fuentes</span>
+          <a href="https://www.imip.org.mx/pdus2040/documento/03_CAPITULO_III_ESTRATEGIAS.pdf" target="_blank" rel="noreferrer">
+            IMIP · PDU 2040 · Corredor De Las Torres / Francisco Villarreal Torres ↗
+          </a>
+          <a href="https://sch.cushmanwakefield.com/api/public/content/Mexico-Industrial-Labor-Report_Q42025?v=c2016a72" target="_blank" rel="noreferrer">
+            Cushman &amp; Wakefield · Mexico Industrial Labor Report Q4 2025 ↗
+          </a>
+        </div>
+      </section>
+
       <section className="masterplan" id="masterplan">
-        <div className="masterplan__number" aria-hidden="true">02</div>
+        <div className="masterplan__number" aria-hidden="true">03</div>
         <div className="shell masterplan__grid">
           <div className="masterplan__copy">
-            <p className="chapter chapter--light">02 / Masterplan</p>
+            <p className="chapter chapter--light">03 / Masterplan</p>
             <SectionHeader
               eyebrow="Organización del proyecto"
               title="El proyecto, visto completo."
@@ -139,7 +205,7 @@ export default function Home() {
       <section className="gallery section shell" id="galeria">
         <div className="gallery__lead">
           <div>
-            <p className="chapter">03 / Galería</p>
+            <p className="chapter">04 / Galería</p>
             <SectionHeader
               eyebrow="Arquitectura"
               title="Espacios que inspiran negocios."
@@ -170,7 +236,7 @@ export default function Home() {
         <div className="shell">
           <div className="advantages__head">
             <div>
-              <p className="chapter">04 / Ventajas</p>
+              <p className="chapter">05 / Ventajas</p>
               <SectionHeader eyebrow="Valor del proyecto" title="Diseñado para funcionar. Pensado para destacar." />
             </div>
             <p className="advantages__lead">
@@ -196,7 +262,7 @@ export default function Home() {
         <div className="contact__texture" aria-hidden="true" />
         <div className="shell contact__grid">
           <div className="contact__intro">
-            <p className="chapter chapter--light">05 / Contacto</p>
+            <p className="chapter chapter--light">06 / Contacto</p>
             <p className="eyebrow eyebrow--light">Tu próximo negocio te espera</p>
             <h2>Agenda una presentación del proyecto.</h2>
             <p>Conoce disponibilidad, planos comerciales y oportunidades dentro de Distrito Villarreal.</p>
@@ -230,8 +296,8 @@ export default function Home() {
           <p>Distrito Villarreal · Ciudad Juárez, Chihuahua, México</p>
           <div>
             <a href="#proyecto">Proyecto</a>
+            <a href="#mercado">Mercado</a>
             <a href="#masterplan">Masterplan</a>
-            <a href="#galeria">Galería</a>
             <a href="#contacto">Contacto</a>
           </div>
         </div>
