@@ -43,8 +43,8 @@ export default function Home() {
           <nav className="nav__links" aria-label="Navegación principal">
             <a href="#proyecto">Proyecto</a>
             <a href="#mercado">Mercado</a>
+            <a href="#ubicacion">Ubicación</a>
             <a href="#masterplan">Masterplan</a>
-            <a href="#galeria">Galería</a>
           </nav>
           <ButtonLink href="#contacto">Solicitar información</ButtonLink>
         </header>
@@ -174,11 +174,144 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="location" id="ubicacion">
+        <div className="shell location__head">
+          <div>
+            <p className="chapter">03 / Ubicación</p>
+            <p className="eyebrow">Conectividad</p>
+            <h2>Un corredor que conecta comercio, ciudad y frontera.</h2>
+          </div>
+          <div className="location__intro">
+            <p>
+              Distrito Villarreal se inserta sobre el eje Francisco Villarreal Torres / De Las Torres,
+              rodeado de actividad comercial y conectado con vialidades que articulan distintos sectores
+              de Ciudad Juárez.
+            </p>
+            <span>Esquema de conectividad · No a escala</span>
+          </div>
+        </div>
+
+        <div className="shell location__layout">
+          <div className="corridor-map" role="img" aria-label="Esquema de conectividad del corredor Francisco Villarreal Torres y referencias comerciales">
+            <div className="corridor-map__grid" aria-hidden="true" />
+            <div className="road road--main"><span>Francisco Villarreal Torres</span></div>
+            <div className="road road--cross road--gomez"><span>Gómez Morín</span></div>
+            <div className="road road--cross road--ejercito"><span>Ejército Nacional</span></div>
+            <div className="road road--branch road--torres"><span>Av. de las Torres</span></div>
+            <div className="road road--branch road--zaragoza"><span>Blvd. Zaragoza</span></div>
+
+            <div className="map-pin map-pin--project">
+              <i />
+              <strong>Distrito Villarreal</strong>
+              <span>Proyecto</span>
+            </div>
+            <div className="map-pin map-pin--tres">
+              <i />
+              <strong>Plaza Tres Torres</strong>
+              <span>Referencia comercial</span>
+            </div>
+            <div className="map-pin map-pin--verona">
+              <i />
+              <strong>Plaza Verona</strong>
+              <span>Referencia comercial</span>
+            </div>
+            <div className="map-pin map-pin--sendero">
+              <i />
+              <strong>Sendero Las Torres</strong>
+              <span>Centro comercial</span>
+            </div>
+            <div className="map-pin map-pin--patio">
+              <i />
+              <strong>Patio Zaragoza</strong>
+              <span>Centro comercial</span>
+            </div>
+
+            <div className="corridor-map__north">
+              <span>N</span>
+              <i aria-hidden="true">↑</i>
+            </div>
+          </div>
+
+          <div className="location__nodes">
+            <article>
+              <span className="location-node__index">01</span>
+              <div>
+                <p>Sobre el corredor</p>
+                <h3>Plaza Tres Torres</h3>
+                <span>Blvd. Francisco Villarreal Torres 11204</span>
+              </div>
+              <a href="https://www.ugmas.mx/plaza-tres-torres" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Tres Torres">↗</a>
+            </article>
+
+            <article>
+              <span className="location-node__index">02</span>
+              <div>
+                <p>Francisco Villarreal Torres</p>
+                <h3>Plaza Verona</h3>
+                <span>Referencia comercial del mismo eje urbano</span>
+              </div>
+              <a href="https://firmania.mx/ciudad-ju%C3%A1rez-ju%C3%A1rez/plaza-verona-154286" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Verona">↗</a>
+            </article>
+
+            <article>
+              <span className="location-node__index">03</span>
+              <div>
+                <p>Av. de las Torres</p>
+                <h3>Plaza Sendero Las Torres</h3>
+                <span>Av. de las Torres 2111</span>
+              </div>
+              <a href="https://plazasendero.com.mx/plaza/las-torres/" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Sendero Las Torres">↗</a>
+            </article>
+
+            <article>
+              <span className="location-node__index">04</span>
+              <div>
+                <p>Blvd. Zaragoza</p>
+                <h3>Patio Zaragoza</h3>
+                <span>Blvd. Zaragoza &amp; Blvd. Óscar Flores</span>
+              </div>
+              <a href="https://www.waze.com/es/live-map/directions/mx/chih./cd.-juarez/patio-zaragoza?to=place.ChIJp2KSjUZe54YRY2fdL5DuVcY" target="_blank" rel="noreferrer" aria-label="Fuente Patio Zaragoza">↗</a>
+            </article>
+          </div>
+        </div>
+
+        <div className="location__border">
+          <div className="shell location__border-grid">
+            <div>
+              <span>Conectividad fronteriza</span>
+              <p>Dos cruces internacionales forman parte de la red de conectividad de Ciudad Juárez.</p>
+            </div>
+            <div className="border-node">
+              <span>MX / US</span>
+              <strong>Puente Internacional Zaragoza</strong>
+              <p>Waterfill · Ciudad Juárez</p>
+            </div>
+            <div className="border-node">
+              <span>MX / US</span>
+              <strong>Puente Córdova–Américas</strong>
+              <p>Ciudad Juárez · El Paso</p>
+            </div>
+            <a className="border-source" href="https://www.puentesfronterizos.gob.mx/" target="_blank" rel="noreferrer">
+              Fideicomiso de Puentes Fronterizos ↗
+            </a>
+          </div>
+        </div>
+
+        <div className="shell location__note">
+          <span>Nota</span>
+          <p>
+            La sección muestra relaciones urbanas y referencias verificadas; no representa distancias,
+            tiempos de traslado ni radios comerciales del predio. Esos datos se incorporarán únicamente
+            cuando exista medición específica.
+          </p>
+        </div>
+      </section>
+
       <section className="masterplan" id="masterplan">
-        <div className="masterplan__number" aria-hidden="true">03</div>
+        <div className="masterplan__number" aria-hidden="true">04</div>
         <div className="shell masterplan__grid">
           <div className="masterplan__copy">
-            <p className="chapter chapter--light">03 / Masterplan</p>
+            <p className="chapter chapter--light">04 / Masterplan</p>
             <SectionHeader
               eyebrow="Organización del proyecto"
               title="El proyecto, visto completo."
@@ -205,7 +338,7 @@ export default function Home() {
       <section className="gallery section shell" id="galeria">
         <div className="gallery__lead">
           <div>
-            <p className="chapter">04 / Galería</p>
+            <p className="chapter">05 / Galería</p>
             <SectionHeader
               eyebrow="Arquitectura"
               title="Espacios que inspiran negocios."
@@ -236,7 +369,7 @@ export default function Home() {
         <div className="shell">
           <div className="advantages__head">
             <div>
-              <p className="chapter">05 / Ventajas</p>
+              <p className="chapter">06 / Ventajas</p>
               <SectionHeader eyebrow="Valor del proyecto" title="Diseñado para funcionar. Pensado para destacar." />
             </div>
             <p className="advantages__lead">
@@ -262,7 +395,7 @@ export default function Home() {
         <div className="contact__texture" aria-hidden="true" />
         <div className="shell contact__grid">
           <div className="contact__intro">
-            <p className="chapter chapter--light">06 / Contacto</p>
+            <p className="chapter chapter--light">07 / Contacto</p>
             <p className="eyebrow eyebrow--light">Tu próximo negocio te espera</p>
             <h2>Agenda una presentación del proyecto.</h2>
             <p>Conoce disponibilidad, planos comerciales y oportunidades dentro de Distrito Villarreal.</p>
@@ -297,7 +430,7 @@ export default function Home() {
           <div>
             <a href="#proyecto">Proyecto</a>
             <a href="#mercado">Mercado</a>
-            <a href="#masterplan">Masterplan</a>
+            <a href="#ubicacion">Ubicación</a>
             <a href="#contacto">Contacto</a>
           </div>
         </div>
