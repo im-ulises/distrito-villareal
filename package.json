@@ -6,12 +6,11 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
-    "start": "wrangler dev --config dist/server/wrangler.json",
-    "deploy": "vinext-cloudflare deploy --config dist/server/wrangler.json",
+    "start": "vinext start",
+    "deploy": "npx @vinext/cloudflare deploy",
     "check": "tsc --noEmit"
   },
   "dependencies": {
-    "@vinext/cloudflare": "1.0.0-beta.10",
     "next": "16.3.5",
     "react": "19.3.0",
     "react-dom": "19.3.0",
