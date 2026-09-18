@@ -735,9 +735,12 @@ button, input { font: inherit; }
 .masterplan__grid {
   position: relative;
   display: grid;
-  grid-template-columns: .62fr 1.38fr;
-  gap: 72px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 52px;
+  align-items: start;
+}
+.masterplan__copy {
+  max-width: 760px;
 }
 .masterplan__copy .button { margin-top: 34px; }
 .masterplan__legend {
@@ -755,8 +758,10 @@ button, input { font: inherit; }
 .masterplan__media {
   margin: 0;
   position: relative;
-  background: #efede8;
-  padding: 10px;
+  background: #fff;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
   box-shadow: 0 44px 110px rgba(0,0,0,.34);
 }
 .masterplan__media::before {
@@ -767,11 +772,13 @@ button, input { font: inherit; }
   pointer-events: none;
 }
 .masterplan__media img {
+  display: block;
   width: 100%;
-  aspect-ratio: 16/10;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   object-position: center;
-  filter: contrast(1.02) saturate(.85);
+  background: #fff;
+  filter: grayscale(1) contrast(1.42);
 }
 .masterplan__media figcaption { color: rgba(255,255,255,.42); }
 
