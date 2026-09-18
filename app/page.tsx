@@ -310,10 +310,10 @@ export default function Home() {
               <span><i /> Consultorios</span>
               <span><i /> Circulación</span>
             </div>
-            <ButtonLink href="/images/masterplan.webp" variant="ghost">Ver plano completo</ButtonLink>
+            <ButtonLink href="/images/masterplan-v2.webp" variant="ghost">Ver plano completo</ButtonLink>
           </div>
           <figure className="masterplan__media">
-            <img src="/images/masterplan.webp" alt="Planta arquitectónica de Distrito Villarreal" loading="lazy" />
+            <img src="/images/masterplan-v2.webp" alt="Planta arquitectónica de Distrito Villarreal" loading="lazy" />
             <figcaption>
               <span>Masterplan arquitectónico</span>
               <span>Distrito Villarreal</span>
