@@ -179,56 +179,37 @@ export default function Home() {
           <div>
             <p className="chapter">03 / Ubicación</p>
             <p className="eyebrow">Conectividad</p>
-            <h2>Un corredor que conecta comercio, ciudad y frontera.</h2>
+            <h2>Ubicación real. Contexto real.</h2>
           </div>
           <div className="location__intro">
             <p>
-              Distrito Villarreal se inserta sobre el eje Francisco Villarreal Torres / De Las Torres,
-              rodeado de actividad comercial y conectado con vialidades que articulan distintos sectores
-              de Ciudad Juárez.
+              La dirección localizada en Google Maps es Blvd. Francisco Villarreal Torres 11187,
+              Las Arcadas, Ciudad Juárez. En lugar de aproximar calles y distancias, mostramos el
+              mapa real y referencias comerciales verificadas por dirección.
             </p>
-            <span>Esquema de conectividad · No a escala</span>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Blvd%20Francisco%20Villarreal%20Torres%2011187%2C%20Las%20Arcadas%2C%2032563%20Ju%C3%A1rez%2C%20Chih.%2C%20M%C3%A9xico"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Abrir ubicación en Google Maps ↗
+            </a>
           </div>
         </div>
 
         <div className="shell location__layout">
-          <div className="corridor-map" role="img" aria-label="Esquema de conectividad del corredor Francisco Villarreal Torres y referencias comerciales">
-            <div className="corridor-map__grid" aria-hidden="true" />
-            <div className="road road--main"><span>Francisco Villarreal Torres</span></div>
-            <div className="road road--cross road--gomez"><span>Gómez Morín</span></div>
-            <div className="road road--cross road--ejercito"><span>Ejército Nacional</span></div>
-            <div className="road road--branch road--torres"><span>Av. de las Torres</span></div>
-            <div className="road road--branch road--zaragoza"><span>Blvd. Zaragoza</span></div>
-
-            <div className="map-pin map-pin--project">
-              <i />
-              <strong>Distrito Villarreal</strong>
-              <span>Proyecto</span>
-            </div>
-            <div className="map-pin map-pin--tres">
-              <i />
-              <strong>Plaza Tres Torres</strong>
-              <span>Referencia comercial</span>
-            </div>
-            <div className="map-pin map-pin--verona">
-              <i />
-              <strong>Plaza Verona</strong>
-              <span>Referencia comercial</span>
-            </div>
-            <div className="map-pin map-pin--sendero">
-              <i />
-              <strong>Sendero Las Torres</strong>
-              <span>Centro comercial</span>
-            </div>
-            <div className="map-pin map-pin--patio">
-              <i />
-              <strong>Patio Zaragoza</strong>
-              <span>Centro comercial</span>
-            </div>
-
-            <div className="corridor-map__north">
-              <span>N</span>
-              <i aria-hidden="true">↑</i>
+          <div className="location__map-card">
+            <iframe
+              title="Ubicación de Distrito Villarreal en Google Maps"
+              src="https://www.google.com/maps?q=Blvd%20Francisco%20Villarreal%20Torres%2011187%2C%20Las%20Arcadas%2C%2032563%20Ju%C3%A1rez%2C%20Chih.%2C%20M%C3%A9xico&z=14&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <div className="location__address">
+              <span>Distrito Villarreal</span>
+              <strong>Blvd. Francisco Villarreal Torres 11187</strong>
+              <p>Las Arcadas · 32563 · Ciudad Juárez, Chihuahua</p>
             </div>
           </div>
 
@@ -236,11 +217,16 @@ export default function Home() {
             <article>
               <span className="location-node__index">01</span>
               <div>
-                <p>Sobre el corredor</p>
+                <p>Mismo corredor</p>
                 <h3>Plaza Tres Torres</h3>
-                <span>Blvd. Francisco Villarreal Torres 11204</span>
+                <span>Blvd. Francisco Villarreal Torres 11204 · Partido Senecú</span>
               </div>
-              <a href="https://www.ugmas.mx/plaza-tres-torres" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Tres Torres">↗</a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Plaza%20Tres%20Torres%2C%20Blvd%20Francisco%20Villarreal%20Torres%2011204%2C%20Ciudad%20Ju%C3%A1rez"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Plaza Tres Torres en Google Maps"
+              >↗</a>
             </article>
 
             <article>
@@ -248,9 +234,14 @@ export default function Home() {
               <div>
                 <p>Francisco Villarreal Torres</p>
                 <h3>Plaza Verona</h3>
-                <span>Referencia comercial del mismo eje urbano</span>
+                <span>Blvd. Francisco Villarreal Torres 3100 · Nogales de Las Torres</span>
               </div>
-              <a href="https://firmania.mx/ciudad-ju%C3%A1rez-ju%C3%A1rez/plaza-verona-154286" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Verona">↗</a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Plaza%20Verona%2C%20Blvd%20Francisco%20Villarreal%20Torres%203100%2C%20Ciudad%20Ju%C3%A1rez"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Plaza Verona en Google Maps"
+              >↗</a>
             </article>
 
             <article>
@@ -258,52 +249,48 @@ export default function Home() {
               <div>
                 <p>Av. de las Torres</p>
                 <h3>Plaza Sendero Las Torres</h3>
-                <span>Av. de las Torres 2111</span>
+                <span>Av. de las Torres 2111 · Ciudad Juárez</span>
               </div>
-              <a href="https://plazasendero.com.mx/plaza/las-torres/" target="_blank" rel="noreferrer" aria-label="Fuente Plaza Sendero Las Torres">↗</a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Plaza%20Sendero%20Las%20Torres%2C%20Av%20de%20las%20Torres%202111%2C%20Ciudad%20Ju%C3%A1rez"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Plaza Sendero Las Torres en Google Maps"
+              >↗</a>
             </article>
 
             <article>
               <span className="location-node__index">04</span>
               <div>
-                <p>Blvd. Zaragoza</p>
+                <p>Zaragoza / Óscar Flores</p>
                 <h3>Patio Zaragoza</h3>
-                <span>Blvd. Zaragoza &amp; Blvd. Óscar Flores</span>
+                <span>Blvd. Zaragoza &amp; Blvd. Óscar Flores · Nuevo Hipódromo</span>
               </div>
-              <a href="https://www.waze.com/es/live-map/directions/mx/chih./cd.-juarez/patio-zaragoza?to=place.ChIJp2KSjUZe54YRY2fdL5DuVcY" target="_blank" rel="noreferrer" aria-label="Fuente Patio Zaragoza">↗</a>
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Patio%20Zaragoza%2C%20Ciudad%20Ju%C3%A1rez"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Abrir Patio Zaragoza en Google Maps"
+              >↗</a>
             </article>
           </div>
         </div>
 
-        <div className="location__border">
-          <div className="shell location__border-grid">
+        <div className="location__verification">
+          <div className="shell location__verification-grid">
             <div>
-              <span>Conectividad fronteriza</span>
-              <p>Dos cruces internacionales forman parte de la red de conectividad de Ciudad Juárez.</p>
+              <span>Cómo leer esta sección</span>
+              <p>El mapa es Google Maps. Las tarjetas laterales muestran direcciones verificadas; no representan proximidad visual ni tiempos de traslado.</p>
             </div>
-            <div className="border-node">
-              <span>MX / US</span>
-              <strong>Puente Internacional Zaragoza</strong>
-              <p>Waterfill · Ciudad Juárez</p>
+            <div>
+              <strong>11187</strong>
+              <span>Dirección del proyecto localizada</span>
             </div>
-            <div className="border-node">
-              <span>MX / US</span>
-              <strong>Puente Córdova–Américas</strong>
-              <p>Ciudad Juárez · El Paso</p>
+            <div>
+              <strong>11204</strong>
+              <span>Plaza Tres Torres sobre el mismo boulevard</span>
             </div>
-            <a className="border-source" href="https://www.puentesfronterizos.gob.mx/" target="_blank" rel="noreferrer">
-              Fideicomiso de Puentes Fronterizos ↗
-            </a>
           </div>
-        </div>
-
-        <div className="shell location__note">
-          <span>Nota</span>
-          <p>
-            La sección muestra relaciones urbanas y referencias verificadas; no representa distancias,
-            tiempos de traslado ni radios comerciales del predio. Esos datos se incorporarán únicamente
-            cuando exista medición específica.
-          </p>
         </div>
       </section>
 
@@ -365,7 +352,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="advantages section" id="ubicacion">
+      <section className="advantages section" id="ventajas">
         <div className="shell">
           <div className="advantages__head">
             <div>
