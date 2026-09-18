@@ -73,6 +73,7 @@ button, input { font: inherit; }
   width: 228px;
   height: auto;
   max-width: none;
+  filter: brightness(0) invert(1);
 }
 .brand--compact img { width: 178px; }
 
