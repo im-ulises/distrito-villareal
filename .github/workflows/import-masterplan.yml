@@ -1,0 +1,42 @@
+name: Import verified masterplan
+
+on:
+  push:
+    branches: [fix/masterplan-mobile-map]
+
+permissions:
+  contents: write
+
+jobs:
+  import-masterplan:
+    if: "!contains(github.event.head_commit.message, '[masterplan-import]')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/masterplan-mobile-map
+          fetch-depth: 0
+      - name: Download verified masterplan
+        run: |
+          set -euxo pipefail
+          curl -fL --retry 3 "https://at.adobe.com/IKgZRTaURCWytE0V" -o public/images/masterplan-v5.webp
+          test "$(stat -c%s public/images/masterplan-v5.webp)" -gt 70000
+          file public/images/masterplan-v5.webp
+      - name: Point page to verified masterplan
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path("app/page.tsx")
+          s=p.read_text()
+          for old in ["/images/masterplan-v4.webp","/images/masterplan-v3.webp","/images/masterplan-v2.webp","/images/masterplan.webp"]:
+              s=s.replace(old,"/images/masterplan-v5.webp")
+          p.write_text(s)
+          PY
+      - name: Commit verified asset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git rm .github/workflows/import-masterplan.yml
+          git add public/images/masterplan-v5.webp app/page.tsx
+          git commit -m "fix: import verified masterplan asset [masterplan-import]"
+          git push origin HEAD:fix/masterplan-mobile-map
