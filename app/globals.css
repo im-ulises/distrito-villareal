@@ -1038,9 +1038,11 @@ button, input { font: inherit; }
   .project, .masterplan__grid { grid-template-columns: 1fr; }
   .location__head { grid-template-columns: 1fr; gap: 32px; }
   .location__intro { justify-self: start; }
-  .location__layout { grid-template-columns: 1fr; }
-  .corridor-map { min-height: 560px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .location__layout { grid-template-columns: 1fr; min-height: 0; }
+  .location__map-card { min-height: 540px; border-right: 0; border-bottom: 1px solid var(--line); }
+  .location__map-card iframe { min-height: 540px; }
   .location__nodes { display: grid; grid-template-columns: 1fr 1fr; }
+  .location__verification-grid { grid-template-columns: 1.4fr .7fr .7fr; }
   .location__nodes article:nth-child(odd) { border-right: 1px solid var(--line); }
   .location__border-grid { grid-template-columns: 1fr 1fr; }
   .location__border-grid > div:first-child { grid-column: 1 / -1; padding: 38px 0; }
@@ -1110,6 +1112,39 @@ button, input { font: inherit; }
   .location { padding-top: 82px; }
   .location__head { margin-bottom: 46px; }
   .location__head .chapter { margin-bottom: 42px; }
+  .location__intro { max-width: none; }
+  .location__intro p { font-size: 12px; }
+  .location__layout { width: 100%; border-left: 0; border-right: 0; }
+  .location__map-card { min-height: 0; overflow: visible; background: #fff; }
+  .location__map-card iframe {
+    display: block;
+    width: 100%;
+    height: 420px;
+    min-height: 420px;
+    touch-action: pan-x pan-y;
+  }
+  .location__address {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    width: 100%;
+    padding: 18px 16px 20px;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+  .location__address strong { font-size: 22px; }
+  .location__nodes article { grid-template-columns: 36px 1fr 32px; gap: 12px; }
+  .location__nodes article div > span { max-width: none; }
+  .location__verification { margin-top: 48px; }
+  .location__verification-grid { grid-template-columns: 1fr; min-height: 0; }
+  .location__verification-grid > div:first-child { padding: 32px 0; }
+  .location__verification-grid > div + div {
+    padding: 24px 0;
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,.12);
+  }
+  .location__verification-grid > div:first-child p { font-size: 21px; }
+  .location__verification-grid strong { font-size: 42px; }
   .corridor-map { min-height: 480px; }
   .map-pin { min-width: 0; max-width: 120px; }
   .map-pin strong { font-size: 9px; }
