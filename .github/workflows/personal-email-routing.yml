@@ -1,0 +1,86 @@
+name: Setup hello email routing
+on:
+  push:
+    branches: [ai-setup-hello-email-20261020]
+    paths: ['.github/workflows/personal-email-routing.yml']
+permissions:
+  contents: read
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+    steps:
+      - name: Configure Cloudflare Email Routing with existing secrets
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os,sys,json,urllib.request,urllib.parse,urllib.error
+          token=os.getenv('CLOUDFLARE_API_TOKEN','')
+          account=os.getenv('CLOUDFLARE_ACCOUNT_ID','')
+          domain='ulisesfrias.com'
+          destination='axlulisesfs@gmail.com'
+          alias='hello@ulisesfrias.com'
+          if not token or not account:
+              print('BLOCKED: Cloudflare GitHub secrets unavailable');sys.exit(0)
+          def api(method,path,payload=None):
+              req=urllib.request.Request('https://api.cloudflare.com/client/v4'+path,
+                   data=json.dumps(payload).encode() if payload is not None else None,
+                   headers={'Authorization':'Bearer '+token,'Content-Type':'application/json'},method=method)
+              try:
+                  with urllib.request.urlopen(req,timeout=20) as r: data=r.read().decode()
+              except urllib.error.HTTPError as e: data=e.read().decode()
+              except Exception as e: print('Network error:',type(e).__name__);return {'success':False}
+              try:return json.loads(data)
+              except:return {'success':False}
+          def error(label,data):
+              print(label+': '+'; '.join(str(e.get('message','error'))[:160] for e in data.get('errors',[])[:2]))
+          zones=api('GET','/zones?'+urllib.parse.urlencode({'name':domain,'per_page':50}))
+          if not zones.get('success'):
+              error('BLOCKED zone lookup; likely needs Zone Read',zones);sys.exit(0)
+          found=[z for z in zones.get('result',[]) if z.get('name')==domain and z.get('account',{}).get('id')==account]
+          if not found: print('BLOCKED: Domain is not in the secret-configured Cloudflare account');sys.exit(0)
+          zone=found[0]['id']
+          print('Found target domain in Cloudflare account')
+          settings=api('GET',f'/zones/{zone}/email/routing')
+          if settings.get('success'):print('Routing status:',settings.get('result',{}).get('status'))
+          else:error('Routing settings not readable',settings)
+          mx_data=api('GET',f'/zones/{zone}/dns_records?type=MX&name={domain}')
+          mx=[r.get('content','') for r in mx_data.get('result',[])] if mx_data.get('success') else None
+          if mx is None:print('Existing MX records cannot be read; DNS will not be changed')
+          else:print('Existing MX count:',len(mx))
+          non_cf=bool(mx and any(not x.lower().endswith('.mx.cloudflare.net') for x in mx))
+          if non_cf:print('SAFEGUARD: Non-Cloudflare MX exists. DNS will not be changed')
+          dests=api('GET',f'/accounts/{account}/email/routing/addresses?per_page=100')
+          existing=next((a for a in dests.get('result',[]) if a.get('email','').lower()==destination),None) if dests.get('success') else None
+          if not dests.get('success'):error('Could not list destination addresses',dests)
+          if existing is None:
+              created=api('POST',f'/accounts/{account}/email/routing/addresses',{'email':destination})
+              if created.get('success'):
+                  existing=created.get('result',{})
+                  print('CREATED destination; Cloudflare sent a verification email')
+              else:error('Could not create destination; likely needs Email Routing Addresses Write',created)
+          else:print('Destination already exists')
+          if not existing or not existing.get('verified'):
+              print('NEXT STEP: Verify destination via Cloudflare email; cannot create forward rule until verified')
+              sys.exit(0)
+          rules=api('GET',f'/zones/{zone}/email/routing/rules?per_page=100')
+          if not rules.get('success'):
+              error('Could not safely list routing rules; no duplicates created',rules);sys.exit(0)
+          matched=[r for r in rules.get('result',[]) if any(m.get('type')=='literal' and m.get('field')=='to' and m.get('value','').lower()==alias for m in r.get('matchers',[]))]
+          if matched:print('Routing rule already exists; left unchanged')
+          else:
+              new={'name':'Personal hello forwarding','enabled':True,'matchers':[{'type':'literal','field':'to','value':alias}],'actions':[{'type':'forward','value':[destination]}]}
+              res=api('POST',f'/zones/{zone}/email/routing/rules',new)
+              if res.get('success'):print('CREATED forwarding rule: '+alias)
+              else:error('Could not create forwarding rule',res)
+          if settings.get('success') and settings.get('result',{}).get('enabled'):
+              print('Email Routing is already enabled')
+          elif mx is not None and len(mx)==0:
+              res=api('POST',f'/zones/{zone}/email/routing/dns',{'name':domain})
+              if res.get('success'):print('ENABLED Cloudflare Email Routing DNS')
+              else:error('Could not enable routing DNS',res)
+          else:print('DNS unchanged; existing MX or missing DNS permissions')
+          PY
