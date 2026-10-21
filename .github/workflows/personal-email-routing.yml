@@ -63,6 +63,13 @@ jobs:
                   print('CREATED destination; Cloudflare sent a verification email')
               else:error('Could not create destination; likely needs Email Routing Addresses Write',created)
           else:print('Destination already exists')
+          if settings.get('success') and settings.get('result',{}).get('enabled'):
+              print('Cloudflare Email Routing DNS already enabled')
+          elif mx is not None and len(mx)==0:
+              enable=api('POST',f'/zones/{zone}/email/routing/dns',{'name':domain})
+              if enable.get('success'):print('ENABLED Email Routing DNS (previously no MX)')
+              else:error('BLOCKED enabling Email Routing DNS',enable)
+          else:print('Did not change DNS because existing MX or missing permissions')
           if not existing or not existing.get('verified'):
               print('NEXT STEP: Verify destination via Cloudflare email; cannot create forward rule until verified')
               sys.exit(0)
@@ -76,11 +83,4 @@ jobs:
               res=api('POST',f'/zones/{zone}/email/routing/rules',new)
               if res.get('success'):print('CREATED forwarding rule: '+alias)
               else:error('Could not create forwarding rule',res)
-          if settings.get('success') and settings.get('result',{}).get('enabled'):
-              print('Email Routing is already enabled')
-          elif mx is not None and len(mx)==0:
-              res=api('POST',f'/zones/{zone}/email/routing/dns',{'name':domain})
-              if res.get('success'):print('ENABLED Cloudflare Email Routing DNS')
-              else:error('Could not enable routing DNS',res)
-          else:print('DNS unchanged; existing MX or missing DNS permissions')
           PY
