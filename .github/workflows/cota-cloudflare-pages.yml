@@ -33,7 +33,7 @@ jobs:
       - name: Ensure COTA Cloudflare Pages project exists
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
         run: |
           set -euo pipefail
           test -n "$CLOUDFLARE_API_TOKEN"
@@ -56,7 +56,7 @@ jobs:
       - name: Deploy COTA (production)
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
-          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
         run: |
           set -euo pipefail
           cd cota-site
