@@ -40,7 +40,7 @@ jobs:
           test -n "$CLOUDFLARE_ACCOUNT_ID"
           http_code=$(curl --silent --show-error \
             --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects?per_page=100" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
             --output /tmp/cota-pages-projects.json --write-out "%{http_code}")
           node -e '
             const fs=require("node:fs");
