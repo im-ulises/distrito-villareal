@@ -38,10 +38,18 @@ jobs:
           set -euo pipefail
           test -n "$CLOUDFLARE_API_TOKEN"
           test -n "$CLOUDFLARE_ACCOUNT_ID"
-          curl --fail-with-body --silent --show-error \
+          http_code=$(curl --silent --show-error \
             --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects?per_page=100" \
-            --output /tmp/cota-pages-projects.json
+            --output /tmp/cota-pages-projects.json --write-out "%{http_code}")
+          node -e '
+            const fs=require("node:fs");
+            const response=JSON.parse(fs.readFileSync("/tmp/cota-pages-projects.json","utf8"));
+            const code=process.argv[1];
+            console.log("Cloudflare Pages HTTP status:",code);
+            console.log("Cloudflare error codes:",(response.errors||[]).map(e=>Number(e.code)));
+            if(code!=="200" || response.success!==true) process.exit(1);
+          ' "$http_code"
           if node -e '
             const fs=require("node:fs");
             const data=JSON.parse(fs.readFileSync("/tmp/cota-pages-projects.json","utf8"));
