@@ -38,12 +38,15 @@ jobs:
           set -euo pipefail
           test -n "$CLOUDFLARE_API_TOKEN"
           test -n "$CLOUDFLARE_ACCOUNT_ID"
-          wrangler pages project list --json > /tmp/cota-pages-projects.json
+          curl --fail-with-body --silent --show-error \
+            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects?per_page=100" \
+            --output /tmp/cota-pages-projects.json
           if node -e '
             const fs=require("node:fs");
-            const projects=JSON.parse(fs.readFileSync("/tmp/cota-pages-projects.json","utf8"));
-            if (!Array.isArray(projects)) throw new Error("Unexpected Cloudflare projects response");
-            process.exit(projects.some(project=>project.name==="cota-landing") ? 0 : 1);
+            const data=JSON.parse(fs.readFileSync("/tmp/cota-pages-projects.json","utf8"));
+            if (!data.success || !Array.isArray(data.result)) throw new Error("Cloudflare Pages listing failed");
+            process.exit(data.result.some(project=>project.name==="cota-landing") ? 0 : 1);
           '; then
             echo "Cloudflare Pages project already exists"
           else
