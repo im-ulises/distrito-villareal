@@ -1,0 +1,73 @@
+name: Deploy COTA to Cloudflare Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/cota-cloudflare-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: cota-cloudflare-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fetch COTA public repository (leave Distrito untouched)
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 --branch main https://github.com/im-ulises/cota-landing.git cota-site
+          test -s cota-site/index.html
+          test -s cota-site/assets/inundacion-juarez-crop.jpg
+          grep -q COTA cota-site/index.html
+
+      - name: Install pinned Cloudflare CLI
+        run: npm install --global wrangler@4.45.0
+
+      - name: Ensure COTA Cloudflare Pages project exists
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          wrangler pages project list --json > /tmp/cota-pages-projects.json
+          if node -e '
+            const fs=require("node:fs");
+            const projects=JSON.parse(fs.readFileSync("/tmp/cota-pages-projects.json","utf8"));
+            if (!Array.isArray(projects)) throw new Error("Unexpected Cloudflare projects response");
+            process.exit(projects.some(project=>project.name==="cota-landing") ? 0 : 1);
+          '; then
+            echo "Cloudflare Pages project already exists"
+          else
+            wrangler pages project create cota-landing --production-branch main
+          fi
+
+      - name: Deploy COTA (production)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+        run: |
+          set -euo pipefail
+          cd cota-site
+          wrangler pages deploy . --project-name cota-landing --branch main --commit-hash "$(git rev-parse HEAD)" --commit-message "Deploy COTA V3"
+
+      - name: Verify public page and image
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6; do
+            if curl -fLsS --max-time 15 https://cota-landing.pages.dev/ -o /tmp/cota-live.html && grep -q "COTA" /tmp/cota-live.html && curl -fLsS --max-time 15 https://cota-landing.pages.dev/assets/inundacion-juarez-crop.jpg -o /dev/null; then
+              echo "Verified: https://cota-landing.pages.dev/"
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "The deployment finished, but the live site did not pass verification"
+          exit 1
