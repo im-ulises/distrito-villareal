@@ -1,0 +1,106 @@
+name: Connect EVO Studios to Cloudflare Pages
+
+on:
+  push:
+    branches:
+      - automation/evo-pages-import-20261025
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evo-studios-cloudflare-import
+  cancel-in-progress: false
+
+jobs:
+  connect-evo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Use Distrito Cloudflare credentials without changing Distrito
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          base="https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects"
+          code=$(curl --silent --show-error -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"             -o /tmp/evo-project.json -w '%{http_code}' "$base/evo-studios-site")
+          if [[ "$code" == 404 ]]; then
+            cat > /tmp/evo-config.json <<'JSON'
+          {
+            "name": "evo-studios-site",
+            "production_branch": "main",
+            "build_config": {
+              "build_command": "",
+              "destination_dir": "dist",
+              "root_dir": "/"
+            },
+            "source": {
+              "type": "github",
+              "config": {
+                "owner": "im-ulises",
+                "owner_id": "260186379",
+                "repo_name": "evo-studios-site",
+                "repo_id": "1432854335",
+                "production_branch": "main",
+                "production_deployments_enabled": true,
+                "preview_deployment_setting": "all"
+              }
+            }
+          }
+          JSON
+            code=$(curl --silent --show-error -X POST "$base"               -H "Content-Type: application/json"               -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"               --data-binary @/tmp/evo-config.json               -o /tmp/evo-project.json -w '%{http_code}')
+          fi
+          node - <<'NODE'
+          const fs = require("fs");
+          const response = JSON.parse(fs.readFileSync("/tmp/evo-project.json","utf8"));
+          const project = response.result || {};
+          if (!response.success || project.name !== "evo-studios-site") {
+            console.error("Cloudflare project operation failed:", (response.errors || []).map(e=>({code:e.code,message:e.message})));
+            process.exit(1);
+          }
+          if (project.source?.type !== "github" ||
+              project.source?.config?.repo_name !== "evo-studios-site" ||
+              project.source?.config?.owner !== "im-ulises") {
+            console.error("Project exists but is not connected to the expected GitHub repository; refusing to modify it.");
+            process.exit(1);
+          }
+          console.log("Cloudflare Pages project:", project.name, "linked GitHub:", project.source.config.owner + "/" + project.source.config.repo_name);
+          console.log("Deployment domain:", project.subdomain || "evo-studios-site.pages.dev");
+          console.log("Most recent deployment status:", project.latest_deployment?.latest_stage?.status || "not yet built");
+          NODE
+          # If linking did not automatically queue the first build, request one from main.
+          if node -e 'const j=require("/tmp/evo-project.json").result;process.exit(j.latest_deployment || j.canonical_deployment ? 1 : 0)'; then
+            code=$(curl --silent --show-error -X POST "$base/evo-studios-site/deployments"               -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN"               -F 'branch=main' -o /tmp/evo-deploy.json -w '%{http_code}')
+            node - <<'NODE'
+          const j=require("/tmp/evo-deploy.json");
+          if (!j.success) {
+            console.error("First Pages build could not be queued:",(j.errors||[]).map(e=>({code:e.code,message:e.message})));
+            process.exit(1);
+          }
+          console.log("EVO initial Pages deployment queued:", j.result?.id);
+          NODE
+          fi
+
+      - name: Verify public Pages URL is serving EVO
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in {1..16}; do
+            status=$(curl --silent --show-error --max-time 20 -L -o /tmp/evo-live.html -w '%{http_code}' 'https://evo-studios-site.pages.dev/' || true)
+            if [[ "$status" == 200 ]] && grep -qi 'Evo Studios' /tmp/evo-live.html; then
+              status_es=$(curl --silent --show-error --max-time 20 -L -o /tmp/evo-live-es.html -w '%{http_code}' 'https://evo-studios-site.pages.dev/es/' || true)
+              if [[ "$status_es" == 200 ]] && grep -qi 'Evo Studios' /tmp/evo-live-es.html; then
+                echo "Verified English https://evo-studios-site.pages.dev/"
+                echo "Verified Spanish https://evo-studios-site.pages.dev/es/"
+                exit 0
+              fi
+            fi
+            echo "EVO Pages still deploying (HTTP: $status)"
+            sleep 12
+          done
+          echo "Pages project may exist, but English/Spanish URLs are not yet serving as expected."
+          exit 1
