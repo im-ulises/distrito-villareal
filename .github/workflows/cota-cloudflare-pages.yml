@@ -26,6 +26,12 @@ jobs:
           test -s cota-site/index.html
           test -s cota-site/assets/50x-juarez-colonia.webp
           test -s cota-site/assets/100x-producto.webp
+          test -s cota-site/robots.txt
+          test -s cota-site/sitemap.xml
+          test -s cota-site/50x/index.html
+          test -s cota-site/100x/index.html
+          test -s cota-site/ciudad-juarez/index.html
+          test -s cota-site/404.html
           grep -q BarreraMX cota-site/index.html
 
       - name: Install pinned Cloudflare CLI
@@ -69,13 +75,13 @@ jobs:
         run: |
           set -euo pipefail
           cd cota-site
-          wrangler pages deploy . --project-name cota-landing --branch main --commit-hash "$(git rev-parse HEAD)" --commit-message "Deploy BarreraMX 50X and 100X models"
+          wrangler pages deploy . --project-name cota-landing --branch main --commit-hash "$(git rev-parse HEAD)" --commit-message "Publish BarreraMX SEO and product guide pages"
 
       - name: Verify public BarreraMX page and images
         run: |
           set -euo pipefail
           for attempt in 1 2 3 4 5 6; do
-            if curl -fLsS --max-time 15 https://cota-landing.pages.dev/ -o /tmp/cota-live.html && grep -q "BarreraMX" /tmp/cota-live.html && curl -fLsS --max-time 15 https://cota-landing.pages.dev/assets/50x-juarez-colonia.webp -o /dev/null; then
+            if curl -fLsS --max-time 15 https://cota-landing.pages.dev/ -o /tmp/cota-live.html && grep -q "BarreraMX" /tmp/cota-live.html && curl -fLsS --max-time 15 https://cota-landing.pages.dev/assets/50x-juarez-colonia.webp -o /dev/null && curl -fLsS --max-time 15 https://cota-landing.pages.dev/robots.txt -o /tmp/cota-robots.txt && grep -q OAI-SearchBot /tmp/cota-robots.txt && curl -fLsS --max-time 15 https://cota-landing.pages.dev/sitemap.xml -o /tmp/cota-sitemap.xml && grep -q '<urlset' /tmp/cota-sitemap.xml && curl -fLsS --max-time 15 https://cota-landing.pages.dev/50x/ -o /dev/null && curl -fLsS --max-time 15 https://cota-landing.pages.dev/100x/ -o /dev/null && curl -fLsS --max-time 15 https://cota-landing.pages.dev/ciudad-juarez/ -o /dev/null; then
               echo "Verified: https://cota-landing.pages.dev/"
               exit 0
             fi
