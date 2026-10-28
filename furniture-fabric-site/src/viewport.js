@@ -1,12 +1,24 @@
 import {FINISHES} from './engine.js';
 const clamp=(n,min,max)=>Math.max(min,Math.min(max,n));
-const hexRgb=h=>{const v=parseInt(h.replace('#',''),16);return [(v>>16)&255,(v>>8)&255,v&255];};
+const hexRgb=h=>{if(h.startsWith('rgb('))return h.match(/\d+/g).slice(0,3).map(Number);const v=parseInt(h.replace('#',''),16);return [(v>>16)&255,(v>>8)&255,v&255];};
 const shade=(hex,k)=>{const arr=hexRgb(hex);return `rgb(${arr.map(v=>clamp(Math.round(v*k),0,255)).join(',')})`;};
 function cuboid(cx,cy,cz,w,h,d,base,kind='body'){
  const X=[cx-w/2,cx+w/2],Y=[cy-h/2,cy+h/2],Z=[cz-d/2,cz+d/2];
  const v=[[X[0],Y[0],Z[0]],[X[1],Y[0],Z[0]],[X[1],Y[1],Z[0]],[X[0],Y[1],Z[0]],[X[0],Y[0],Z[1]],[X[1],Y[0],Z[1]],[X[1],Y[1],Z[1]],[X[0],Y[1],Z[1]]];
  const faces=[{ids:[4,5,6,7],k:1.06,n:[0,0,1]}, {ids:[1,0,3,2],k:.57,n:[0,0,-1]}, {ids:[5,1,2,6],k:.75,n:[1,0,0]}, {ids:[0,4,7,3],k:.88,n:[-1,0,0]}, {ids:[7,6,2,3],k:1.21,n:[0,1,0]}, {ids:[0,1,5,4],k:.60,n:[0,-1,0]}];
  return faces.map(f=>({vertices:f.ids.map(i=>v[i]),color:shade(base,f.k),normal:f.n,kind}));
+}
+// All drawer components share the exact same translation. The front never
+// detaches from the box. This calculation is unit-testable without a canvas.
+export function drawerPose(p,stats,index,open){
+ const t=+p.thickness,D=+p.depth,bd=+p.slideLength;
+ const move=p.activeDrawer==='all'||Number(p.activeDrawer)===index;
+ const travel=move?clamp(+open||0,0,1)*Math.min(bd*.85,D*.85):0;
+ const faceH=stats.faceH,g=+p.gap,H=+p.height;
+ const cy=H/2-g-faceH/2-index*(faceH+g);
+ const frontZ=D/2-t/2+travel;
+ const boxFrontZ=D/2-t-2+travel;
+ return {cy,travel,frontZ,boxFrontZ,boxZ:boxFrontZ-bd/2};
 }
 export class FurnitureViewport{
  constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.azimuth=.52;this.elevation=.28;this.zoom=1;this.open=0;this.exploded=false;this.design=null;this.drag=false;this.onChange=()=>{};
@@ -25,45 +37,60 @@ export class FurnitureViewport{
   c.save();for(let x=(w%34)/2;x<w;x+=34)line([x,0],[x,h],'rgba(20,35,33,.036)');for(let y=(h%34)/2;y<h;y+=34)line([0,y],[w,y],'rgba(20,35,33,.036)');c.restore();
   const d=this.design;if(!d||d.issues?.length)return;
   const p=d.params,t=+p.thickness,W=+p.width,H=+p.height,D=+p.depth;
-  const size=Math.max(W,H,D);const focal=size*3.6;
-  const base=Math.min(w/(W*1.8),h/(H*1.55))*this.zoom;
+  const size=Math.max(W,H,D);const focal=size*4.2;
+  // Keep the moving drawer(s) in frame and center the camera toward their travel.
+  const extension=this.open*Math.min(p.slideLength*.85,D*.85);
+  const base=Math.min(w/(W*1.95+extension*.48),h/(H*1.65))*this.zoom;
+  const centerZ=extension*.26;
   const project=(xyz)=>{
-   const [x,y,z]=xyz;let rx=Math.cos(this.azimuth)*x+Math.sin(this.azimuth)*z;
+   const [x,y,z0]=xyz;const z=z0-centerZ;let rx=Math.cos(this.azimuth)*x+Math.sin(this.azimuth)*z;
    let rz=-Math.sin(this.azimuth)*x+Math.cos(this.azimuth)*z;
    let ry=Math.cos(this.elevation)*y-Math.sin(this.elevation)*rz;
    let depth=Math.sin(this.elevation)*y+Math.cos(this.elevation)*rz;
    const ps=focal/(focal-depth);
    return [w*.50+rx*base*ps,h*.50-ry*base*ps,depth];
   };
-  let faces=[];const wood=FINISHES[p.finish].hex;const ex=this.exploded?80:0;
+  let faces=[];const wood=FINISHES[p.finish].hex;const ex=this.exploded?Math.min(60,t*4):0;
   const put=(x,y,z,ww,hh,dd,color=wood,kind='body')=>{if(ww<=0||hh<=0||dd<=0)return;faces.push(...cuboid(x,y,z,ww,hh,dd,color,kind))};
-  // Free-standing carcass, back applied on its exterior.
-  put(-W/2+t/2-ex,0,p.back/2,t,H,D-p.back);
-  put(W/2-t/2+ex,0,p.back/2,t,H,D-p.back);
-  put(0,H/2-t/2+ex,p.back/2,W-2*t,t,D-p.back);
-  put(0,-H/2+t/2-ex,p.back/2,W-2*t,t,D-p.back);
+  // The exterior depth includes the drawer fronts and the applied HDF back.
+  // Carcass ends behind fronts. Back and drawer fronts do not protrude beyond D.
+  const carcassD=D-p.back-t;
+  const carcassZ=(p.back-t)/2;
+  put(-W/2+t/2-ex,0,carcassZ,t,H,carcassD);
+  put(W/2-t/2+ex,0,carcassZ,t,H,carcassD);
+  put(0,H/2-t/2+ex,carcassZ,W-2*t,t,carcassD);
+  put(0,-H/2+t/2-ex,carcassZ,W-2*t,t,carcassD);
   put(0,0,-D/2+p.back/2,W,H,p.back,shade(wood,.77));
   const g=+p.gap,faceH=d.stats.faceH,faceW=d.stats.faceW;
   for(let i=0;i<p.drawers;i++){
-   const cy=H/2-g-faceH/2-i*(faceH+g),forward=(this.open*(D*.65)),frontZ=D/2+t/2+forward+ex;
-   if(this.open>.05 && p.hardware!=='premium'){
+   const pose=drawerPose(p,d.stats,i,this.open);
+   const {cy,travel}=pose;
+   const frontZ=pose.frontZ+ex;
+   if(pose.travel>0.5){
     const bw=d.stats.boxW,boxH=d.stats.boxH,bd=+p.slideLength;
-    const bodyZ=D/2-t-bd/2+forward*.72;
-    put(-bw/2+t/2,cy,bodyZ,t,boxH,bd,shade(wood,.89),'drawer');
-    put(bw/2-t/2,cy,bodyZ,t,boxH,bd,shade(wood,.89),'drawer');
-    put(0,cy,bodyZ-bd/2+t/2,bw-2*t,boxH,t,shade(wood,.8),'drawer');
-    put(0,cy-boxH/2+3,bodyZ,bw,6,bd,'#c3ab8b','drawer');
+    const frontInsideZ=pose.boxFrontZ+ex;
+    const boxZ=pose.boxZ+ex;
+    const wallColor=shade(wood,.90);
+    // A complete box (4 walls and its bottom) moves as ONE rigid unit.
+    // It stays behind the drawer front at 0%, rather than popping in when opened.
+    put(-bw/2+t/2,cy,boxZ,t,boxH,bd,wallColor,'drawer');
+    put(bw/2-t/2,cy,boxZ,t,boxH,bd,wallColor,'drawer');
+    put(0,cy,frontInsideZ-t/2,bw-2*t,boxH,t,shade(wood,.95),'drawer');
+    put(0,cy,frontInsideZ-bd+t/2,bw-2*t,boxH,t,shade(wood,.78),'drawer');
+    put(0,cy-boxH/2+3,boxZ,bw,6,bd,'#d5bc94','drawer');
    }
    put(0,cy,frontZ,faceW,faceH,t,wood,'front');
    if(p.handles!=='none'){
-     put(0,cy,frontZ+t/2+6,Math.min(148,faceW*.22),7,12,p.finish==='grafito'?'#d0d3cf':'#323839','handle');
-     put(-Math.min(148,faceW*.22)/2+14,cy,frontZ+t/2+1,7,10,14,'#4b5050','handle');
-     put(Math.min(148,faceW*.22)/2-14,cy,frontZ+t/2+1,7,10,14,'#4b5050','handle');
+     const hw=Math.min(148,faceW*.22);
+     put(0,cy,frontZ+t/2+12,hw,7,10,p.finish==='grafito'?'#d0d3cf':'#323839','handle');
+     put(-hw/2+14,cy,frontZ+t/2+5,7,10,14,'#4b5050','handle');
+     put(hw/2-14,cy,frontZ+t/2+5,7,10,14,'#4b5050','handle');
    }
   }
   // Only draw faces pointing toward camera; painter ordering.
-  const vy=-Math.sin(this.azimuth)*0+Math.cos(this.azimuth)*1;
-  const frontDir=[Math.sin(this.azimuth)*Math.cos(this.elevation),Math.sin(this.elevation),Math.cos(this.azimuth)*Math.cos(this.elevation)];
+  // Projection uses rz = -sin(azimuth)*x + cos(azimuth)*z.
+  // Consequently the camera's world-space X component is NEGATIVE sin(azimuth).
+  const frontDir=[-Math.sin(this.azimuth)*Math.cos(this.elevation),Math.sin(this.elevation),Math.cos(this.azimuth)*Math.cos(this.elevation)];
   faces=faces.map(f=>{const pts=f.vertices.map(project);return {...f,pts,depth:pts.reduce((a,b)=>a+b[2],0)/pts.length};})
     .filter(f=>f.normal[0]*frontDir[0]+f.normal[1]*frontDir[1]+f.normal[2]*frontDir[2]>-.01).sort((a,b)=>a.depth-b.depth);
   c.lineJoin='round';for(const f of faces){c.beginPath();f.pts.forEach((pt,i)=>i?c.lineTo(pt[0],pt[1]):c.moveTo(pt[0],pt[1]));c.closePath();c.fillStyle=f.color;c.fill();c.strokeStyle=f.kind==='handle'?'rgba(0,0,0,.3)':'rgba(22,28,26,.14)';c.lineWidth=.75;c.stroke();}

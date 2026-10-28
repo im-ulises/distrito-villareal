@@ -2,10 +2,12 @@
 // for the selected slide/hinge manufacturer's installation instructions.
 export const DEFAULTS = Object.freeze({
   name:'Cajonera / Clóset 01', width:800, height:750, depth:450,
-  thickness:16, drawers:4, gap:3, back:3, kerf:3.2,
-  boardWidth:2440, boardHeight:1220, grain:'vertical',
+  thickness:15, drawers:4, gap:3, back:3, kerf:3.2,
+  boardWidth:2400, boardHeight:1200, grain:'vertical',
   finish:'roble', hardware:'balanced', handles:'bar',
-  slideLength:400, drawerOpen:0, exploded:false
+  slideLength:400, drawerOpen:0, activeDrawer:'all', exploded:false,
+  sheetPrice:900, hdfPriceM2:0, slidePairPrice:0, handlePrice:0, edgingPriceM:0, cutPricePerPiece:0,
+  laborPrice:0, miscPrice:0, profitPercent:0, taxPercent:0
 });
 
 export const FINISHES = {
@@ -28,6 +30,7 @@ export function validate(config){
   integer('width',300,2400); integer('height',250,2600); integer('depth',200,1200);
   integer('drawers',1,10); if(![15,16,18,19].includes(+p.thickness))issues.push('Selecciona un espesor de melamina válido.');
   if(+p.gap<2||+p.gap>8)issues.push('La junta de frentes debe ser de 2 a 8 mm.');
+  if(+p.boardWidth>4000||+p.boardHeight>3000||+p.boardWidth<1000||+p.boardHeight<1000)issues.push('Tablero fuera del tamaño admitido (1,000–4,000 × 1,000–3,000 mm).');
   const freeH=p.height-2*p.thickness;
   const faceH=(p.height-(p.drawers+1)*p.gap)/p.drawers;
   if(faceH<115)issues.push('Cada frente de cajón debe medir al menos 115 mm de alto en este prototipo.');
@@ -38,7 +41,7 @@ export function validate(config){
   if(!HARDWARE[p.hardware])issues.push('Gama de herrajes no reconocida.');
   if(p.slideLength > p.depth-p.back-p.thickness-10)issues.push('La corredera seleccionada excede la profundidad disponible.');
   if(p.slideLength<250)issues.push('Selecciona una longitud de corredera de al menos 250 mm.');
-  if(+p.boardWidth<+p.width||+p.boardHeight<1000)issues.push('Comprueba el tamaño del tablero.');
+  // La distribución puede decidir que una pieza no cabe, sin ocultar el diseño completo.
   return issues;
 }
 
@@ -48,7 +51,7 @@ export function createDesign(config={}){
   if(issues.length)return {params:p,issues,parts:[],hardware:[],stats:null,manufacturingReady:false};
   const t=+p.thickness,W=+p.width,H=+p.height,D=+p.depth,
         b=+p.back,g=+p.gap,n=+p.drawers,
-        bodyD=D-b,innerW=W-2*t,innerH=H-2*t,
+        bodyD=D-b-t,innerW=W-2*t,innerH=H-2*t,
         faceW=W-2*g,faceH=(H-(n+1)*g)/n,
         hw=HARDWARE[p.hardware];
   const clearance=hw.clearance??12.7; // indicative proxy only for premium geometry
@@ -106,9 +109,51 @@ export function layoutSheets(parts,boardWidth=2440,boardHeight=1220,kerf=3.2){
     }
   }
   return {sheets:sheets.map(({parts})=>({parts,usedArea:parts.reduce((a,p)=>a+p.w*p.h,0)})),unplaced,
-          utilization:sheets.length?round(100*sheets.reduce((s,sheet)=>s+sheet.usedArea,0)/(sheets.length*boardWidth*boardHeight)):0};
+          utilization:sheets.length?round(100*sheets.reduce((sum,sheet)=>sum+sheet.parts.reduce((area,p)=>area+p.w*p.h,0),0)/(sheets.length*boardWidth*boardHeight)):0};
 }
 
+// Quote values are MXN; missing prices remain 0 and are flagged explicitly.
+// Board prices refer to whole 2-sided 15 mm sheets, NOT to the consumed square meters.
+export function calculateQuote(config={},designResult=null){
+ const p={...DEFAULTS,...config};
+ const d=designResult??createDesign(p);
+ if(d.issues.length)return {issues:d.issues,lines:[],totals:null,missing:[]};
+ const nesting=layoutSheets(d.parts,+p.boardWidth,+p.boardHeight,+p.kerf);
+ const positive=(key)=>{const v=Number(p[key]);return Number.isFinite(v)&&v>=0?v:0;};
+ const hardwareQty=d.hardware.find(h=>h.name.startsWith('Pares de correderas'))?.qty||0;
+ const handlesQty=d.hardware.find(h=>h.name==='Jaladeras')?.qty||0;
+ const edgingMeters=d.hardware.find(h=>h.name==='Canto PVC')?.qty||0;
+ const melaminePieces=d.parts.filter(x=>x.material==='melamina').reduce((total,x)=>total+x.quantity,0);
+ const hdfArea=d.parts.filter(x=>x.material==='hdf').reduce((total,x)=>total+x.x*x.y*x.quantity,0)/1e6;
+ const items=[
+  {id:'boards',label:'Tableros de melamina completos',quantity:nesting.sheets.length,unit:'tableros',unitPrice:positive('sheetPrice'),required:true},
+  {id:'hdf',label:'HDF de respaldos y fondos',quantity:round(hdfArea),unit:'m²',unitPrice:positive('hdfPriceM2'),required:hdfArea>0},
+  {id:'slides',label:'Correderas (par)',quantity:hardwareQty,unit:'pares',unitPrice:positive('slidePairPrice'),required:hardwareQty>0},
+  {id:'handles',label:'Jaladeras',quantity:handlesQty,unit:'piezas',unitPrice:positive('handlePrice'),required:handlesQty>0},
+  {id:'edging',label:'Canto PVC',quantity:edgingMeters,unit:'m',unitPrice:positive('edgingPriceM'),required:edgingMeters>0},
+  {id:'cutting',label:'Servicio de corte',quantity:melaminePieces,unit:'piezas',unitPrice:positive('cutPricePerPiece'),required:melaminePieces>0},
+  {id:'labor',label:'Ensamble e instalación',quantity:1,unit:'servicio',unitPrice:positive('laborPrice'),required:true},
+  {id:'misc',label:'Otros: tornillos, flete, etc.',quantity:1,unit:'importe',unitPrice:positive('miscPrice'),required:true},
+ ].map(x=>({...x,total:round(x.quantity*x.unitPrice)}));
+ const cost=round(items.reduce((total,x)=>total+x.total,0));
+ const profitPercent=Math.min(1000,positive('profitPercent'));
+ const taxPercent=Math.min(100,positive('taxPercent'));
+ const profit=round(cost*profitPercent/100);
+ const subtotal=round(cost+profit);
+ const tax=round(subtotal*taxPercent/100);
+ const grandTotal=round(subtotal+tax);
+ const missing=items.filter(x=>x.required&&x.unitPrice===0).map(x=>x.label);
+ if(nesting.unplaced.length)missing.push(`${nesting.unplaced.length} piezas no caben en el tablero configurado`);
+ if(+p.thickness!==15)missing.push('El precio de $900 corresponde a melamina de 15 mm; confirma el precio para el espesor elegido');
+ return {issues:[],nesting,lines:items,missing,totals:{cost,profit,subtotal,tax,grandTotal,boardCount:nesting.sheets.length,boardCost:items[0].total,profitPercent,taxPercent},complete:missing.length===0};
+}
+export function quoteCsv(quote){
+ if(!quote.totals)return '';
+ const q=x=>'"'+String(x).replaceAll('"','""')+'"';
+ const rows=[['Concepto','Cantidad','Unidad','Precio unitario MXN','Importe MXN'],...quote.lines.map(x=>[x.label,x.quantity,x.unit,x.unitPrice,x.total]),
+  ['Costo directo','','','',quote.totals.cost],['Utilidad','','','',quote.totals.profit],['IVA configurado','','','',quote.totals.tax],['Total parcial','','','',quote.totals.grandTotal],['Precios pendientes','','','',quote.missing.join(' | ')]];
+ return '\uFEFF'+rows.map(row=>row.map(q).join(';')).join('\r\n');
+}
 export function csvOf(parts){
   const q=x=>'"'+String(x).replaceAll('"','""')+'"';
   const rows=[['ID','Pieza','Cantidad','Largo mm','Ancho mm','Material','Cantos','Grupo','Notas'],
