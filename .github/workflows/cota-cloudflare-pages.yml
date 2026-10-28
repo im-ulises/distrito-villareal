@@ -24,8 +24,8 @@ jobs:
           set -euo pipefail
           git clone --quiet --depth 1 --branch main https://github.com/im-ulises/cota-landing.git cota-site
           test -s cota-site/index.html
-          test -s cota-site/assets/wz50-juarez-colonia.webp
-          test -s cota-site/assets/wz100-producto.webp
+          test -s cota-site/assets/50x-juarez-colonia.webp
+          test -s cota-site/assets/100x-producto.webp
           grep -q BarreraMX cota-site/index.html
 
       - name: Install pinned Cloudflare CLI
@@ -69,13 +69,13 @@ jobs:
         run: |
           set -euo pipefail
           cd cota-site
-          wrangler pages deploy . --project-name cota-landing --branch main --commit-hash "$(git rev-parse HEAD)" --commit-message "Deploy BarreraMX product catalog"
+          wrangler pages deploy . --project-name cota-landing --branch main --commit-hash "$(git rev-parse HEAD)" --commit-message "Deploy BarreraMX 50X and 100X models"
 
       - name: Verify public BarreraMX page and images
         run: |
           set -euo pipefail
           for attempt in 1 2 3 4 5 6; do
-            if curl -fLsS --max-time 15 https://cota-landing.pages.dev/ -o /tmp/cota-live.html && grep -q "BarreraMX" /tmp/cota-live.html && curl -fLsS --max-time 15 https://cota-landing.pages.dev/assets/wz50-juarez-colonia.webp -o /dev/null; then
+            if curl -fLsS --max-time 15 https://cota-landing.pages.dev/ -o /tmp/cota-live.html && grep -q "BarreraMX" /tmp/cota-live.html && curl -fLsS --max-time 15 https://cota-landing.pages.dev/assets/50x-juarez-colonia.webp -o /dev/null; then
               echo "Verified: https://cota-landing.pages.dev/"
               exit 0
             fi
