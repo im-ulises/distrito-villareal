@@ -1,0 +1,65 @@
+name: Deploy Furniture Fabric to Cloudflare Pages
+
+on:
+  push:
+    branches: [furniture-fabric-deploy]
+    paths:
+      - "furniture-fabric-site/**"
+      - ".github/workflows/deploy-furniture-fabric.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: furniture-fabric-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.api_cldflr }}
+      CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify static files
+        run: |
+          test -s furniture-fabric-site/index.html
+          test -s furniture-fabric-site/src/app.js
+          test -s furniture-fabric-site/src/engine.js
+          test -s furniture-fabric-site/src/viewport.js
+          test -s furniture-fabric-site/src/styles.css
+          test -n "$CLOUDFLARE_API_TOKEN"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Cloudflare Wrangler
+        run: npm install --global wrangler@4.45.0
+      - name: Ensure Pages project exists
+        run: |
+          set -euo pipefail
+          status=$(curl --silent --show-error --output /tmp/furniture-project.json --write-out "%{http_code}" --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/furniture-fabric")
+          if [ "$status" = "404" ]; then
+            wrangler pages project create furniture-fabric --production-branch main
+          elif [ "$status" = "200" ]; then
+            echo "Pages project already exists"
+          else
+            node -e 'const fs=require("fs");const j=JSON.parse(fs.readFileSync("/tmp/furniture-project.json","utf8"));console.error("Cloudflare error codes:",(j.errors||[]).map(e=>e.code))'
+            exit 1
+          fi
+      - name: Deploy Furniture Fabric
+        run: wrangler pages deploy furniture-fabric-site --project-name furniture-fabric --branch main --commit-hash "$GITHUB_SHA"
+      - name: Verify live website
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/ -o /tmp/furniture-live.html && grep -q "Furniture Fabric" /tmp/furniture-live.html && curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/src/app.js -o /dev/null; then
+              echo "Verified https://furniture-fabric.pages.dev/"
+              exit 0
+            fi
+            sleep 8
+          done
+          echo "Furniture Fabric deployment could not be independently verified"
+          exit 1
