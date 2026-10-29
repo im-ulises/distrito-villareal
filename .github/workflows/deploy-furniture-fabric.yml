@@ -31,6 +31,11 @@ jobs:
           test -s furniture-fabric-site/src/engine.js
           test -s furniture-fabric-site/src/viewport.js
           test -s furniture-fabric-site/src/styles.css
+          test -s furniture-fabric-site/closet.html
+          test -s furniture-fabric-site/src/closet-engine.js
+          test -s furniture-fabric-site/src/closet-app.js
+          test -s furniture-fabric-site/src/closet-viewport.js
+          test -s furniture-fabric-site/src/closet.css
           test -n "$CLOUDFLARE_API_TOKEN"
       - uses: actions/setup-node@v4
         with:
@@ -55,7 +60,7 @@ jobs:
         run: |
           set -euo pipefail
           for attempt in 1 2 3 4 5 6 7 8; do
-            if curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/ -o /tmp/furniture-live.html && grep -q "Furniture Fabric" /tmp/furniture-live.html && curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/src/app.js -o /dev/null; then
+            if curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/ -o /tmp/furniture-live.html && grep -q "Furniture Fabric" /tmp/furniture-live.html && curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/src/app.js -o /dev/null && curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/closet.html -o /tmp/closet-live.html && grep -q "Clóset Nogales" /tmp/closet-live.html && curl -fLsS --max-time 15 https://furniture-fabric.pages.dev/src/closet-app.js -o /dev/null; then
               echo "Verified https://furniture-fabric.pages.dev/"
               exit 0
             fi
