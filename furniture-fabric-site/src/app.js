@@ -1,9 +1,11 @@
 import {DEFAULTS,FINISHES,HARDWARE,createDesign,layoutSheets,csvOf,hardwareCsv,calculateQuote,quoteCsv} from './engine.js';
 import {FurnitureViewport} from './viewport.js';
+import {activeProject,persistActiveProject} from './project-store.js';
 const $=s=>document.querySelector(s);
 const fmt=n=>new Intl.NumberFormat('es-MX',{maximumFractionDigits:1}).format(n);
 const money=n=>new Intl.NumberFormat('es-MX',{style:'decimal',maximumFractionDigits:2}).format(n);
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+activeProject('drawer');
 const stored=(()=>{try{return JSON.parse(localStorage.getItem('furniture-fabric-v1')||'{}')}catch{return {}}})();
 // Migrate the old untouched 16 mm / 2440 × 1220 defaults to the local supplier's 15 mm / 2400 × 1200 sheet.
 if(stored.thickness===16 && stored.boardWidth===2440 && stored.boardHeight===1220){stored.thickness=15;stored.boardWidth=2400;stored.boardHeight=1200;}
@@ -32,7 +34,7 @@ const icons={
 };
 const icon=(name,size=18)=>`<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]||icons.cube}</svg>`;
 const svgBadge=(val,unit)=>`<span class="metric-value">${fmt(val)}</span><span class="metric-unit">${unit}</span>`;
-function persist(){localStorage.setItem('furniture-fabric-v1',JSON.stringify(p));const s=$('#save-label');if(s)s.textContent='Guardado localmente';}
+function persist(){localStorage.setItem('furniture-fabric-v1',JSON.stringify(p));persistActiveProject('drawer',p);const s=$('#save-label');if(s)s.textContent='Guardado localmente';}
 function design(){return createDesign(p)}
 function quote(d=design()){return calculateQuote(p,d)}
 function pesos(n){return '$'+new Intl.NumberFormat('es-MX',{minimumFractionDigits:2,maximumFractionDigits:2}).format(n)}
@@ -43,8 +45,8 @@ function shell(){
   <aside class="sidebar" id="sidebar">
     <div class="brand"><span class="brand-symbol">${icon('logo',24)}</span><span class="brand-type"><b>FURNITURE</b><em>FABRIC<span class="brand-dot">.</span></em></span></div>
     <div class="sidebar-caption">ESPACIO DE TRABAJO</div>
-    <div class="project-switch"><span class="project-ico">${icon('cube',19)}</span><span><strong>Mi taller</strong><small>Proyectos personales</small></span>${icon('chevron',15)}</div>
-    <div class="sidebar-caption nav-cap">MIS PROYECTOS</div><a href="./closet.html" class="nav-link" style="text-decoration:none;display:flex;color:#e5f2e9;background:#285343;border:1px solid #467361;margin-bottom:14px;align-items:center;gap:11px">▧ <span>Clóset Nogales</span> <small>Nuevo</small></a><div class="sidebar-caption nav-cap">HERRAMIENTAS</div>
+    <a href="./projects.html" class="project-switch" style="text-decoration:none;color:inherit"><span class="project-ico">${icon('cube',19)}</span><span><strong>Mi taller</strong><small>Proyectos personales</small></span>${icon('chevron',15)}</a>
+    <div class="sidebar-caption nav-cap">MIS PROYECTOS</div><a href="./projects.html" class="nav-link ff-projects-entry" style="text-decoration:none;display:flex;align-items:center;gap:11px">${icon('layers',18)} <span>Biblioteca de proyectos</span> ${icon('chevron',14)}</a><div class="sidebar-caption nav-cap" style="margin-top:22px">HERRAMIENTAS</div>
     <nav>${navLink('design','cube','Diseñador 3D')}${navLink('cuts','layers','Lista de cortes')}${navLink('hardware','package','Herrajes')}${navLink('quote','file','Cotizador')}${navLink('plans','ruler','Planos técnicos')}</nav>
     <div class="sidebar-bottom"><div class="version-tag"><span class="status-dot"></span> MVP / VERSIÓN 0.3</div><div class="sidebar-help">Diseño paramétrico para melamina.<br/>Hecho para crear, ajustar y fabricar.</div><div class="sidebar-foot">FURNITURE FABRIC <span>© 2026</span></div></div>
   </aside>
