@@ -1,6 +1,6 @@
 // Envelope dimensions are user measurements, not approved shop dimensions.
 // Hidden space is shown as potential storage, not automatically added to cut lists.
-export const CAVITY_DEFAULTS=Object.freeze({hiddenLeft:720,hiddenRight:587,extraTop:null});
+export const CAVITY_DEFAULTS=Object.freeze({hiddenLeft:720,hiddenRight:587,extraTop:230}); // Provisional: 2280 mm total interior - 2050 mm abertura.
 export const mm=v=>new Intl.NumberFormat('es-MX',{maximumFractionDigits:1}).format(v);
 export function planCavity(raw={}){
  const openingWidth=Number(raw.nicheWidth??1870), openingHeight=Number(raw.nicheHeight??2050), openingDepth=Number(raw.nicheDepth??790);
@@ -14,5 +14,5 @@ export function planCavity(raw={}){
  if(top!==null&&(!Number.isFinite(top)||top<0||top>2000))issues.push('La altura oculta superior no es válida.');
  const totalWidth=openingWidth+left+right;
  return {openingWidth,openingHeight,openingDepth,left,right,top,totalWidth,totalHeight:top===null?null:top+openingHeight,issues,measurementKnown:{openingWidth:true,openingHeight:true,openingDepth:true,left:true,right:true,top:top!==null},
-  hypotheses:['El ancho total se interpreta en el mismo plano horizontal, sin sumar espesores del concreto.','Los volúmenes laterales se representan como reservas; profundidad lateral, altura libre y acceso deben verificarse.','No fabricar piezas de los laterales ni del altillo sin verificar las medidas, la ruta de montaje y la accesibilidad.']};
+  hypotheses:['El ancho total se interpreta en el mismo plano horizontal, sin sumar espesores del concreto.','Los volúmenes laterales se representan como reservas; profundidad lateral, altura libre y acceso deben verificarse.','Los 2280 mm se interpretan provisionalmente como altura interior TOTAL; 230 mm sobre la abertura. Confirmar este significado antes de fabricar.','No fabricar piezas de los laterales ni del altillo sin verificar las medidas, la ruta de montaje y la accesibilidad.']};
 }

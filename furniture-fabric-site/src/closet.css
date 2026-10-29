@@ -21,3 +21,5 @@
 .cavity-note p{margin:8px 0}
 .cavity-note button{margin-top:8px}
 @media(max-width:550px){.cavity-kpis{grid-template-columns:repeat(2,1fr)}.cavity-grid{grid-template-columns:1fr}.cavity-panel>svg{min-height:150px}}
+
+.cavity-height-banner{background:#eaf1eb;border-left:3px solid #628d70;padding:11px 15px;border-radius:6px;color:#274b36;font-size:12px;line-height:1.6}.cavity-height-banner strong{color:#8b5c2c}
