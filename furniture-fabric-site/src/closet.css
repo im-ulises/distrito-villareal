@@ -23,3 +23,14 @@
 @media(max-width:550px){.cavity-kpis{grid-template-columns:repeat(2,1fr)}.cavity-grid{grid-template-columns:1fr}.cavity-panel>svg{min-height:150px}}
 
 .cavity-height-banner{background:#eaf1eb;border-left:3px solid #628d70;padding:11px 15px;border-radius:6px;color:#274b36;font-size:12px;line-height:1.6}.cavity-height-banner strong{color:#8b5c2c}
+/* Full cavity concept view / pricing */
+.dualview-toggle{display:flex;align-items:center;gap:7px;background:#f1f4ef;border-radius:8px;padding:5px;margin:12px 0}
+.dualview-toggle button{border:0;border-radius:6px;background:transparent;color:#596a5d;font-size:11px;font-weight:700;padding:10px 14px;cursor:pointer;flex:1}
+.dualview-toggle button.active{background:white;color:#1f4a31;box-shadow:0 1px 5px #00000014}
+.full-quote-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:15px 0}
+.full-quote-grid article{background:#edf4ee;border-radius:8px;padding:15px}
+.full-quote-grid article span{display:block;font-size:10px;color:#65816b}.full-quote-grid article b{display:block;margin-top:7px;font-size:22px;letter-spacing:-.7px;color:#21412f}
+.provisional-tag{display:inline-flex;padding:4px 8px;border-radius:5px;background:#ffefcc;color:#8e6013;font-size:9px;font-weight:800;letter-spacing:.2px}
+.full-explanation{padding:13px 16px;background:#eef3f0;border:1px solid #dce5dd;border-radius:8px;color:#4a6352;font-size:12px;line-height:1.6}
+.full-explanation strong{color:#264630}.spec-line{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0;font-size:11px;color:#546c59}.spec-line b{color:#234530}
+@media(max-width:560px){.full-quote-grid{grid-template-columns:1fr 1fr}.full-quote-grid article:last-child{grid-column:span 2}}
