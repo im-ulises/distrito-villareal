@@ -1,9 +1,11 @@
 import {layoutSheets, csvOf, hardwareCsv} from './engine.js';
+import {CAVITY_DEFAULTS,planCavity} from './cavity-engine.js';
 
 // All measurements are millimeters. Project is a spatial design / quoting draft,
 // not an approved shop drawing or an approved manufacturer's drill template.
 export const CLOSET_DEFAULTS = Object.freeze({
-  name:'Clóset Nogales · configuración agosto', nicheWidth:1870,nicheHeight:2050,nicheDepth:790,
+  name:'Clóset Nogales · replanteo', nicheWidth:1870,nicheHeight:2050,nicheDepth:790,
+  ...CAVITY_DEFAULTS,
   sideClearance:10, topClearance:20,bottomClearance:10,depth:600, thickness:15,
   leftBay:470,rightBay:470, drawerCount:4, drawerTop:870, toeKick:70,
   slideLength:500,drawerOpen:0,activeDrawer:'all', finish:'roble',
@@ -32,6 +34,7 @@ export function validateCloset(raw={}){
  if((p.drawerTop-p.toeKick-3*(+p.drawerCount+1))/p.drawerCount<120)issues.push('Los frentes de cajón resultarían demasiado bajos.');
  if(p.depth>p.nicheDepth-5)issues.push('Faltan al menos 5 mm de profundidad libre entre el mueble y el fondo del hueco.');
  if(p.slideLength>p.depth-+p.thickness-35)issues.push('La corredera no cabe en el fondo seleccionado.');
+ issues.push(...planCavity(p).issues);
  if(!PRESETS[p.finish])issues.push('Acabado no reconocido.');
  return issues;
 }
@@ -112,6 +115,9 @@ export function createCloset(raw={}){
     pieces:parts.reduce((s,a)=>s+a.quantity,0),sideTotal:p.sideClearance*2,topFree:p.topClearance,bottomFree:p.bottomClearance,
     clearanceBehind:p.nicheDepth-D,rodLength:left-32};
  const notes=[
+  `El espacio total detrás del concreto es ${p.nicheWidth + p.hiddenLeft + p.hiddenRight} mm: ${p.hiddenLeft} mm ocultos izquierda, ${p.nicheWidth} mm abertura y ${p.hiddenRight} mm ocultos derecha. Estas dos zonas NO están incluidas en el despiece ni presupuesto actual.`,
+  p.extraTop==null?'El altillo oculto superior existe pero su altura no está medida. No se asumirá altura ni se estimarán piezas para ese volumen.':`Altillo oculto superior: ${p.extraTop} mm declarados; medir profundidad y geometría antes de añadir piezas a planos.`,
+  'Para aprovechar los lados debe verificarse cómo introducir las piezas por la abertura frontal y acceder sin chocar con el marco de concreto.',
   'Hueco 1870 × 2050 × 790 mm declarado. Verificar en 3 alturas, 3 anchuras y profundidad mínima antes de fabricar.',
   'Se consideran holguras de instalación (10 mm por lado, 20 mm arriba, 10 mm abajo). Revisar nivel, desplome y zoclo del sitio.',
   'Cajas de cajón con holgura lateral de 12.7 mm por lado como referencia; NO cortar ni barrenar sin confirmar el SKU.',
