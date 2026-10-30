@@ -23,14 +23,14 @@ jobs:
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           repository: im-ulises/autonomous-business-os
-          ref: b861da22cc5f9806c82578dec910dec7757c9917
+          ref: f08e418485ecf9b6e0cccd9d476a6eff5dd244e9
           path: business-os
           persist-credentials: false
 
       - name: Verify immutable source commit
         run: |
           set -euo pipefail
-          test "$(git -C business-os rev-parse HEAD)" = "b861da22cc5f9806c82578dec910dec7757c9917"
+          test "$(git -C business-os rev-parse HEAD)" = "f08e418485ecf9b6e0cccd9d476a6eff5dd244e9"
           test -s business-os/wrangler.jsonc
           grep -q 'autonomous-business-os-web' business-os/wrangler.jsonc
 
