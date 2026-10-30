@@ -2,7 +2,7 @@
 """Publish the verified EVO static artifact through the Cloudflare Pages REST API.
 The token is read only from the runner environment and never logged or saved.
 """
-import base64, hashlib, json, mimetypes, os, sys, tarfile, time, uuid
+import base64, hashlib, io, json, mimetypes, os, sys, tarfile, time, uuid
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from urllib.request import Request, urlopen
@@ -38,28 +38,16 @@ def cf(method,path,data=None,jwt=None,content_type='application/json',allow_miss
             raise RuntimeError(f"Cloudflare API failed; error codes {[e.get('code') for e in result.get('errors',[])]}")
         return result.get('result')
 
-def fetch_asset(item):
-    target=OUTPUT/item['path'];target.parent.mkdir(parents=True,exist_ok=True)
-    for url in item['urls']:
-        for attempt in range(2):
-            try:
-                with urlopen(Request(url,headers={'User-Agent':'Mozilla/5.0'}),timeout=60) as response:data=response.read()
-                if len(data)==item['size'] and digest(data)==item['sha256']:
-                    target.write_bytes(data);return
-            except (HTTPError,URLError,TimeoutError):pass
-    raise RuntimeError('Asset did not match verified source: '+item['path'])
-
 def prepare():
-    archive=HERE/'site-text.tar.gz'
-    if digest(archive.read_bytes())!=CONFIG['text_bundle_sha256']:raise RuntimeError('Text bundle verification failed')
+    parts=[]
+    for item in CONFIG['archive_parts']:
+        data=(HERE/item['path']).read_bytes()
+        if len(data)!=item['size'] or digest(data)!=item['sha256']:raise RuntimeError('Archive part verification failed: '+item['path'])
+        parts.append(data)
+    data=b''.join(parts)
+    if digest(data)!=CONFIG['archive_sha256']:raise RuntimeError('Full archive verification failed')
     OUTPUT.mkdir(parents=True,exist_ok=True)
-    with tarfile.open(archive) as package:package.extractall(OUTPUT,filter='data')
-    complete=0
-    with ThreadPoolExecutor(max_workers=8) as pool:
-        futures=[pool.submit(fetch_asset,item) for item in CONFIG['binary']]
-        for future in as_completed(futures):
-            future.result();complete+=1
-            if complete%40==0:log(f'Validated binary assets: {complete}/{len(futures)}')
+    with tarfile.open(fileobj=io.BytesIO(data)) as package:package.extractall(OUTPUT,filter='data')
     for item in CONFIG['files']:
         path=OUTPUT/item['path']
         if not path.is_file() or path.stat().st_size!=item['size'] or digest(path.read_bytes())!=item['sha256']:
