@@ -1,0 +1,86 @@
+name: Publish Autonomous Business OS Preview (Cloudflare Pages)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/business-os-cloudflare-preview.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: business-os-cloudflare-preview
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Fetch Business OS preview from dedicated repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: im-ulises/autonomous-business-os
+          ref: feat/cloudflare-preview
+          path: business-os
+          persist-credentials: false
+
+      - name: Validate standalone preview before publishing
+        run: |
+          set -euo pipefail
+          test -s business-os/.cloudflare-preview/index.html
+          grep -q "Autonomous OS" business-os/.cloudflare-preview/index.html
+          test ! -L business-os/.cloudflare-preview/index.html
+
+      - name: Install pinned Wrangler (no secrets in build)
+        run: npm install --global wrangler@4.133.0
+
+      - name: Ensure isolated Cloudflare Pages project
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          curl --fail-with-body --silent --show-error \
+            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
+            -o /tmp/business-os-pages.json
+          if node -e '
+            const d=require("/tmp/business-os-pages.json");
+            if(d.success!==true || !Array.isArray(d.result)) process.exit(3);
+            process.exit(d.result.some(p=>p.name==="autonomous-business-os-preview")?0:2);
+          '; then
+            echo "Pages project already exists"
+          else
+            wrangler pages project create autonomous-business-os-preview --production-branch main
+          fi
+
+      - name: Deploy standalone Business OS preview
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+        run: |
+          set -euo pipefail
+          wrangler pages deploy business-os/.cloudflare-preview \
+            --project-name autonomous-business-os-preview \
+            --branch main \
+            --commit-hash "$(git -C business-os rev-parse HEAD)"
+
+      - name: Verify deployed preview
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if curl -fLsS --max-time 15 \
+              https://autonomous-business-os-preview.pages.dev/ \
+              -o /tmp/business-os-live.html \
+              && grep -q "Autonomous OS" /tmp/business-os-live.html; then
+              echo "Published: https://autonomous-business-os-preview.pages.dev/"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Cloudflare deployment URL did not pass verification"
+          exit 1
