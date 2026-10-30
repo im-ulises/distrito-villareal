@@ -86,3 +86,36 @@ jobs:
           done
           echo "The Worker deployed but did not pass live verification"
           exit 1
+
+      - name: Redirect the original Pages preview to the new Worker
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/business-os-redirect"
+          cat > "$RUNNER_TEMP/business-os-redirect/_redirects" <<'REDIRECTS'
+          /* https://autonomous-business-os-web.axlulisesfs.workers.dev/:splat 302
+          REDIRECTS
+          cat > "$RUNNER_TEMP/business-os-redirect/index.html" <<'HTML'
+          <!doctype html><html lang="es"><meta charset="utf-8"><meta http-equiv="refresh" content="0;url=https://autonomous-business-os-web.axlulisesfs.workers.dev/"><title>Autonomous Business OS</title><a href="https://autonomous-business-os-web.axlulisesfs.workers.dev/">Abrir Autonomous Business OS</a></html>
+          HTML
+          npx wrangler pages deploy "$RUNNER_TEMP/business-os-redirect" \
+            --project-name autonomous-business-os-preview \
+            --branch main
+
+      - name: Verify original Pages URL now serves new UI
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if curl -fLsS --max-time 15 \
+              https://autonomous-business-os-preview.pages.dev/ \
+              -o /tmp/business-os-old-url.html \
+              && grep -q "Autonomous Business OS" /tmp/business-os-old-url.html; then
+              echo "Original preview URL now resolves to the current Business OS"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Original Pages URL did not resolve successfully"
+          exit 1
