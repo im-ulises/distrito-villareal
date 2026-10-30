@@ -1,0 +1,49 @@
+name: Publish EVO Studios to Cloudflare via API
+
+on:
+  push:
+    branches: [deploy-evo-studios-20261030]
+    paths:
+      - ".github/workflows/evo-studios-cloudflare-api.yml"
+      - ".cloudflare-deploy/evo-studios-new-site/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: evo-studios-new-site-cloudflare-api
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout isolated deployment artifact
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install hash implementation
+        run: python -m pip install --disable-pip-version-check blake3==1.0.8
+
+      - name: Publish verified EVO artifact through Cloudflare REST API
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: "756a510f19b5f736d154fac36ff12749"
+        run: python .cloudflare-deploy/evo-studios-new-site/publish.py
+
+      - name: Save public deployment receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evo-studios-cloudflare-deployment
+          path: .cloudflare-deploy/evo-studios-new-site/deployment-result.json
+          if-no-files-found: ignore
+          retention-days: 30

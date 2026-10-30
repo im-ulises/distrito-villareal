@@ -1,0 +1,3738 @@
+{
+  "source_commit": "e592e3ad34b42e22596bdfcad21d229b6e215086",
+  "text_bundle_sha256": "95eda65b9f2968dfa601486ddb93703c2c8e1b0f757a334526498069dbc01049",
+  "binary": [
+    {
+      "path": "assets/external/0bc96cd0d5b0--F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2",
+      "urls": [
+        "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2"
+      ],
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "size": 14888
+    },
+    {
+      "path": "assets/external/0cc476d41deb-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fAZ9hjQ.ttf"
+      ],
+      "sha256": "6906c67c75ca4ab456b46fa2a06150dcca99db018cccef86fd35183ac74b21e3",
+      "size": 66692
+    },
+    {
+      "path": "assets/external/12107d7e333d-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCGB5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCGB5QiK4.ttf"
+      ],
+      "sha256": "68ec4dbab996c09fdf7ed62e845367898db15f339e5ea2f8b3f33b3d3ca6c8a2",
+      "size": 59728
+    },
+    {
+      "path": "assets/external/13722ff98bf5-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcPtxRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcPtxRipWA.ttf"
+      ],
+      "sha256": "fd64154c8a7f01b783ffa7deb46524faf1e30568aca34e5e88a0e00d79938c52",
+      "size": 67940
+    },
+    {
+      "path": "assets/external/18956783700b-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_f_R25ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_f_R25ZyEU.ttf"
+      ],
+      "sha256": "3886ec1ebae707d4a1a3b080811499bb26afb9fb28c798103b0789f2474771d2",
+      "size": 24424
+    },
+    {
+      "path": "assets/external/196082c3f108-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYAZ9hjQ.ttf"
+      ],
+      "sha256": "1bfc2a55504add1a87771cde89865a8b1a2cf6137e4309e9e03cfa9134786f7f",
+      "size": 66808
+    },
+    {
+      "path": "assets/external/1e19c8b6f2d1-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHh5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHh5QiK4.ttf"
+      ],
+      "sha256": "d748ed8c1e00dafa9503402a0360e66dbce755d10525048f6e2a0711705707e4",
+      "size": 59276
+    },
+    {
+      "path": "assets/external/223cdd8d3096-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTch9tRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTch9tRipWA.ttf"
+      ],
+      "sha256": "656bafe54e2a0bd64f594548da2aafa82711bab424c65c513dddc8ec92fee59d",
+      "size": 67944
+    },
+    {
+      "path": "assets/external/2305f0853248-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfAZ9hjQ.ttf"
+      ],
+      "sha256": "2dfcb6f984e0ed6f225d5298e6d56c8ba264a36424dc62e31f7d0f3f49f43175",
+      "size": 66868
+    },
+    {
+      "path": "assets/external/24b5ad699155-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHx5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHx5QiK4.ttf"
+      ],
+      "sha256": "3a6dd8ab24ad88e0ce9785b573e654cf9170f82dea0a512d5c6e69c0b4c44c71",
+      "size": 59232
+    },
+    {
+      "path": "assets/external/44a0d91536ba-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dtRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dtRipWA.ttf"
+      ],
+      "sha256": "72a6e5d274641c5be347bc5d07e4c24fd66644c106223a3444337562353a1d84",
+      "size": 67624
+    },
+    {
+      "path": "assets/external/46a87a5a69c5-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYAZ9hjQ.ttf"
+      ],
+      "sha256": "5b608ee73c59a14777bba3863bcb4bf01d0888ca0ad94142ccd17edfb702749b",
+      "size": 67012
+    },
+    {
+      "path": "assets/external/5519596cb4cb-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_chQG5ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_chQG5ZyEU.ttf"
+      ],
+      "sha256": "ccf337841c43b2d9d7280e03f096996343722df77200400cb26bf9468c0e280b",
+      "size": 24096
+    },
+    {
+      "path": "assets/external/5e7aa2d48b3a-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xwHx5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xwHx5QiK4.ttf"
+      ],
+      "sha256": "4bb4294afd5b920d3aec8318c78c2cd14da392e37db7b0add5f59660db73a2f9",
+      "size": 59408
+    },
+    {
+      "path": "assets/external/60e362f549c2-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zrGB5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zrGB5QiK4.ttf"
+      ],
+      "sha256": "61887805975352273fad26aed00e031f336238d8fbd08787eb9f16d40c1e9501",
+      "size": 59616
+    },
+    {
+      "path": "assets/external/676b2b417dc9-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hjQ.ttf"
+      ],
+      "sha256": "98cb81a8ecd586ea2297735ec031b29bfbcd1d062f097600cfa09cdb640dd2b3",
+      "size": 67028
+    },
+    {
+      "path": "assets/external/6f5740f738cf-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyfAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyfAZ9hjQ.ttf"
+      ],
+      "sha256": "d6f57997e9e849e026c33882b5447374e028f954b14d427510ddf6c034362581",
+      "size": 66896
+    },
+    {
+      "path": "assets/external/723b804690ef-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc69tRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc69tRipWA.ttf"
+      ],
+      "sha256": "fc407a4ed015719c419f4b686a4c423422fdcee8444d9a26b97b1421347c7f2e",
+      "size": 67728
+    },
+    {
+      "path": "assets/external/7c761112b2ac-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf"
+      ],
+      "sha256": "db2007cac3f58427030755b0ff368cceef98dc503cf6d3d2aa366a4743f9749f",
+      "size": 66592
+    },
+    {
+      "path": "assets/external/824a63960cc4-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCHx5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCHx5QiK4.ttf"
+      ],
+      "sha256": "029a5f5ac42597d03a9927d3ab9982faeec66bf13bd440e99ef3d102c61a1727",
+      "size": 59500
+    },
+    {
+      "path": "assets/external/85cf2323f7bd-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A7Yd-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A7Yd-EI84Q.ttf"
+      ],
+      "sha256": "c341094aa923fb45b70dd2b77afad87bbcbe0cd9e47b1a495a70c83c0384af0f",
+      "size": 24660
+    },
+    {
+      "path": "assets/external/8a01aff9a099-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_fWR25ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_fWR25ZyEU.ttf"
+      ],
+      "sha256": "403c7198fe6e36c40cc8933957d271c97fe28e5de0e471b87428d89ad1a73df9",
+      "size": 24388
+    },
+    {
+      "path": "assets/external/8d3cb755fc28-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hjQ.ttf"
+      ],
+      "sha256": "16586b28b0432e68f0099445946195dc97909ff7744f764eed708b38e61ca6c9",
+      "size": 66788
+    },
+    {
+      "path": "assets/external/8f56411d3a9f--F6qfjptAgt5VM-kVkqdyU8n3twJ8lc.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/ibmplexmono/v20/-F6qfjptAgt5VM-kVkqdyU8n3twJ8lc.ttf"
+      ],
+      "sha256": "4fc14a73ca53ba9d32fd759ae1ca1a3133326035d0dd337862b3ee1633cc156e",
+      "size": 129916
+    },
+    {
+      "path": "assets/external/901cfb83cfba-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjPQ-aWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjPQ-aWy5X.ttf"
+      ],
+      "sha256": "5481649ae958a5e23437731b004e5edf8c947464f572ad797ea369a613a4f85b",
+      "size": 58104
+    },
+    {
+      "path": "assets/external/92cbfcbfcc27-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyeAZ9hjQ.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyeAZ9hjQ.ttf"
+      ],
+      "sha256": "a58875806962305219b52a406f2c12d803cbb43e05e2cf0576bc580bbffd1b04",
+      "size": 66892
+    },
+    {
+      "path": "assets/external/9656f6aac244-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A1Ea-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A1Ea-EI84Q.ttf"
+      ],
+      "sha256": "362efbbc8e8ef8e641db4d8902149d6123e9d2b257c54998b97d47ee041e1034",
+      "size": 24940
+    },
+    {
+      "path": "assets/external/9699f125c906-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTccNxRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTccNxRipWA.ttf"
+      ],
+      "sha256": "c4de717022aa9c2564ee39997f56a9ab68c021891bef2005cd2fd54c862cc89c",
+      "size": 68120
+    },
+    {
+      "path": "assets/external/9b00c4243120-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcB9xRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcB9xRipWA.ttf"
+      ],
+      "sha256": "2f7d923e292f7c7c03d7a1d266f13ff041a765db8a272cc9cc377735a48ed783",
+      "size": 67968
+    },
+    {
+      "path": "assets/external/9b5512e0e075-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_ehR25ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_ehR25ZyEU.ttf"
+      ],
+      "sha256": "97e2475de18c94afa6c2eca47e9c711786a074f2305854c0fea693e8c2f599a8",
+      "size": 24432
+    },
+    {
+      "path": "assets/external/a8176bfba8a0-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3Ax8a-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3Ax8a-EI84Q.ttf"
+      ],
+      "sha256": "05fdfa3eead906104ac45305e9ba431e53d683fed741db8656de5b20343a60dc",
+      "size": 24920
+    },
+    {
+      "path": "assets/external/aab57f60339a--F63fjptAgt5VM-kVkqdyU8n5ig.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n5ig.ttf"
+      ],
+      "sha256": "a7fdc993f9f0387caedba4e42521136fa97e4c0837ae6239bf0413ccf8af00c2",
+      "size": 128812
+    },
+    {
+      "path": "assets/external/ab32c56b9f6c-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3AzYa-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3AzYa-EI84Q.ttf"
+      ],
+      "sha256": "966e9c3b579a0bfad75ff50b5e7caeea27f6169f1c30e7432d968cebed3138b7",
+      "size": 25044
+    },
+    {
+      "path": "assets/external/b16e118012a3-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw-aWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw-aWy5X.ttf"
+      ],
+      "sha256": "8655b2e81072d5bdb621aaffb56459d11b61b98baf0fba5c4b64c6b0bcf3056c",
+      "size": 57964
+    },
+    {
+      "path": "assets/external/b3669257fa01-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ycGB5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ycGB5QiK4.ttf"
+      ],
+      "sha256": "0d93acb2058a9c8c39452efcbaa271356e9ba934fca4c483af3660454c4dba9e",
+      "size": 59528
+    },
+    {
+      "path": "assets/external/b4285b1ca5d8-placeholder.png",
+      "urls": [
+        "https://etemplates.wdesignkit.com/widgets/wp-content/plugins/elementor/assets/images/placeholder.png"
+      ],
+      "sha256": "1a8352b9372452ab024b5dfd3c74cd8fac2c84e7ff152879f83949c4707fd87e",
+      "size": 6146
+    },
+    {
+      "path": "assets/external/b7ef74852830-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A2ga-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A2ga-EI84Q.ttf"
+      ],
+      "sha256": "f036abf66e7037c81ea884e5399c6f0f166950d223b591e5c35c8fe0f9d0e311",
+      "size": 25052
+    },
+    {
+      "path": "assets/external/bb5ad1cb32e7-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjw-aWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjw-aWy5X.ttf"
+      ],
+      "sha256": "146ae616266b189ddb3cf8388ce5eff56717d187cea96bd0cf0350b8672afa07",
+      "size": 58304
+    },
+    {
+      "path": "assets/external/bbf256786c22-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ylGB5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ylGB5QiK4.ttf"
+      ],
+      "sha256": "e24d85ed25918a1af93caa31650e7a20a9f5c540311b1a5fa314f4287501dcf4",
+      "size": 59556
+    },
+    {
+      "path": "assets/external/bc1f53b59a0a-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjUQ-aWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjUQ-aWy5X.ttf"
+      ],
+      "sha256": "e20ade22c329234b30ba9384361c6e20c0d59af1266804854c144d6d00a2cc9e",
+      "size": 58252
+    },
+    {
+      "path": "assets/external/bdc18eef5369-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdtRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdtRipWA.ttf"
+      ],
+      "sha256": "7fc5a701c23c474951b1834a7e376df47bf414ea446243f7c687bf3e228e20fb",
+      "size": 68012
+    },
+    {
+      "path": "assets/external/bfbebb311dd2-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj0QiaWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj0QiaWy5X.ttf"
+      ],
+      "sha256": "c90eb1b5369976faa882ec1d9299bab5505a78647006b2972e70c801113bc184",
+      "size": 58300
+    },
+    {
+      "path": "assets/external/d14d8028e6bc-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_eYR25ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_eYR25ZyEU.ttf"
+      ],
+      "sha256": "8f5be4b8947df42c58db9bd41ffc61bd04a9c037340358ef6fc2ea15fab08981",
+      "size": 24352
+    },
+    {
+      "path": "assets/external/d341f0441ddd-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_dNQG5ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_dNQG5ZyEU.ttf"
+      ],
+      "sha256": "3fb2f6d7b4b0c2057b4848d6ae0e4dac97adb4128aba0b3fa6c55e235e1eadc1",
+      "size": 24196
+    },
+    {
+      "path": "assets/external/e607a1883f39-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A4Qd-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A4Qd-EI84Q.ttf"
+      ],
+      "sha256": "c6c965cbcd51a6187317d5c8a91a6030df50743f20612231bd39ea21957c61f0",
+      "size": 24796
+    },
+    {
+      "path": "assets/external/ec83488c65d6-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A-gd-EI84Q.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A-gd-EI84Q.ttf"
+      ],
+      "sha256": "18c9ff3f977a4559f1f7d2a1a6c8a1118232c3fb7df9abd015739a08b3db946d",
+      "size": 24672
+    },
+    {
+      "path": "assets/external/ee0f3d0d808c-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj6AiaWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj6AiaWy5X.ttf"
+      ],
+      "sha256": "5f20d7df0079d93b9a4ed5d4ce891a1ab9c00db4c4ce73ba1da995f105cd31a9",
+      "size": 58340
+    },
+    {
+      "path": "assets/external/ee32603ccc9a-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdxRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdxRipWA.ttf"
+      ],
+      "sha256": "8799951be08d482f02cb73ea3a697a684d720b032d426c818616d0c6026b7b86",
+      "size": 68148
+    },
+    {
+      "path": "assets/external/f1175aa3869f-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_d_QG5ZyEU.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/figtree/v9/_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_d_QG5ZyEU.ttf"
+      ],
+      "sha256": "06ef355f4fe14bba01df14e655de9bc33629097d65b60a0d863c84e9170483f9",
+      "size": 24164
+    },
+    {
+      "path": "assets/external/f71df737a2f1-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjwiaWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjwiaWy5X.ttf"
+      ],
+      "sha256": "b61656a8612f26e0f823260572b9df43828fa947e8c6b8640caab0053e1dbf66",
+      "size": 58536
+    },
+    {
+      "path": "assets/external/f7f5d22b48f5-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0wcHx5QiK4.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0wcHx5QiK4.ttf"
+      ],
+      "sha256": "82ad8b502574ad1b5efba2905ab9e61dabeda4548b4fea1c79a1e714ebb86f37",
+      "size": 59412
+    },
+    {
+      "path": "assets/external/fd77f8459084-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjpgiaWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjpgiaWy5X.ttf"
+      ],
+      "sha256": "4df90338ec02fa7009f41f245ba9c88762cfd21ed38df3fc72b98721e8f4abdf",
+      "size": 58468
+    },
+    {
+      "path": "assets/external/fe5f1c301deb-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw6aWy5X.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/intertight/v9/NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw6aWy5X.ttf"
+      ],
+      "sha256": "b7aeaa858658536a09a92d9f7baf313f940fc07bdad1416d83931ef07d42c794",
+      "size": 58280
+    },
+    {
+      "path": "assets/external/ff202abd4481-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dpRipWA.ttf",
+      "urls": [
+        "https://fonts.gstatic.com/s/inter/v20/UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dpRipWA.ttf"
+      ],
+      "sha256": "575622c99c4429a0e398dc224c0d514fec62f4e48666be52ea69e752324659cf",
+      "size": 68020
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2"
+      ],
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "size": 20156
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+        "https://gianmediagroup.com/core/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      ],
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "size": 48256
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+        "https://gianmediagroup.com/core/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2"
+      ],
+      "sha256": "77fefe8ca19b9f69b5284832c519e0493127c1f091f0a8936884be7721c4e618",
+      "size": 44872
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.eot",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.54.0",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.54.0"
+      ],
+      "sha256": "370b9a40e0ede1998a6216a71aa1758aad364501e8d49e4d6a48fd045c60f56f",
+      "size": 241948
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.54.0",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.54.0"
+      ],
+      "sha256": "1885a4223aca0f98da9bee90da6f9e450680ede9c6e6c06863507d48499e6d45",
+      "size": 241788
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.54.0",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.54.0"
+      ],
+      "sha256": "37d6c42f4c2ba9b39cdb6235983e896e0429a956999416f82c7edb77d4f149ae",
+      "size": 133464
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.54.0",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.54.0"
+      ],
+      "sha256": "1d7ab8c66c7fbbf2059cc927b4a2533de146e2cd05179763a55a00e85721b4bc",
+      "size": 108152
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot"
+      ],
+      "sha256": "52633a4bd205e19c3cd09c8d2ee281557bc6242a99e7f69cad6c49a4d1fa9c06",
+      "size": 151556
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf"
+      ],
+      "sha256": "7c6ce17d6e55fb2b5267880fd0939c7e2be6de99bb57fa56a7fe2f40146c0137",
+      "size": 151368
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff"
+      ],
+      "sha256": "284ec4299d1c93376385ef74c2aeaf7af4e1c6e63f5163a5e1e85ab4c5c79d76",
+      "size": 97804
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2"
+      ],
+      "sha256": "6b2680fab784d245cbb23d3b51e8d18740e8fc1c7c1c8eadcf0b2b7612125ff8",
+      "size": 81612
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot"
+      ],
+      "sha256": "cf83ffb8cf0023bd439dfdd5d02f1954b6ee027e85897d6cfc5f90bbca9ec1d2",
+      "size": 34034
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf"
+      ],
+      "sha256": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+      "size": 33736
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff"
+      ],
+      "sha256": "14c9db4ff87fde08f67b0a69dd594bab6d87174812a0dbd34c59833bfed8cc0e",
+      "size": 16276
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2"
+      ],
+      "sha256": "8afc6e5e842baab16010c2ce6fcf48ec4ded8e1579a37c1f1bc027e120d04951",
+      "size": 13276
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot"
+      ],
+      "sha256": "75a761159ae266c5332a4f266e07a5543712ffb76ee0260b07782195c04dc364",
+      "size": 203030
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf"
+      ],
+      "sha256": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+      "size": 202744
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff"
+      ],
+      "sha256": "74edc18b67c487e32f181719fdb347e2e77020744651f446e9acd7bd6821e2e7",
+      "size": 101652
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2",
+        "https://gianmediagroup.com/core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2"
+      ],
+      "sha256": "d0b4256abed72481585662971262eabee345c19f837af00d7ce24239d3b40eef",
+      "size": 78196
+    },
+    {
+      "path": "core/views/ff55dedaeb/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/views/ff55dedaeb/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2",
+        "https://gianmediagroup.com/core/views/ff55dedaeb/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2"
+      ],
+      "sha256": "b6e7adca884c51549c66384fec54747fa2967ac6ad5655ed02c5da5b682a9ba2",
+      "size": 106112
+    },
+    {
+      "path": "core/views/ff55dedaeb/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/core/views/ff55dedaeb/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+        "https://gianmediagroup.com/core/views/ff55dedaeb/assets/fonts/manrope/Manrope-VariableFont_wght.woff2"
+      ],
+      "sha256": "ce340d48531930f3f2c8b7c47d149f82c9f4413548dd216e0f4d9af94a87c374",
+      "size": 53600
+    },
+    {
+      "path": "storage/2026/07/Client-1-300x120.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/07/Client-1-300x120.png"
+      ],
+      "sha256": "2ff9a1b0433383cac89a5e6fa949a34a6daa97905aee2af937051c75f68f6ffe",
+      "size": 13133
+    },
+    {
+      "path": "storage/2026/07/Client-1.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-1.png",
+        "https://gianmediagroup.com/storage/2026/07/Client-1.png"
+      ],
+      "sha256": "69842959a29d0da98f968c4e31d28f999c56dbd0ada9ef5460b5896f038b0dda",
+      "size": 19469
+    },
+    {
+      "path": "storage/2026/07/Client-2.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-2.png"
+      ],
+      "sha256": "58565b79d348832637df859325c5b6b5b8483274211b35a67278e20388896f13",
+      "size": 13033
+    },
+    {
+      "path": "storage/2026/07/Client-3.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-3.png"
+      ],
+      "sha256": "f76fc8d2466d123fc8af81cd9d1325daeb8ce0a6fa9abf1caf55342f3aee7ba9",
+      "size": 15708
+    },
+    {
+      "path": "storage/2026/07/Client-4.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-4.png"
+      ],
+      "sha256": "480d6f8b3f2c4562678f4793761b5b3472ba82a39524d1439cdc5a437f273f96",
+      "size": 11152
+    },
+    {
+      "path": "storage/2026/07/Client-5.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-5.png"
+      ],
+      "sha256": "52ba93e1818daf931e86582de88659cdd4a035d95293ffb86b8692b747e126d1",
+      "size": 23276
+    },
+    {
+      "path": "storage/2026/07/Client-6.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-6.png"
+      ],
+      "sha256": "1c6832c4951985f860cada4421dc520b9ae6d5d4360af6a2a9ef1280b5b84305",
+      "size": 11290
+    },
+    {
+      "path": "storage/2026/07/Client-7.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/Client-7.png"
+      ],
+      "sha256": "fbc34549545eb9fedb72dfd099d8c15a1669878e08e0f9b3a58c309e205f8320",
+      "size": 19711
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-150x150.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/GMG-Logo-Icon-150x150.png",
+        "https://gianmediagroup.com/storage/2026/07/GMG-Logo-Icon-150x150.png"
+      ],
+      "sha256": "ac96f722817f49510aac301a3e1398eb169f888d5f6b8a606c07b5a0e20adba7",
+      "size": 3524
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-300x300.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/GMG-Logo-Icon-300x300.png",
+        "https://gianmediagroup.com/storage/2026/07/GMG-Logo-Icon-300x300.png"
+      ],
+      "sha256": "522b14a31382c42e259b57c585d55a9c1e5adaf0b350add41ffac2290966665b",
+      "size": 9622
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-480x480.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/GMG-Logo-Icon-480x480.png",
+        "https://gianmediagroup.com/storage/2026/07/GMG-Logo-Icon-480x480.png"
+      ],
+      "sha256": "a54513d65b0ac7bbaf4b4812432e255aaefd35ae4f7a68f30b71fc215507a23d",
+      "size": 19511
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/GMG-Logo-Icon.png",
+        "https://gianmediagroup.com/storage/2026/07/GMG-Logo-Icon.png"
+      ],
+      "sha256": "cb58eef6807dac814968215d2ee7f53519a07ba6da8eead67734b5b8934cbbf6",
+      "size": 20069
+    },
+    {
+      "path": "storage/2026/07/Grid-Background-Gian-Media.mp4",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/07/Grid-Background-Gian-Media.mp4"
+      ],
+      "sha256": "f69076c98f2e2e519618fc2790bc640cf0e9d0e7219c5320399f32fdb6337147",
+      "size": 4782890
+    },
+    {
+      "path": "storage/2026/07/bg-1.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/07/bg-1.webp"
+      ],
+      "sha256": "d9508cd65b4a7392fc014513e06e116fab97b4ce16bc99ed6b08cccd40afb559",
+      "size": 5618
+    },
+    {
+      "path": "storage/2026/07/cropped-Gian-Media-Group-Favicon.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/07/cropped-Gian-Media-Group-Favicon.png",
+        "https://gianmediagroup.com/storage/2026/07/cropped-Gian-Media-Group-Favicon.png"
+      ],
+      "sha256": "89b1b207cbf466241c2c69784bd5c00299e4355eddf17c91b33966de7163ae4e",
+      "size": 16769
+    },
+    {
+      "path": "storage/2026/07/elementor/thumbs/GMG-Logo-Icon-rqobjj6hz9owe3p8lf4qbvtacnb9dojqstemykuc3u.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/07/GMG-Logo-Icon.png"
+      ],
+      "sha256": "cb58eef6807dac814968215d2ee7f53519a07ba6da8eead67734b5b8934cbbf6",
+      "size": 20069
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-1053x2048.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-1053x2048.png"
+      ],
+      "sha256": "56ec751e2f6f25eff3b824a7ad72c6b7bd5c8aba8a2af846331f7143ac159588",
+      "size": 412705
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-154x300.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-154x300.png"
+      ],
+      "sha256": "81dac98073ebc9ccb9653c194188e2142c133aa95c435330ebff687da880f943",
+      "size": 20696
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-480x934.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-480x934.png"
+      ],
+      "sha256": "90afeb462c8cc60fdf40afb9018430726beac1e1030f0e9c76a6c7c2108e2c83",
+      "size": 119734
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-526x1024.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-526x1024.png"
+      ],
+      "sha256": "facbd83f412026dd4e59a528cc885d16113edbf76f07a77093a7e0963202781c",
+      "size": 138929
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-768x1494.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-768x1494.png"
+      ],
+      "sha256": "a5b0de01701b08460ebe9ca6fa238bfc8304f45761068698a3148d24175402f9",
+      "size": 250504
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-789x1536.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-789x1536.png"
+      ],
+      "sha256": "0fb0b0ba807c39ddb654673025669605a769b56543229557f4e9c0fcc4cec39a",
+      "size": 262182
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-scaled.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-scaled.png"
+      ],
+      "sha256": "a330c645a1d829931ac95969c9bf7e6b58fca62cfc08f5b77cac16812131b353",
+      "size": 587008
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-180x180.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/08/cropped-GMG-Black-180x180.png",
+        "https://gianmediagroup.com/storage/2026/08/cropped-GMG-Black-180x180.png"
+      ],
+      "sha256": "c8192c3192416ca5c5413de0a190cce74b12de35fb68aaee3bb7f02352428eee",
+      "size": 4504
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-192x192.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/08/cropped-GMG-Black-192x192.png",
+        "https://gianmediagroup.com/storage/2026/08/cropped-GMG-Black-192x192.png"
+      ],
+      "sha256": "799dc0d012c9e70fd49e5c425ba64147f35a10ce536303749756496644af74fa",
+      "size": 4894
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-270x270.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/08/cropped-GMG-Black-270x270.png",
+        "https://gianmediagroup.com/storage/2026/08/cropped-GMG-Black-270x270.png"
+      ],
+      "sha256": "d16dbe5a4bce51dcebc481652018a532c59c8f732d6a6961c24ce87a1d6c2c65",
+      "size": 8368
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-32x32.png",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/08/cropped-GMG-Black-32x32.png",
+        "https://gianmediagroup.com/storage/2026/08/cropped-GMG-Black-32x32.png"
+      ],
+      "sha256": "f7d0f28a0907a66b3e2f3e1aca43a8658bd9c4829ed103b642299079a8f5f291",
+      "size": 702
+    },
+    {
+      "path": "storage/2026/08/cubic-loop.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/08/cubic-loop.webp"
+      ],
+      "sha256": "d6e7db076c3452baac61242820b1d55216d498937fd632f086150d9a35ebe8ce",
+      "size": 1033404
+    },
+    {
+      "path": "storage/2026/09/3d-design.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/09/3d-design.png"
+      ],
+      "sha256": "3f0c2fd2e297e3c1746637ffff16d1d89ac147ff0807e00eab50203dc98a4f35",
+      "size": 481725
+    },
+    {
+      "path": "storage/2026/09/A1.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/A1.webp"
+      ],
+      "sha256": "d948b88e44c7d3c6663ab1cf5e0ef2c12b9ea3eb8e127d137a08c29dec7c87ef",
+      "size": 26614
+    },
+    {
+      "path": "storage/2026/09/A11.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/A11.webp"
+      ],
+      "sha256": "a88aaa7b7aa54573f22d64085503a1b99a9f76957375a4bb180a92c508e6f911",
+      "size": 32594
+    },
+    {
+      "path": "storage/2026/09/A2.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/A2.webp"
+      ],
+      "sha256": "2c8ae66ca946536734089d31ca6cc16ff968f81118f6bd922aa03301dd9b4419",
+      "size": 23938
+    },
+    {
+      "path": "storage/2026/09/A8.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/A8.webp"
+      ],
+      "sha256": "31f32c09390c29ff74ba03903083455ea251a172cb2fa36263d0c9d87746b2cf",
+      "size": 17528
+    },
+    {
+      "path": "storage/2026/09/A9.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/A9.webp"
+      ],
+      "sha256": "0473dbea200021559af9c8258ecae0e2d8dd52d239e6a3345f2210ef94b07402",
+      "size": 30512
+    },
+    {
+      "path": "storage/2026/09/V1.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/V1.webp"
+      ],
+      "sha256": "8f0dde10b80b6facc7a60ad505dc9d65e9b7300349ea2eaf67fef696b22219ba",
+      "size": 8262540
+    },
+    {
+      "path": "storage/2026/09/mediaventures.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/09/mediaventures.png"
+      ],
+      "sha256": "ce04d1c1c72333688647efff70674d9b15cbbafeb87929d45c4933b0d3ea77d4",
+      "size": 749378
+    },
+    {
+      "path": "storage/2026/09/seo-service-239x300.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/seo-service-239x300.webp"
+      ],
+      "sha256": "9dda307b57a6cdca65919b78642be0a8976b9c60a2a0462e70447a75c1462b6d",
+      "size": 6232
+    },
+    {
+      "path": "storage/2026/09/seo-service.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/seo-service.webp"
+      ],
+      "sha256": "87965a06e43f24f353daef5e1c3894090c711adc05d87658cf1729dbf3fdeefb",
+      "size": 19566
+    },
+    {
+      "path": "storage/2026/09/seochart.png",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/09/seochart.png"
+      ],
+      "sha256": "a3124c22ded5e556ebd274032c1adde837207bef6b4b77e4681a728da4e1cbd1",
+      "size": 335198
+    },
+    {
+      "path": "storage/2026/09/uiuxdesign-service-239x300.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/uiuxdesign-service-239x300.webp"
+      ],
+      "sha256": "cb2fc0608dc40aed363bd81107fdfba06985f7f41788a43498be29c529bc257f",
+      "size": 4416
+    },
+    {
+      "path": "storage/2026/09/uiuxdesign-service.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/uiuxdesign-service.webp",
+        "https://gianmediagroup.com/storage/2026/09/uiuxdesign-service.webp"
+      ],
+      "sha256": "779249c2d0993972875d3fac52bd0c0a4f668c3b4b4fe335a11168dc7af00fcd",
+      "size": 17224
+    },
+    {
+      "path": "storage/2026/09/web-development-service-239x300.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/web-development-service-239x300.webp"
+      ],
+      "sha256": "f2beb6b0606df8673a27caa6315e9794c596c35ea1a080f4ccec2fec835d7438",
+      "size": 10104
+    },
+    {
+      "path": "storage/2026/09/web-development-service.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/09/web-development-service.webp",
+        "https://gianmediagroup.com/storage/2026/09/web-development-service.webp"
+      ],
+      "sha256": "45f3bb430721aaaf08514e93215d17f70ce0dd7e796c55ccba981a503179789a",
+      "size": 44208
+    },
+    {
+      "path": "storage/2026/10/AEO-service-300x176.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/AEO-service-300x176.webp"
+      ],
+      "sha256": "691aaacacea24904bf994fcc13bfcae4c65b0d94579a134b90b3d29ed15d908d",
+      "size": 4418
+    },
+    {
+      "path": "storage/2026/10/AEO-service-768x450.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/AEO-service-768x450.webp"
+      ],
+      "sha256": "6aa8a937a3400fde259e5cd67faab12824e2f882842c962637973dcd07944888",
+      "size": 18180
+    },
+    {
+      "path": "storage/2026/10/AEO-service.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/AEO-service.webp"
+      ],
+      "sha256": "7cc993b7670019d7e5036453f84900a4272a6d67808b3acdae0a9f7dd6c9689c",
+      "size": 35672
+    },
+    {
+      "path": "storage/2026/10/AI-SEO-Portfolio-Gian-Media.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/AI-SEO-Portfolio-Gian-Media.webp",
+        "https://gianmediagroup.com/storage/2026/10/AI-SEO-Portfolio-Gian-Media.webp"
+      ],
+      "sha256": "297d0754b843e55c6c9382202702909b8ac5257d878921054c7a1303b6baf624",
+      "size": 48172
+    },
+    {
+      "path": "storage/2026/10/Capron-1.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Capron-1.webp"
+      ],
+      "sha256": "cf689b5c23acaa22e968a338d8f2dc47f618ffad442e54f26cbcaadba1bb3f06",
+      "size": 36698
+    },
+    {
+      "path": "storage/2026/10/Capron-2-e1791392013543.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Capron-2-e1791392013543.webp"
+      ],
+      "sha256": "1af3397a9658b93675c824dc1ecf095d0041452dc8f25cfb9407209307dfad7b",
+      "size": 30448
+    },
+    {
+      "path": "storage/2026/10/Capron-3.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Capron-3.webp"
+      ],
+      "sha256": "f659ce8702a0fe603a6d14b3dbb072cc855199056dba7f99dfb74c390dd5b659",
+      "size": 69650
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-154x300.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Clinic-Website-scaled-1-154x300.webp"
+      ],
+      "sha256": "da6c72a1fe6d6e59cc3279def802d854464c35c221d052868c1a7e4d62078c51",
+      "size": 7516
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-526x1024.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Clinic-Website-scaled-1-526x1024.webp"
+      ],
+      "sha256": "7ea5093cdf396ffa31452b9d4487ae1f6f7a2753dd313b1e9a2bb0f7b381bddc",
+      "size": 43666
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-768x1494.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Clinic-Website-scaled-1-768x1494.webp"
+      ],
+      "sha256": "75c453bb49b73ea37758a6a91955e11d5cd6b3d5e4b2307e4666c8ebc2adedfa",
+      "size": 74032
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-789x1536.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Clinic-Website-scaled-1-789x1536.webp"
+      ],
+      "sha256": "d4f915d00d8b91f2c689d5e50814554228877f036245a95239f7d2dceb4ec93d",
+      "size": 77292
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Clinic-Website-scaled-1.webp"
+      ],
+      "sha256": "bef326168b689438032b499c4389b32b7d3bace3a351849a140a33ff902cd11e",
+      "size": 142670
+    },
+    {
+      "path": "storage/2026/10/Foot.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Foot.webp",
+        "https://gianmediagroup.com/storage/2026/10/Foot.webp"
+      ],
+      "sha256": "e8fdc467dbff057345ae4141919b3501072a702812dfe681d2cf6140ab3224a3",
+      "size": 188732
+    },
+    {
+      "path": "storage/2026/10/GIAN-1024x305.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/GIAN-1024x305.webp",
+        "https://gianmediagroup.com/storage/2026/10/GIAN-1024x305.webp"
+      ],
+      "sha256": "885a59f78fd4a1b4a834200a1f6d6234ce3400ba0a9b95e2badea08461a06bdf",
+      "size": 84932
+    },
+    {
+      "path": "storage/2026/10/GIAN-300x89.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/GIAN-300x89.webp",
+        "https://gianmediagroup.com/storage/2026/10/GIAN-300x89.webp"
+      ],
+      "sha256": "29e76ec8429fb1f4a278c968eb0c05386b8fa57cba078245a9481821fd38c685",
+      "size": 10168
+    },
+    {
+      "path": "storage/2026/10/GIAN-768x228.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/GIAN-768x228.webp",
+        "https://gianmediagroup.com/storage/2026/10/GIAN-768x228.webp"
+      ],
+      "sha256": "e6ec2776940871fdff8e780e0d315d97ab5d03747b468f64b7f3d6e9ff6378e4",
+      "size": 53046
+    },
+    {
+      "path": "storage/2026/10/GIAN.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/GIAN.webp",
+        "https://gianmediagroup.com/storage/2026/10/GIAN.webp"
+      ],
+      "sha256": "330a1acdcb696df483f6da9f34fdc11c84a083921bd4f48d41bce8c4ab057973",
+      "size": 153806
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-300x176.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-300x176.webp"
+      ],
+      "sha256": "f78ecdf1d344a06bbd9667caea75a53a3431db314526c679d5c4e8bd935c32d1",
+      "size": 5808
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-768x449.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-768x449.webp"
+      ],
+      "sha256": "bb6fb37a6a8ec58fb546e0b49572a06d7da4c456342f259f952d17b0843457d8",
+      "size": 22066
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1.webp"
+      ],
+      "sha256": "7510f7299f41c323ce48cea13eb5ec2f2cc0c9576cfae331ceab150cd60e9e96",
+      "size": 49766
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Drooling.mp4",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Drooling.mp4",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Drooling.mp4"
+      ],
+      "sha256": "353d99b02dd5b7e4a9bfc6c4f5a8cb39e72e13b5fd1ebb30cc62cf5745eb33e9",
+      "size": 2110168
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Portfolio.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Portfolio.webp"
+      ],
+      "sha256": "1f2a06c22dbf6fff71151e9de392d132029134a2e361ebca30c16ae6df5aaf0e",
+      "size": 29382
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-1.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-1.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-1.webp"
+      ],
+      "sha256": "32921835e2e8ef7c497c48b401132b5e70e4ac0b7272f3b83b070b30288d6ee1",
+      "size": 15388
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-2.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-2.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-2.webp"
+      ],
+      "sha256": "c87b9f6ebe6812fa2669aa8ff1c50410685df3807c21304b8dc3ad35d4217f35",
+      "size": 56026
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-3.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-3.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-3.webp"
+      ],
+      "sha256": "fe46cab8480b75a8cffd2446ffd2bada963e97e4366ec0e3bcd1b3640aad9c4f",
+      "size": 27540
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-Portfolio.webp"
+      ],
+      "sha256": "024f73b6e5b7570e3d92bf7f60026178b7bdd954931f9b5a218fc1797164b916",
+      "size": 82176
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab-2.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-ScolioRehab-2.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-ScolioRehab-2.webp"
+      ],
+      "sha256": "008510cdbbbd5f7d8cc3666a522049c5abc88b0f3d90243fc09e49e2d90f5329",
+      "size": 51604
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab-3.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-ScolioRehab-3.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-ScolioRehab-3.webp"
+      ],
+      "sha256": "c62258309cb747e8e8ae73746ff3507aadada3aafb9a2c6441ca8f314571d273",
+      "size": 66020
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Media-Web-Design-ScolioRehab.webp",
+        "https://gianmediagroup.com/storage/2026/10/Gian-Media-Web-Design-ScolioRehab.webp"
+      ],
+      "sha256": "913584b4d612952624bb167ca8c940f31cc5fae6038a7ffc9d49673b159b795b",
+      "size": 32788
+    },
+    {
+      "path": "storage/2026/10/Gian-Stavin-Gian-Media-Founder-150x150.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Stavin-Gian-Media-Founder-150x150.webp"
+      ],
+      "sha256": "d1e51605147dbea02e4a470614499747679df40f644bd907da150c244cdd43bd",
+      "size": 1506
+    },
+    {
+      "path": "storage/2026/10/Gian-Stavin-Gian-Media-Founder.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Gian-Stavin-Gian-Media-Founder.webp"
+      ],
+      "sha256": "cd26354cf42709584efcffd45d42b236d5aaaca5f0c9810986919e531ed8e2fe",
+      "size": 6522
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-1.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-1.webp"
+      ],
+      "sha256": "74a586bfc4021465889fde6516daf6b3e810b03a35b105393588c84bb630c5c1",
+      "size": 12108
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-2.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-2.webp"
+      ],
+      "sha256": "c8bdd0df2ce94d2c1d8f9295d547f29837a0194e436f1fa1095e05e37a36c84d",
+      "size": 23116
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-3.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-3.webp"
+      ],
+      "sha256": "07b8855c63ed416d41d84ab19a6e17580f8dc25d73c274de53eae31bd12f3a22",
+      "size": 23906
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-4.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-4.webp"
+      ],
+      "sha256": "ec0aff5e83f40a77fb38a76c2ee7cb22b735c9e092954a5deb9708e582af4a62",
+      "size": 26676
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-5.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-5.webp"
+      ],
+      "sha256": "6e858c7ad0ba0491abaf6784df5c6e14b3b033ad8c62ce9045512ddd504c33ef",
+      "size": 27548
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-6.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-6.webp"
+      ],
+      "sha256": "c8a6eef39f070166c8a107262554803cfb0cc2b4931ab08d500e86fba4bd1ebd",
+      "size": 18046
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-7.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-7.webp"
+      ],
+      "sha256": "686bc3d9f2587b74f32ea87f24a765bfafdc60b40653d3e561a31e0e0e17588d",
+      "size": 20082
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-8.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/GianMedia-about-8.webp"
+      ],
+      "sha256": "cadfe257e23560f5d52bda137012b5e33127b3ed341f686f3dbe4e817d2f167f",
+      "size": 16342
+    },
+    {
+      "path": "storage/2026/10/Koku.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Koku.webp"
+      ],
+      "sha256": "8953ee96bd6210418d9505ffc9587985d8328daca6ef35b009aa0b288ae4a6a3",
+      "size": 62222
+    },
+    {
+      "path": "storage/2026/10/Kokuuart-Gian-Media.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Kokuuart-Gian-Media.webp"
+      ],
+      "sha256": "54ead339487c37d57ce9f4e140cc7dcca8cca6804551e000937cd034b21196ef",
+      "size": 51656
+    },
+    {
+      "path": "storage/2026/10/Ortholife-Gian-Media.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Ortholife-Gian-Media.webp"
+      ],
+      "sha256": "49f5810d286298d2e51f7d5debe0c57a5565617e5a5581d1a71ff9931751a0b0",
+      "size": 52396
+    },
+    {
+      "path": "storage/2026/10/Selected-Work-2-e1791040812822.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Selected-Work-2-e1791040812822.webp",
+        "https://gianmediagroup.com/storage/2026/10/Selected-Work-2-e1791040812822.webp"
+      ],
+      "sha256": "b1ecc79fdbece482d913cc1006563dd2ff0756a7239631869fd58a08d83a9b74",
+      "size": 50918
+    },
+    {
+      "path": "storage/2026/10/Selected-Work.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Selected-Work.webp"
+      ],
+      "sha256": "7c9ca945805e2110e05fd51d1b8ba1ef58a2583a09cc5a730ceeb7726c13d065",
+      "size": 97204
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media-300x176.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-Project-Gian-Media-300x176.webp"
+      ],
+      "sha256": "b4ca486e035ee643039fa87e349b0f21cb4b21cc2f532662addbb5a54782a22c",
+      "size": 9372
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media-768x450.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-Project-Gian-Media-768x450.webp"
+      ],
+      "sha256": "580ca518f9bcc315a81b6fb78cae853a0f508a90287199ad1511aa115e027c46",
+      "size": 37294
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-Project-Gian-Media.webp"
+      ],
+      "sha256": "94b6c2fed6a27488f6dc428883b164f0ed3bbc37f16b082eac253ba1b4997009",
+      "size": 75346
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-150x150.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-page-3-150x150.webp"
+      ],
+      "sha256": "e3761bcd8b7a8edad3ff1116b2d33a08ba07f3e070bc7794140ee591e7f1f552",
+      "size": 5478
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-300x300.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-page-3-300x300.webp"
+      ],
+      "sha256": "77873a732d4153a4b8fb9afa945a1de16ba5bb3b4ed49f9662bf3c920c8637e7",
+      "size": 13518
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-768x768.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-page-3-768x768.webp"
+      ],
+      "sha256": "1e0b6fd5f8001c5debfcef920bdc9fcd71be32c9e08d5759ae1df574c22638a1",
+      "size": 49254
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/Spine-Clinic-page-3.webp"
+      ],
+      "sha256": "88dc86838dfca3a95360f2981d01e29910c6baa4f0fb57ecc6331b99a69262b8",
+      "size": 98526
+    },
+    {
+      "path": "storage/2026/10/Web-management-239x300.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Web-management-239x300.webp"
+      ],
+      "sha256": "d20853c46b09d16f32cad6edb293ee6475abe5f55fa9b32cecc204eb6e4a92f6",
+      "size": 4588
+    },
+    {
+      "path": "storage/2026/10/Web-management.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/Web-management.webp",
+        "https://gianmediagroup.com/storage/2026/10/Web-management.webp"
+      ],
+      "sha256": "80cbfd8f301af89d5e1326dec7b57779f06646aca7f78dad8d796f70e6cdb5ea",
+      "size": 18226
+    },
+    {
+      "path": "storage/2026/10/ortholife-web-design.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/ortholife-web-design.webp"
+      ],
+      "sha256": "6cb316ae4f3fdafa00e374957cf36a1be78e2f43cefb81d77a69ecb04747fd19",
+      "size": 5002468
+    },
+    {
+      "path": "storage/2026/10/ortholife-website-design-by-gian-media.webp",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/2026/10/ortholife-website-design-by-gian-media.webp",
+        "https://gianmediagroup.com/storage/2026/10/ortholife-website-design-by-gian-media.webp"
+      ],
+      "sha256": "3ec9e6e1c7c085576d3bd76d05890796fe2f01e979136e5c1387244e9e028e7f",
+      "size": 74660
+    },
+    {
+      "path": "storage/2026/10/overlay.webp",
+      "urls": [
+        "https://gianmediagroup.com/storage/2026/10/overlay.webp"
+      ],
+      "sha256": "0864e9555df5124b3dd4d8caf52bc613119c959d2770a95e7515d1081e01d97a",
+      "size": 99494
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkahkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkahkawzu.woff2"
+      ],
+      "sha256": "900190befc0dfe4ae99fefcbe7f72425c48a61ebe3ff00bbe93b0287e0007c97",
+      "size": 22288
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkankawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkankawzu.woff2"
+      ],
+      "sha256": "a5ee960e6273ecaa1787150604d18a2be3fad74cf76936f916ed8b235a4106bb",
+      "size": 24576
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbnka.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbnka.woff2"
+      ],
+      "sha256": "9ec9eb9108f1752c30ba316606858d685a112a609d8bef1fb3d5d32c8e0b6507",
+      "size": 44192
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbxkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbxkawzu.woff2"
+      ],
+      "sha256": "baac6db7ec159297d2fe9d313222d826e76b09fd72be43530b632059d482c02d",
+      "size": 18800
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkc3kawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkc3kawzu.woff2"
+      ],
+      "sha256": "fbeb2620ecd7451cd9f27a70e7ec39e1597cb33fd36be9424bf97a18c0e2e786",
+      "size": 39456
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkchkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkchkawzu.woff2"
+      ],
+      "sha256": "b9acf16c2906a6b95c31bf7cd8b417bfc32f83216a50d70c0cd41e57a1922f4a",
+      "size": 28536
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcnkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcnkawzu.woff2"
+      ],
+      "sha256": "68ab4e107fc1d8d32d358b0e8c8182921e7934e4fc672f3805dfa9a16946a9fb",
+      "size": 4468
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcxkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcxkawzu.woff2"
+      ],
+      "sha256": "a0435a376ff703ac8ceedd566f18e3b025d91f35349b21968a09d65080fac0b6",
+      "size": 13888
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkenkawzu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkenkawzu.woff2"
+      ],
+      "sha256": "8754810078212d20cc4d3e96f6c4fd2d2252e06263617681ebd1cfae813b68b2",
+      "size": 44336
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3-ubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3-ubgee.woff2"
+      ],
+      "sha256": "31c5962274d8bd31cbf72f45aaa615f33f230088491b4ee5d9f544fef10c418e",
+      "size": 17628
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3cubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3cubgee.woff2"
+      ],
+      "sha256": "d94ccab74005ea632c5680d33d34586634ded595035990fa2cfef2f1e1cccb55",
+      "size": 4340
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3gubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3gubgee.woff2"
+      ],
+      "sha256": "3a8eee8312b77ac2ef2dc2e01fdddf8ede8a4f72bf1a08d40745d8b432386fdf",
+      "size": 35568
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3iubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3iubgee.woff2"
+      ],
+      "sha256": "c06ca3fcbc5f7c37ebb7c86a69502009911ecd8183811bae02f9b1fbb0541ddb",
+      "size": 22796
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3kubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3kubgee.woff2"
+      ],
+      "sha256": "884933fb5789b478d2da68a4cb0bd5cc138d995f1fea9a957ba29cb3c00f1bf7",
+      "size": 26428
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3oubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3oubgee.woff2"
+      ],
+      "sha256": "38ca68052df6bb72126ff9cedd7d78d2afe62079e9149ddedf650ae8f4c744cf",
+      "size": 13004
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2"
+      ],
+      "sha256": "20b535fa80c8189e3b87d1803038389960203a886d502bc2ef1857affc2f38d2",
+      "size": 40128
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamawcubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamawcubgee.woff2"
+      ],
+      "sha256": "d758e85352971dffe51a5992405eb8f9b316b1bed82495445c328699ee400830",
+      "size": 40572
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamaxkubgee.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamaxkubgee.woff2"
+      ],
+      "sha256": "e921785496ed2d98c2257c88a6f838afa6acbee05cb8467048501bfe2a301461",
+      "size": 20408
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufa5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufa5qw54a.woff2"
+      ],
+      "sha256": "09b79394660831abe425de3d999cf89844c100f31a0da97d0c71f12a005afdbf",
+      "size": 32284
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufb5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufb5qw54a.woff2"
+      ],
+      "sha256": "7361486c87055d07878f8e758c916db8576c579ed3bdc209c19fd43063dd8e27",
+      "size": 2184
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufc5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufc5qw54a.woff2"
+      ],
+      "sha256": "4c2a824cab9799116baa8f7a85c7ca062fd67d1ee7b9bc6338ef3bcdae31fc16",
+      "size": 9872
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufd5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufd5qw54a.woff2"
+      ],
+      "sha256": "c5c268299cdaa725aa32d248338b0e9beadc9808da1124720204bac9b215d018",
+      "size": 20760
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufj5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufj5qw54a.woff2"
+      ],
+      "sha256": "b914dc874c479f977f20ff2ac7e5e75871a6b8119fe4b671065126d6873e93f0",
+      "size": 21272
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufn5qu.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufn5qu.woff2"
+      ],
+      "sha256": "a8e429611131e3fdc2018ec943a36100dbabb4aaa788c8dead6bdcf927917293",
+      "size": 34328
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufo5qw54a.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufo5qw54a.woff2"
+      ],
+      "sha256": "1c0fd8b50a6f78fbcc46b942912284c79b85962667b7b63a0e0b229327521287",
+      "size": 14852
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2"
+      ],
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "size": 20156
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DbZs.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DbZs.woff2"
+      ],
+      "sha256": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965",
+      "size": 10280
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GNAa5o_ik.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GNAa5o_ik.woff2"
+      ],
+      "sha256": "a0cc105b3241fe952fd58ba226633f8ba733b16fd5419affbda6c8cc5c627a0b",
+      "size": 10376
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GND65o.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GND65o.woff2"
+      ],
+      "sha256": "7242fa62d13d46172816b266f03c027999faa3755a52c2124bc2c440f6f4b983",
+      "size": 20928
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMJng.woff2"
+      ],
+      "sha256": "39689184132e9fba8fb1066f429125d14445352a566f47f4edcae7c3c90e486d",
+      "size": 27380
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L1UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L1UUMJng.woff2"
+      ],
+      "sha256": "787fc783f35c913334445a7c4502bb272f94a8328426578776eac5e4ebd03ba1",
+      "size": 12096
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L2UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L2UUMJng.woff2"
+      ],
+      "sha256": "1991ed5832eb07f7523f22a843ca9a8aa83c51c8e87062ce77794855d2f5dee8",
+      "size": 10596
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMJng.woff2"
+      ],
+      "sha256": "71254244ccb1ec21e14db3480fef6f6826d1136dc4aca1c7d3ca7ce31294fcce",
+      "size": 91900
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUM.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUM.woff2"
+      ],
+      "sha256": "7291b5970da2237441273c03b424a504b70b18f09791473fab99687dcc314720",
+      "size": 51832
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L6UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L6UUMJng.woff2"
+      ],
+      "sha256": "29e273a42cac8240f37fbdd94c684f8a255e61c8076942d9b8f18a0e2c014991",
+      "size": 20484
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMJng.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMJng.woff2"
+      ],
+      "sha256": "47d42151dff6d13f1c2b9a1f278290f625593c1f01c89612ee4ae7f063167f7a",
+      "size": 19980
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2"
+      ],
+      "sha256": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+      "size": 18748
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2"
+      ],
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "size": 48256
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2"
+      ],
+      "sha256": "1be3448e292fbf05ffe176fe1e43f135013d50b1e7d324ad1a558f623d3bb6f6",
+      "size": 18996
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2"
+      ],
+      "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
+      "size": 85068
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2"
+      ],
+      "sha256": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
+      "size": 25960
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2"
+      ],
+      "sha256": "6e9e020a25f9b56d418f2c085b1d3c09725a4da23fe693a5b463064606732190",
+      "size": 11232
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2"
+      ],
+      "sha256": "5c66f9e07e90c6d4ac4922cc68d60de26c17b1858e677fb5e603fce3952b3ff2",
+      "size": 10252
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsD8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsD8ah8QA.woff2"
+      ],
+      "sha256": "3937173d62f238179ca073aee632d53ebc088967ac841bf213211be05720881a",
+      "size": 16996
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsE8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsE8ah8QA.woff2"
+      ],
+      "sha256": "815c54f4279b399a2afb93e99844e0ba6d9df2fc809eab372aa05e8b8d0847da",
+      "size": 22192
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2"
+      ],
+      "sha256": "77fefe8ca19b9f69b5284832c519e0493127c1f091f0a8936884be7721c4e618",
+      "size": 44872
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsI8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsI8ah8QA.woff2"
+      ],
+      "sha256": "88599e6f2f36551c98dd836df944179f0d4e31eefa620bb753c96069b53ac55a",
+      "size": 10480
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA.woff2"
+      ],
+      "sha256": "fd9beddaaec644945809da574cf1caf342073c7e4b46a2ea5bd136c8cf1a9eca",
+      "size": 89800
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsK8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsK8ah8QA.woff2"
+      ],
+      "sha256": "9bba92a871106008d89cc9734c218a3660b92ff647bdfb6879bf0440fba002c0",
+      "size": 26660
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsL8ah8QA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsL8ah8QA.woff2"
+      ],
+      "sha256": "83735bbea54cc7c4e7ee2af3ede4c2bc5e421ba5bdef4cd3ea2ec8d25b5afaa8",
+      "size": 11700
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwa5kRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwa5kRFe9.woff2"
+      ],
+      "sha256": "f0b9617a2d27a8f7b106917fe097c22d4eb3f84266188d21e74ea50b93d3207d",
+      "size": 17856
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaRkRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaRkRFe9.woff2"
+      ],
+      "sha256": "bf45219d9e0a0727240389257be2c490248e933aed9a35eba211c22487b003c2",
+      "size": 95128
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaVkRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaVkRFe9.woff2"
+      ],
+      "sha256": "317b739e8d2e603651c42e6c886f3bbb5830c82a926b5fcd58a9b129bf7fb485",
+      "size": 10904
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaZkRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaZkRFe9.woff2"
+      ],
+      "sha256": "c4eefe8a2e119ee412a93b895ccf7e32eca5becb3b1b3e3469510a4476adf5c7",
+      "size": 11912
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwadkRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwadkRFe9.woff2"
+      ],
+      "sha256": "ac99a8b36fdf616b32c51de703cd6c3d5a5579d111cd656d21b5b099fa2f9c66",
+      "size": 27916
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwalkRFe9.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwalkRFe9.woff2"
+      ],
+      "sha256": "a88929ea0ba743c17c617a4f24bf6db5bebb8abae0b5e44fa112737b6cc97636",
+      "size": 23380
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwapkRA.woff2",
+      "urls": [
+        "https://07f660a2.delivery.rocketcdn.me/wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwapkRA.woff2"
+      ],
+      "sha256": "26da6578cb17ad7922d0c6586697ab1c5de86a3cfd46057eec8a9e1f034ac965",
+      "size": 47912
+    },
+    {
+      "path": "wp-content/uploads/2026/07/bg-1.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/07/bg-1.webp"
+      ],
+      "sha256": "d9508cd65b4a7392fc014513e06e116fab97b4ce16bc99ed6b08cccd40afb559",
+      "size": 5618
+    },
+    {
+      "path": "wp-content/uploads/2026/08/cubic-loop.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/08/cubic-loop.webp"
+      ],
+      "sha256": "d6e7db076c3452baac61242820b1d55216d498937fd632f086150d9a35ebe8ce",
+      "size": 1033404
+    },
+    {
+      "path": "wp-content/uploads/2026/09/MobileWebd.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/09/MobileWebd.webp"
+      ],
+      "sha256": "1832655f2b81bbcd8e7ffcd0baa79e93c367dc4ab39c9cacd549215fdc08717e",
+      "size": 25602
+    },
+    {
+      "path": "wp-content/uploads/2026/09/Untitled-design.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/09/Untitled-design.webp"
+      ],
+      "sha256": "d32c766f27705085d21d05b52765ed5cd33178eb492768e4f8b684c8dfda6b8e",
+      "size": 103986
+    },
+    {
+      "path": "wp-content/uploads/2026/10/Shape-Conv.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/10/Shape-Conv.webp"
+      ],
+      "sha256": "01fdf221f8f7c88c0490d38bc843dbe008c66ebe34cd3da7f9215cfc2ee95742",
+      "size": 258432
+    },
+    {
+      "path": "wp-content/uploads/2026/10/experience.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/10/experience.webp"
+      ],
+      "sha256": "1b941875add9d73ef91c59e37ea1d500dcc8c4177fd810e09f27d94dfa96f51b",
+      "size": 872294
+    },
+    {
+      "path": "wp-content/uploads/2026/10/overlay.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/10/overlay.webp"
+      ],
+      "sha256": "0864e9555df5124b3dd4d8caf52bc613119c959d2770a95e7515d1081e01d97a",
+      "size": 99494
+    },
+    {
+      "path": "wp-content/uploads/2026/10/shape.webp",
+      "urls": [
+        "https://gianmediagroup.com/wp-content/uploads/2026/10/shape.webp"
+      ],
+      "sha256": "a01b5b3d77ea3b366e8fb79072b96cf5a22dcd52c6baa894d81c08fa2731302e",
+      "size": 153480
+    }
+  ],
+  "files": [
+    {
+      "path": "assets/external/0bc96cd0d5b0--F6qfjptAgt5VM-kVkqdyU8n3twJwlBFgg.woff2",
+      "sha256": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+      "size": 14888
+    },
+    {
+      "path": "assets/external/0cc476d41deb-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuI6fAZ9hjQ.ttf",
+      "sha256": "6906c67c75ca4ab456b46fa2a06150dcca99db018cccef86fd35183ac74b21e3",
+      "size": 66692
+    },
+    {
+      "path": "assets/external/12107d7e333d-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCGB5QiK4.ttf",
+      "sha256": "68ec4dbab996c09fdf7ed62e845367898db15f339e5ea2f8b3f33b3d3ca6c8a2",
+      "size": 59728
+    },
+    {
+      "path": "assets/external/13722ff98bf5-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcPtxRipWA.ttf",
+      "sha256": "fd64154c8a7f01b783ffa7deb46524faf1e30568aca34e5e88a0e00d79938c52",
+      "size": 67940
+    },
+    {
+      "path": "assets/external/18956783700b-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_f_R25ZyEU.ttf",
+      "sha256": "3886ec1ebae707d4a1a3b080811499bb26afb9fb28c798103b0789f2474771d2",
+      "size": 24424
+    },
+    {
+      "path": "assets/external/196082c3f108-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuGKYAZ9hjQ.ttf",
+      "sha256": "1bfc2a55504add1a87771cde89865a8b1a2cf6137e4309e9e03cfa9134786f7f",
+      "size": 66808
+    },
+    {
+      "path": "assets/external/1e19c8b6f2d1-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHh5QiK4.ttf",
+      "sha256": "d748ed8c1e00dafa9503402a0360e66dbce755d10525048f6e2a0711705707e4",
+      "size": 59276
+    },
+    {
+      "path": "assets/external/211fbefe7d5b-css.css",
+      "sha256": "5c07801fbf7614ea6cfdc58253e09681e6ee743a38302245e697a61a3a1071ee",
+      "size": 11012
+    },
+    {
+      "path": "assets/external/223cdd8d3096-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTch9tRipWA.ttf",
+      "sha256": "656bafe54e2a0bd64f594548da2aafa82711bab424c65c513dddc8ec92fee59d",
+      "size": 67944
+    },
+    {
+      "path": "assets/external/2305f0853248-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuOKfAZ9hjQ.ttf",
+      "sha256": "2dfcb6f984e0ed6f225d5298e6d56c8ba264a36424dc62e31f7d0f3f49f43175",
+      "size": 66868
+    },
+    {
+      "path": "assets/external/24b5ad699155-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xCHx5QiK4.ttf",
+      "sha256": "3a6dd8ab24ad88e0ce9785b573e654cf9170f82dea0a512d5c6e69c0b4c44c71",
+      "size": 59232
+    },
+    {
+      "path": "assets/external/44a0d91536ba-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dtRipWA.ttf",
+      "sha256": "72a6e5d274641c5be347bc5d07e4c24fd66644c106223a3444337562353a1d84",
+      "size": 67624
+    },
+    {
+      "path": "assets/external/46a87a5a69c5-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyYAZ9hjQ.ttf",
+      "sha256": "5b608ee73c59a14777bba3863bcb4bf01d0888ca0ad94142ccd17edfb702749b",
+      "size": 67012
+    },
+    {
+      "path": "assets/external/5519596cb4cb-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_chQG5ZyEU.ttf",
+      "sha256": "ccf337841c43b2d9d7280e03f096996343722df77200400cb26bf9468c0e280b",
+      "size": 24096
+    },
+    {
+      "path": "assets/external/5e7aa2d48b3a-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0xwHx5QiK4.ttf",
+      "sha256": "4bb4294afd5b920d3aec8318c78c2cd14da392e37db7b0add5f59660db73a2f9",
+      "size": 59408
+    },
+    {
+      "path": "assets/external/60e362f549c2-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zrGB5QiK4.ttf",
+      "sha256": "61887805975352273fad26aed00e031f336238d8fbd08787eb9f16d40c1e9501",
+      "size": 59616
+    },
+    {
+      "path": "assets/external/676b2b417dc9-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuBWYAZ9hjQ.ttf",
+      "sha256": "98cb81a8ecd586ea2297735ec031b29bfbcd1d062f097600cfa09cdb640dd2b3",
+      "size": 67028
+    },
+    {
+      "path": "assets/external/6f5740f738cf-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuDyfAZ9hjQ.ttf",
+      "sha256": "d6f57997e9e849e026c33882b5447374e028f954b14d427510ddf6c034362581",
+      "size": 66896
+    },
+    {
+      "path": "assets/external/7032d7b2c880-css.css",
+      "sha256": "5c07801fbf7614ea6cfdc58253e09681e6ee743a38302245e697a61a3a1071ee",
+      "size": 11012
+    },
+    {
+      "path": "assets/external/723b804690ef-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc69tRipWA.ttf",
+      "sha256": "fc407a4ed015719c419f4b686a4c423422fdcee8444d9a26b97b1421347c7f2e",
+      "size": 67728
+    },
+    {
+      "path": "assets/external/7c761112b2ac-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyfAZ9hjQ.ttf",
+      "sha256": "db2007cac3f58427030755b0ff368cceef98dc503cf6d3d2aa366a4743f9749f",
+      "size": 66592
+    },
+    {
+      "path": "assets/external/824a63960cc4-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0zCHx5QiK4.ttf",
+      "sha256": "029a5f5ac42597d03a9927d3ab9982faeec66bf13bd440e99ef3d102c61a1727",
+      "size": 59500
+    },
+    {
+      "path": "assets/external/85cf2323f7bd-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A7Yd-EI84Q.ttf",
+      "sha256": "c341094aa923fb45b70dd2b77afad87bbcbe0cd9e47b1a495a70c83c0384af0f",
+      "size": 24660
+    },
+    {
+      "path": "assets/external/892b8ac91153-css2.css",
+      "sha256": "a2a49a9ab91533380e83c7658ce61eccce816744807067096091f04aa862286c",
+      "size": 209
+    },
+    {
+      "path": "assets/external/8a01aff9a099-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_fWR25ZyEU.ttf",
+      "sha256": "403c7198fe6e36c40cc8933957d271c97fe28e5de0e471b87428d89ad1a73df9",
+      "size": 24388
+    },
+    {
+      "path": "assets/external/8d3cb755fc28-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuFuYAZ9hjQ.ttf",
+      "sha256": "16586b28b0432e68f0099445946195dc97909ff7744f764eed708b38e61ca6c9",
+      "size": 66788
+    },
+    {
+      "path": "assets/external/8f56411d3a9f--F6qfjptAgt5VM-kVkqdyU8n3twJ8lc.ttf",
+      "sha256": "4fc14a73ca53ba9d32fd759ae1ca1a3133326035d0dd337862b3ee1633cc156e",
+      "size": 129916
+    },
+    {
+      "path": "assets/external/901cfb83cfba-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjPQ-aWy5X.ttf",
+      "sha256": "5481649ae958a5e23437731b004e5edf8c947464f572ad797ea369a613a4f85b",
+      "size": 58104
+    },
+    {
+      "path": "assets/external/92cbfcbfcc27-UcCO3FwrK3iLTeHuS_nVMrMxCp50SjIw2boKoduKmMEVuLyeAZ9hjQ.ttf",
+      "sha256": "a58875806962305219b52a406f2c12d803cbb43e05e2cf0576bc580bbffd1b04",
+      "size": 66892
+    },
+    {
+      "path": "assets/external/9656f6aac244-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A1Ea-EI84Q.ttf",
+      "sha256": "362efbbc8e8ef8e641db4d8902149d6123e9d2b257c54998b97d47ee041e1034",
+      "size": 24940
+    },
+    {
+      "path": "assets/external/9699f125c906-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTccNxRipWA.ttf",
+      "sha256": "c4de717022aa9c2564ee39997f56a9ab68c021891bef2005cd2fd54c862cc89c",
+      "size": 68120
+    },
+    {
+      "path": "assets/external/9b00c4243120-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcB9xRipWA.ttf",
+      "sha256": "2f7d923e292f7c7c03d7a1d266f13ff041a765db8a272cc9cc377735a48ed783",
+      "size": 67968
+    },
+    {
+      "path": "assets/external/9b5512e0e075-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_ehR25ZyEU.ttf",
+      "sha256": "97e2475de18c94afa6c2eca47e9c711786a074f2305854c0fea693e8c2f599a8",
+      "size": 24432
+    },
+    {
+      "path": "assets/external/a8176bfba8a0-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3Ax8a-EI84Q.ttf",
+      "sha256": "05fdfa3eead906104ac45305e9ba431e53d683fed741db8656de5b20343a60dc",
+      "size": 24920
+    },
+    {
+      "path": "assets/external/aab57f60339a--F63fjptAgt5VM-kVkqdyU8n5ig.ttf",
+      "sha256": "a7fdc993f9f0387caedba4e42521136fa97e4c0837ae6239bf0413ccf8af00c2",
+      "size": 128812
+    },
+    {
+      "path": "assets/external/ab32c56b9f6c-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3AzYa-EI84Q.ttf",
+      "sha256": "966e9c3b579a0bfad75ff50b5e7caeea27f6169f1c30e7432d968cebed3138b7",
+      "size": 25044
+    },
+    {
+      "path": "assets/external/b16e118012a3-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw-aWy5X.ttf",
+      "sha256": "8655b2e81072d5bdb621aaffb56459d11b61b98baf0fba5c4b64c6b0bcf3056c",
+      "size": 57964
+    },
+    {
+      "path": "assets/external/b3669257fa01-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ycGB5QiK4.ttf",
+      "sha256": "0d93acb2058a9c8c39452efcbaa271356e9ba934fca4c483af3660454c4dba9e",
+      "size": 59528
+    },
+    {
+      "path": "assets/external/b4285b1ca5d8-placeholder.png",
+      "sha256": "1a8352b9372452ab024b5dfd3c74cd8fac2c84e7ff152879f83949c4707fd87e",
+      "size": 6146
+    },
+    {
+      "path": "assets/external/b7ef74852830-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A2ga-EI84Q.ttf",
+      "sha256": "f036abf66e7037c81ea884e5399c6f0f166950d223b591e5c35c8fe0f9d0e311",
+      "size": 25052
+    },
+    {
+      "path": "assets/external/bb5ad1cb32e7-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjw-aWy5X.ttf",
+      "sha256": "146ae616266b189ddb3cf8388ce5eff56717d187cea96bd0cf0350b8672afa07",
+      "size": 58304
+    },
+    {
+      "path": "assets/external/bbf256786c22-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0ylGB5QiK4.ttf",
+      "sha256": "e24d85ed25918a1af93caa31650e7a20a9f5c540311b1a5fa314f4287501dcf4",
+      "size": 59556
+    },
+    {
+      "path": "assets/external/bc1f53b59a0a-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjUQ-aWy5X.ttf",
+      "sha256": "e20ade22c329234b30ba9384361c6e20c0d59af1266804854c144d6d00a2cc9e",
+      "size": 58252
+    },
+    {
+      "path": "assets/external/bdc18eef5369-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdtRipWA.ttf",
+      "sha256": "7fc5a701c23c474951b1834a7e376df47bf414ea446243f7c687bf3e228e20fb",
+      "size": 68012
+    },
+    {
+      "path": "assets/external/bfbebb311dd2-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj0QiaWy5X.ttf",
+      "sha256": "c90eb1b5369976faa882ec1d9299bab5505a78647006b2972e70c801113bc184",
+      "size": 58300
+    },
+    {
+      "path": "assets/external/d14d8028e6bc-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_eYR25ZyEU.ttf",
+      "sha256": "8f5be4b8947df42c58db9bd41ffc61bd04a9c037340358ef6fc2ea15fab08981",
+      "size": 24352
+    },
+    {
+      "path": "assets/external/d341f0441ddd-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_dNQG5ZyEU.ttf",
+      "sha256": "3fb2f6d7b4b0c2057b4848d6ae0e4dac97adb4128aba0b3fa6c55e235e1eadc1",
+      "size": 24196
+    },
+    {
+      "path": "assets/external/d34292ea0b29-css2.css",
+      "sha256": "c0a554aec3b3d5157d80e65c7b1aa5960b7042536c9dae995be394460b6c4c61",
+      "size": 205
+    },
+    {
+      "path": "assets/external/e607a1883f39-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A4Qd-EI84Q.ttf",
+      "sha256": "c6c965cbcd51a6187317d5c8a91a6030df50743f20612231bd39ea21957c61f0",
+      "size": 24796
+    },
+    {
+      "path": "assets/external/ec83488c65d6-_Xm9-HUzqDCFdgfMm4GnA4aZFrUvtOK3A-gd-EI84Q.ttf",
+      "sha256": "18c9ff3f977a4559f1f7d2a1a6c8a1118232c3fb7df9abd015739a08b3db946d",
+      "size": 24672
+    },
+    {
+      "path": "assets/external/ee0f3d0d808c-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mj6AiaWy5X.ttf",
+      "sha256": "5f20d7df0079d93b9a4ed5d4ce891a1ab9c00db4c4ce73ba1da995f105cd31a9",
+      "size": 58340
+    },
+    {
+      "path": "assets/external/ee32603ccc9a-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTcWdxRipWA.ttf",
+      "sha256": "8799951be08d482f02cb73ea3a697a684d720b032d426c818616d0c6026b7b86",
+      "size": 68148
+    },
+    {
+      "path": "assets/external/f1175aa3869f-_Xmz-HUzqDCFdgfMsYiV_F7wfS-Bs_d_QG5ZyEU.ttf",
+      "sha256": "06ef355f4fe14bba01df14e655de9bc33629097d65b60a0d863c84e9170483f9",
+      "size": 24164
+    },
+    {
+      "path": "assets/external/f71df737a2f1-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjjwiaWy5X.ttf",
+      "sha256": "b61656a8612f26e0f823260572b9df43828fa947e8c6b8640caab0053e1dbf66",
+      "size": 58536
+    },
+    {
+      "path": "assets/external/f7f5d22b48f5-NGShv5HMAFg6IuGlBNMjxLsC66ZMtb8hyW62x0wcHx5QiK4.ttf",
+      "sha256": "82ad8b502574ad1b5efba2905ab9e61dabeda4548b4fea1c79a1e714ebb86f37",
+      "size": 59412
+    },
+    {
+      "path": "assets/external/fd77f8459084-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjpgiaWy5X.ttf",
+      "sha256": "4df90338ec02fa7009f41f245ba9c88762cfd21ed38df3fc72b98721e8f4abdf",
+      "size": 58468
+    },
+    {
+      "path": "assets/external/fe5f1c301deb-NGSnv5HMAFg6IuGlBNMjxJEL2VmU3NS7Z2mjDw6aWy5X.ttf",
+      "sha256": "b7aeaa858658536a09a92d9f7baf313f940fc07bdad1416d83931ef07d42c794",
+      "size": 58280
+    },
+    {
+      "path": "assets/external/ff202abd4481-UcCM3FwrK3iLTcvneQg7Ca725JhhKnNqk4j1ebLhAm8SrXTc2dpRipWA.ttf",
+      "sha256": "575622c99c4429a0e398dc224c0d514fec62f4e48666be52ea69e752324659cf",
+      "size": 68020
+    },
+    {
+      "path": "contact/index.html",
+      "sha256": "7b8b3dadaf53751b9f904f8557fc49d202d96b9007b1aa42c262736d867e1dc0",
+      "size": 89031
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/css/6/f/6/47af4d53f0a9b2845019ebb8ecd3d.css",
+      "sha256": "fb5ee11f8618737aa5095a24b77e6c16c129e665c5232bce798b76c444e1835d",
+      "size": 106465
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/css/7/9/a/a8daabe13ec0a01c767c09c200551.css",
+      "sha256": "fb5ee11f8618737aa5095a24b77e6c16c129e665c5232bce798b76c444e1835d",
+      "size": 106465
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "size": 20156
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "size": 48256
+    },
+    {
+      "path": "core/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+      "sha256": "77fefe8ca19b9f69b5284832c519e0493127c1f091f0a8936884be7721c4e618",
+      "size": 44872
+    },
+    {
+      "path": "core/cache/min/1/ajax/libs/gsap/3.13.0/CustomEase.min.js",
+      "sha256": "d04daec1547f7fe00da72f765ddf4a6dc33e705f1be0afc9f61ad145796885e8",
+      "size": 7062
+    },
+    {
+      "path": "core/cache/min/1/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js",
+      "sha256": "e79563e05a7331bd3dd40f266d0232fb075a9801b55addc640e7eb605468da23",
+      "size": 44150
+    },
+    {
+      "path": "core/cache/min/1/ajax/libs/gsap/3.13.0/gsap.min.js",
+      "sha256": "7462332d9ae1c62a78f0c42ab82aa4e6f24cf4ec699f140d29cf275994beb3bd",
+      "size": 72428
+    },
+    {
+      "path": "core/cache/min/1/npm/gsap@3.13.0/dist/ScrollTrigger.min.js",
+      "sha256": "e79563e05a7331bd3dd40f266d0232fb075a9801b55addc640e7eb605468da23",
+      "size": 44150
+    },
+    {
+      "path": "core/cache/min/1/npm/three@0.146.0/build/three.min.js",
+      "sha256": "5a3ebb06df607e107199729465040c56d1937b955c5741c0ca06a0ea19d7aaa9",
+      "size": 606294
+    },
+    {
+      "path": "core/cache/min/1/npm/three@0.146.0/examples/js/controls/OrbitControls.js",
+      "sha256": "e8e3088dc3731e6e2114c97ec26d1f424c7fa8388bf9bc76208fd43d0da0de94",
+      "size": 16618
+    },
+    {
+      "path": "core/cache/min/1/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css",
+      "sha256": "15fe97fad1c8513ac9ce5d39632ed70d68ff8016f4bea667177a40b6eb5e7f69",
+      "size": 22701
+    },
+    {
+      "path": "core/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css",
+      "sha256": "69ddbbb1de9c425c5f594dffcc57bcd00b6aabeb75a3818541733d0a02568ee0",
+      "size": 60583
+    },
+    {
+      "path": "core/cache/min/1/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css",
+      "sha256": "dc7e118b7e07217031d017282955569cb66891f527050135caadb2dd5779824f",
+      "size": 1082
+    },
+    {
+      "path": "core/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css",
+      "sha256": "fde233fecd445e0ebc6ac433b417171ca3612c9d7bd8a6ab16c87807f56aaf6b",
+      "size": 16223
+    },
+    {
+      "path": "core/cache/min/1/wp-content/plugins/royal-elementor-addons/assets/js/lib/particles/particles.js",
+      "sha256": "7df55b8f6776fbd510d06d64de2f6397447a4b6ca95bb5d7e7ad16545ecde9ad",
+      "size": 27576
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/elementor/google-fonts/css/roboto.css",
+      "sha256": "052f12f637112c40cdc908708ae38439db6d98399bdb0f9a63bfab6166bbadc7",
+      "size": 89406
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/elementor/google-fonts/css/robotoslab.css",
+      "sha256": "d48d175121bce6387e05f3365422a3e5b851720d007dc7c29574c4a787873bcd",
+      "size": 19476
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-12049.css",
+      "sha256": "c59e953f32858c6727350ceac202a9b9801817fd061336d7b1344262b5e12cdb",
+      "size": 35582
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-12049.js",
+      "sha256": "64119327c31e7ca1ab94d667b2fd62ad0f067ff6027d2bd3308745ee2a6c18e6",
+      "size": 151684
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-12051.css",
+      "sha256": "72bc5fff1d5b4c275991b7c20ca5382e7c2d7c27b4ac78823b0672d959c4c7d3",
+      "size": 45588
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-12051.js",
+      "sha256": "2ff19f848c179940484ae2c7f72536455e431f8d1db793333f868250b69475ae",
+      "size": 160933
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-14211.css",
+      "sha256": "c59e953f32858c6727350ceac202a9b9801817fd061336d7b1344262b5e12cdb",
+      "size": 35582
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-14211.js",
+      "sha256": "0b2d61d640d934402b8cb7b3c41ec79ae5fd8c950bb971bedfcb003958367e2d",
+      "size": 151684
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-15111.css",
+      "sha256": "c59e953f32858c6727350ceac202a9b9801817fd061336d7b1344262b5e12cdb",
+      "size": 35582
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-15111.js",
+      "sha256": "64119327c31e7ca1ab94d667b2fd62ad0f067ff6027d2bd3308745ee2a6c18e6",
+      "size": 151684
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-3539.css",
+      "sha256": "ab090d5789624a4ef1fc8cf9d776c5a720c79a1ebfeb34584e24fed7e225793f",
+      "size": 33113
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/essential-addons-elementor/eael-3539.js",
+      "sha256": "919f33ef1a30b76d11b3794c233bd45dbba35f83ea9c280138d67811dc846910",
+      "size": 2916
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Flashing-Circular-Rotating-Gallery_klf1gh25/Flashing_Circular_Rotating_Gallery_klf1gh25.css",
+      "sha256": "eabe0daaad16201fb5227f32bd89affdaead2facf857fb552fe1dddb448daf72",
+      "size": 1724
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Flashing-Circular-Rotating-Gallery_klf1gh25/Flashing_Circular_Rotating_Gallery_klf1gh25.js",
+      "sha256": "1db1df1fc92eb7ddfd6b956e619396ea4791565fb3ab27a506991ff04381b1d4",
+      "size": 4663
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Full-Screen-Menu_59j2u825/Full_Screen_Menu_59j2u825.css",
+      "sha256": "65fb6e6c5ab9d3a8e082985eec3ad8646a9b10a64ffab02f76a12c8638823565",
+      "size": 17847
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Full-Screen-Menu_59j2u825/Full_Screen_Menu_59j2u825.js",
+      "sha256": "67c447c2b5e3203823039289ac2135887644348b923efa95f83790ef4678994f",
+      "size": 3523
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Infinite-Image-Draggable-Cube_ae2ich25/Infinite_Image_Draggable_Cube_ae2ich25.css",
+      "sha256": "27282bbb7034385515f254d56b9be4c87ef68c5c0e277a13044c57679f8dd7e3",
+      "size": 4308
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Infinite-Image-Draggable-Cube_ae2ich25/Infinite_Image_Draggable_Cube_ae2ich25.js",
+      "sha256": "89024a750fe285c22f39cdc988724616cea649949d6f31d8207de4880904e2e1",
+      "size": 20617
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Scroll-Banner_ejmfcv23/Scroll_Banner_ejmfcv23.css",
+      "sha256": "17932615f89ab944e7b758d7c139c7a4c2ba6089a97baba8861b730b15fdf834",
+      "size": 2205
+    },
+    {
+      "path": "core/cache/min/1/wp-content/uploads/wdesignkit/elementor/Scroll-Banner_ejmfcv23/Scroll_Banner_ejmfcv23.js",
+      "sha256": "fff99d089434959c16f10122e8ff40a557ee8a20ad7e4014f0c323d55958b9b8",
+      "size": 1273
+    },
+    {
+      "path": "core/modules/9097659473/assets/front-end/css/view/general.min.css",
+      "sha256": "96102022182a1acb5f4755104dd3f246c5826140767d6da628271ba0e2b0068e",
+      "size": 7746
+    },
+    {
+      "path": "core/modules/9097659473/assets/front-end/js/view/general.min.js",
+      "sha256": "c8e5f564e90da235324da118d52d26adc4308b40df8b19401fbc66fe32ea81ad",
+      "size": 11970
+    },
+    {
+      "path": "core/modules/ccc473c329/assets/css/modules/motion-fx.min.css",
+      "sha256": "830e206b42444c7bad7bf3ce729c00a11e0f4cb76b01f94f2d5d2c4578f7ee79",
+      "size": 778
+    },
+    {
+      "path": "core/modules/ccc473c329/assets/css/modules/sticky.min.css",
+      "sha256": "6f0b2e96bd88c2d8512dfd204adaf2251376467a1f834a51c66ce85f0051979d",
+      "size": 162
+    },
+    {
+      "path": "core/modules/ccc473c329/assets/js/elements-handlers.min.js",
+      "sha256": "cf8b52ece0e12112f97b78cbbe11d089ae5ea5fd9125e70104a2cf45572e48fe",
+      "size": 291601
+    },
+    {
+      "path": "core/modules/ccc473c329/assets/js/frontend.min.js",
+      "sha256": "cd9c7eb928d82956dac04e5b39b0a86690daa455e350d68581e95c22efc6835e",
+      "size": 80170
+    },
+    {
+      "path": "core/modules/ccc473c329/assets/lib/sticky/jquery.sticky.min.js",
+      "sha256": "34bbd1c367ffc7d80fcff86c7e5f8777e70f4911bb324e8ecfc7dd3604a96e68",
+      "size": 3721
+    },
+    {
+      "path": "core/modules/ccc473c329/modules/lottie/assets/animations/default.json",
+      "sha256": "f27cbedb9785e64fa35387faae0430ab2496edbf512c4b5ede1796c922d8dd39",
+      "size": 112811
+    },
+    {
+      "path": "core/modules/dccac82750/assets/css/frontend.min.css",
+      "sha256": "56b6ebaedfc1a0e8a2653ab9838e53aee7b2f4de547997439754649999267fb5",
+      "size": 451663
+    },
+    {
+      "path": "core/modules/dccac82750/assets/css/lib/animations/text-animations.min.css",
+      "sha256": "346722bc13d0c169275c62d4642f968f5d7c1b639b842778c48df558d8954e17",
+      "size": 14235
+    },
+    {
+      "path": "core/modules/dccac82750/assets/js/frontend.min.js",
+      "sha256": "3e41e52fde68fa8c4630dd804614d6976030265a2d369e61636b14da7f3ddb53",
+      "size": 308275
+    },
+    {
+      "path": "core/modules/dccac82750/assets/js/lib/jarallax/jarallax.min.js",
+      "sha256": "0e8046d1329ee32048030b15b473e89574c1a96f1fe350e2f6fe2bbbdb1916af",
+      "size": 15408
+    },
+    {
+      "path": "core/modules/dccac82750/assets/js/lib/parallax/parallax.min.js",
+      "sha256": "9d9e06fb9a97436f2d652149d48331c5ec9eab5fd6c27b496b055c319d6a4e67",
+      "size": 17272
+    },
+    {
+      "path": "core/modules/dccac82750/assets/js/modal-popups.min.js",
+      "sha256": "ffe90abf1e3a9fa01e7b3b4b0d36b8d76d918e2ec9895f06f40b5de446362146",
+      "size": 11524
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/conditionals/e-swiper.min.css",
+      "sha256": "196f351ce1a780302b50e7b2404023102d7f555aa518d62ec678829c4b7b1185",
+      "size": 5486
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/frontend.min.css",
+      "sha256": "0a5d398672e25dc7f020f69df92a985481b248a60e301fee232d0c8afd648dc5",
+      "size": 54666
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-heading.min.css",
+      "sha256": "f68e889145cb0e47b7b190b2fdf087a9213a264ad33951512880c9f8bb6d0cd8",
+      "size": 560
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-icon-box.min.css",
+      "sha256": "398e2425ac154b75384c55af3fcb40cf68ef50e15714b9dda11bf54ee0b9fc35",
+      "size": 4726
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-image-box.min.css",
+      "sha256": "7738ac41dae333c277ec1132c7ffa496457af424a623cbf02b56fea00adaaf1a",
+      "size": 1657
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-image-carousel.min.css",
+      "sha256": "26da5f73e4bb1559c1f4865fa414fed4630a978addcb437dca43c5392a42e564",
+      "size": 342
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-image.min.css",
+      "sha256": "fb8690e594b2f9b841585895d811e8cb839667a1a63963d1a1cdea11e2aa2abb",
+      "size": 214
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/css/widget-toggle.min.css",
+      "sha256": "5426b5addc14c28268cfc7157b81a7d8d4cb0d4fc2fe5cd9642b59c942439273",
+      "size": 1547
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/accordion.min.js",
+      "sha256": "eed8b17c17ecfa215944acc5f7ce2cda252fae432a38790feb6958c0e706f26f",
+      "size": 27640
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/alert.min.js",
+      "sha256": "fb38732542d09a63e009347e59387caf77b80747e383840cde9a52cee92393e7",
+      "size": 19940
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/background-slideshow.min.js",
+      "sha256": "b988fa9f49a827ea9e370928141eea3bbc6de3bb8ba09be948ae80352c3a906d",
+      "size": 23186
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/background-video.min.js",
+      "sha256": "4bafd11c752be817df7d0a1bf792465c6198e5d957700e64fb6263affb784f1f",
+      "size": 24570
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/contact-buttons.min.js",
+      "sha256": "6dadb9c4bb9cf569be194cad4f6c4178914e7df1d993ff4d3e66d87132db8c3e",
+      "size": 36520
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/container-grid-container.min.js",
+      "sha256": "e6e7d57ed85937fb0e7b163d1c0fc27da6123698dceaed743c558429295eaf11",
+      "size": 34868
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/container-shapes.min.js",
+      "sha256": "68a9a4c480f30589de9826cfc8d68efa8aa8cf5d42485586b99bf55ef86c1108",
+      "size": 21154
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/counter.min.js",
+      "sha256": "d0f15fb89f96c3f95b25c69c003187276c966cb4ec2fb060175667b752bdc51d",
+      "size": 20228
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/floating-bars.min.js",
+      "sha256": "c4bb48030a77b22867663e3c6589de18752cc7036047c05c6849324070b2f6a6",
+      "size": 36167
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/handles-position.min.js",
+      "sha256": "d7de925ceb55af02dd905b88098179eacf347898fa1ad514004d0512cabf10f2",
+      "size": 1992
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/image-carousel.min.js",
+      "sha256": "ef7af3233638831fee4085f43f2c9f733f5fc9c505694f6d961ba57cab260891",
+      "size": 1002
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/lightbox-lightbox.min.js",
+      "sha256": "b82b9b986c077b84504806a46d180c2fe65b29cf514ed5db27744c736714b00e",
+      "size": 78316
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/nested-accordion.min.js",
+      "sha256": "20dc92c8d21341cab979f1b1a2ea249b7a05b0fa1bfa4a0f13c51e40f3b97c44",
+      "size": 38733
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/nested-tabs.min.js",
+      "sha256": "6e93510a15f216e017fb8a71182a375e934a55f1fa9ba2420e1529d3162bec7c",
+      "size": 43389
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/progress.min.js",
+      "sha256": "36ecbd5e72a39ee08cc7ec0ee6eae30419e49dfd72fc28b830df2e87b3ac158e",
+      "size": 20450
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/section-shapes.min.js",
+      "sha256": "28bd7cf05d282e271224f21c922cc1adc1cc22318fff4abb101e326a1352823f",
+      "size": 21062
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/section-stretched-section.min.js",
+      "sha256": "234201e19453b4a7ed9678ec3b2e8354f1d1c2a7b264c4f072b6a645b6d15499",
+      "size": 1057
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/tabs.min.js",
+      "sha256": "16d38cf21ba84e3aefb0acbb46ef2dfaf85bbd25fd18813b28802278c18674aa",
+      "size": 27597
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/text-editor.min.js",
+      "sha256": "a7b26ee1157dd6916bd9a82e218629d8f4fe8e818153289d7ede0286caaf543b",
+      "size": 20662
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/text-path.min.js",
+      "sha256": "848e62947c7379ab840fd66b922ccad0531c2b5a5f40fed2052d54d95ba3fa6e",
+      "size": 27058
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/toggle.min.js",
+      "sha256": "82f1aae5bec4881d5ffc737c9b79a75fcc916bac9e9e61e1009414a082fb3458",
+      "size": 27667
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/video.min.js",
+      "sha256": "5202547ebbd8cab399e4ab5d8bbd389980c2b84b705f6e9fdb5c26e81adcff60",
+      "size": 23550
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/chunks/wp-audio.min.js",
+      "sha256": "58ccccc5c7a0546a36074d26db48ada3ffab0eff92580cf3752f5e278cf2ea0c",
+      "size": 916
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/frontend-modules.min.js",
+      "sha256": "2636846470306c226883fb4ede46a96d71a54454d6c8b1bd9e26e6baf72db965",
+      "size": 53086
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/frontend.min.js",
+      "sha256": "bbfe6403b4ddba29284c72d20f000154d04588d60850fc39a6fd65861c6d83e6",
+      "size": 60022
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/js/webpack.runtime.min.js",
+      "sha256": "8d2011a2a7c0d96582f8495b69b6e5f56432ed8b5095cf7aac7e2f259ea2fbfb",
+      "size": 103
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/animations/styles/fadeIn.min.css",
+      "sha256": "d9c370831c74b1850d70f5b1c99453d6cda21e5099428a3f21c43bd96c3acb5d",
+      "size": 77
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/animations/styles/fadeInUp.min.css",
+      "sha256": "7263363f11b6184fe306b05a849db2de5a674258610578e594068bec72b4f2a9",
+      "size": 130
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/font-awesome/css/fontawesome.min.css",
+      "sha256": "fafc4160788beca657ec3e3041976281fb6d54a0e82bb4d22a433f7c6bb8b1d6",
+      "size": 58071
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/font-awesome/css/v4-shims.min.css",
+      "sha256": "c55902832fb84522d02ea1a60a30747403a140d8651fa748f13ba398b0c0df3a",
+      "size": 26702
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/font-awesome/js/v4-shims.min.js",
+      "sha256": "6f35273b8502706ee06854d797337ab40bc1b3a7421960a2ceb5392ac85a0f54",
+      "size": 15073
+    },
+    {
+      "path": "core/modules/f65f29574d/assets/lib/swiper/v8/swiper.min.js",
+      "sha256": "2ac3af00c283c0b2ae6108fa83a2053e51274a2a812fb063916cbe19bc4f96b5",
+      "size": 143709
+    },
+    {
+      "path": "core/modules/ffee7df689/assets/js/lazyload/17.8.3/lazyload.min.js",
+      "sha256": "f40767552e5e94b2d5f9a65d7f640cfa7d225298023dbd682095e040809a3d1a",
+      "size": 8892
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.eot",
+      "sha256": "370b9a40e0ede1998a6216a71aa1758aad364501e8d49e4d6a48fd045c60f56f",
+      "size": 241948
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.svg",
+      "sha256": "634665000157e91c48a30f38dd154f101a7e18667b975e990cf76be6926e48b3",
+      "size": 372813
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf",
+      "sha256": "1885a4223aca0f98da9bee90da6f9e450680ede9c6e6c06863507d48499e6d45",
+      "size": 241788
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff",
+      "sha256": "37d6c42f4c2ba9b39cdb6235983e896e0429a956999416f82c7edb77d4f149ae",
+      "size": 133464
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2",
+      "sha256": "1d7ab8c66c7fbbf2059cc927b4a2533de146e2cd05179763a55a00e85721b4bc",
+      "size": 108152
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.eot",
+      "sha256": "52633a4bd205e19c3cd09c8d2ee281557bc6242a99e7f69cad6c49a4d1fa9c06",
+      "size": 151556
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.svg",
+      "sha256": "5accc59868cdb3e81386c2f325823e8a82ce3b553912e2d43fb9abb4cd5a1e94",
+      "size": 749223
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.ttf",
+      "sha256": "7c6ce17d6e55fb2b5267880fd0939c7e2be6de99bb57fa56a7fe2f40146c0137",
+      "size": 151368
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff",
+      "sha256": "284ec4299d1c93376385ef74c2aeaf7af4e1c6e63f5163a5e1e85ab4c5c79d76",
+      "size": 97804
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-brands-400.woff2",
+      "sha256": "6b2680fab784d245cbb23d3b51e8d18740e8fc1c7c1c8eadcf0b2b7612125ff8",
+      "size": 81612
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.eot",
+      "sha256": "cf83ffb8cf0023bd439dfdd5d02f1954b6ee027e85897d6cfc5f90bbca9ec1d2",
+      "size": 34034
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.svg",
+      "sha256": "2326849b6c3dfa217a0e9ecaec9553c910a4e2987c87315c85073d2b95a484f3",
+      "size": 144714
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.ttf",
+      "sha256": "c651b8a67d3193206f622c3c3b0fbca4a2f2727108c4212b52c1e2a2e84c9b31",
+      "size": 33736
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff",
+      "sha256": "14c9db4ff87fde08f67b0a69dd594bab6d87174812a0dbd34c59833bfed8cc0e",
+      "size": 16276
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-regular-400.woff2",
+      "sha256": "8afc6e5e842baab16010c2ce6fcf48ec4ded8e1579a37c1f1bc027e120d04951",
+      "size": 13276
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.eot",
+      "sha256": "75a761159ae266c5332a4f266e07a5543712ffb76ee0260b07782195c04dc364",
+      "size": 203030
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.svg",
+      "sha256": "fa498fb2596a5235c5c86d7b68a7fbe76e9855c01af4b0e5ab41c41047c648e0",
+      "size": 918991
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.ttf",
+      "sha256": "3d06af1f31cd83ace7a265a014b8fb5dee15770ecac8f7a55555190e627e03c2",
+      "size": 202744
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff",
+      "sha256": "74edc18b67c487e32f181719fdb347e2e77020744651f446e9acd7bd6821e2e7",
+      "size": 101652
+    },
+    {
+      "path": "core/plugins/elementor/assets/lib/font-awesome/webfonts/fa-solid-900.woff2",
+      "sha256": "d0b4256abed72481585662971262eabee345c19f837af00d7ce24239d3b40eef",
+      "size": 78196
+    },
+    {
+      "path": "core/views/ff55dedaeb/assets/fonts/fira-code/FiraCode-VariableFont_wght.woff2",
+      "sha256": "b6e7adca884c51549c66384fec54747fa2967ac6ad5655ed02c5da5b682a9ba2",
+      "size": 106112
+    },
+    {
+      "path": "core/views/ff55dedaeb/assets/fonts/manrope/Manrope-VariableFont_wght.woff2",
+      "sha256": "ce340d48531930f3f2c8b7c47d149f82c9f4413548dd216e0f4d9af94a87c374",
+      "size": 53600
+    },
+    {
+      "path": "index.html",
+      "sha256": "b1c48f0417a1ac1ee187d16340c7e2ee734c924835a2de1966454971da88b1d9",
+      "size": 325903
+    },
+    {
+      "path": "lib/js/dist/hooks.min.js",
+      "sha256": "fc774906082b59dedcfc55b8ef127783b6d056578ff4586a8ebbdb81bbe286f1",
+      "size": 5107
+    },
+    {
+      "path": "lib/js/dist/i18n.min.js",
+      "sha256": "5083905862c2b7aa8a84c4f2313d359d2288fb25fbe1ff577fa7325eff2ed2d9",
+      "size": 5791
+    },
+    {
+      "path": "lib/js/jquery/jquery-migrate.min.js",
+      "sha256": "5274f11e6fb32ae0cf2dfb9f8043272865c397a7c4223b4cfa7d50ea52fbde89",
+      "size": 13577
+    },
+    {
+      "path": "lib/js/jquery/jquery.min.js",
+      "sha256": "cb6f2d32c49d1c2b25e9ffc9aaafa3f83075346c01bcd4ae6eb187392a4292cf",
+      "size": 87553
+    },
+    {
+      "path": "lib/js/jquery/ui/core.min.js",
+      "sha256": "b7a27a4b4abfc300eaf7d9151afeef8df2663d98586e38f59f91bbe98ef30af7",
+      "size": 18674
+    },
+    {
+      "path": "preview-runtime.js",
+      "sha256": "f7c6ac5dcb6e5e54148783b4ae5f2bf0a266e7d75a89ccdd3b33b8c28c42a6f1",
+      "size": 808
+    },
+    {
+      "path": "project/index.html",
+      "sha256": "8c18e194a387203e83636e518fd8d517a62cb05ac930625f6577fae1b6de9f38",
+      "size": 202446
+    },
+    {
+      "path": "project/spine-clinic-family-holistic/index.html",
+      "sha256": "e7c0f21b511886b0adce09a5725ee2217e91ea98b00cc822051d44a44204931f",
+      "size": 201358
+    },
+    {
+      "path": "robots.txt",
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1",
+      "size": 26
+    },
+    {
+      "path": "storage/2026/07/Client-1-300x120.png",
+      "sha256": "2ff9a1b0433383cac89a5e6fa949a34a6daa97905aee2af937051c75f68f6ffe",
+      "size": 13133
+    },
+    {
+      "path": "storage/2026/07/Client-1.png",
+      "sha256": "69842959a29d0da98f968c4e31d28f999c56dbd0ada9ef5460b5896f038b0dda",
+      "size": 19469
+    },
+    {
+      "path": "storage/2026/07/Client-2.png",
+      "sha256": "58565b79d348832637df859325c5b6b5b8483274211b35a67278e20388896f13",
+      "size": 13033
+    },
+    {
+      "path": "storage/2026/07/Client-3.png",
+      "sha256": "f76fc8d2466d123fc8af81cd9d1325daeb8ce0a6fa9abf1caf55342f3aee7ba9",
+      "size": 15708
+    },
+    {
+      "path": "storage/2026/07/Client-4.png",
+      "sha256": "480d6f8b3f2c4562678f4793761b5b3472ba82a39524d1439cdc5a437f273f96",
+      "size": 11152
+    },
+    {
+      "path": "storage/2026/07/Client-5.png",
+      "sha256": "52ba93e1818daf931e86582de88659cdd4a035d95293ffb86b8692b747e126d1",
+      "size": 23276
+    },
+    {
+      "path": "storage/2026/07/Client-6.png",
+      "sha256": "1c6832c4951985f860cada4421dc520b9ae6d5d4360af6a2a9ef1280b5b84305",
+      "size": 11290
+    },
+    {
+      "path": "storage/2026/07/Client-7.png",
+      "sha256": "fbc34549545eb9fedb72dfd099d8c15a1669878e08e0f9b3a58c309e205f8320",
+      "size": 19711
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-150x150.png",
+      "sha256": "ac96f722817f49510aac301a3e1398eb169f888d5f6b8a606c07b5a0e20adba7",
+      "size": 3524
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-300x300.png",
+      "sha256": "522b14a31382c42e259b57c585d55a9c1e5adaf0b350add41ffac2290966665b",
+      "size": 9622
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon-480x480.png",
+      "sha256": "a54513d65b0ac7bbaf4b4812432e255aaefd35ae4f7a68f30b71fc215507a23d",
+      "size": 19511
+    },
+    {
+      "path": "storage/2026/07/GMG-Logo-Icon.png",
+      "sha256": "cb58eef6807dac814968215d2ee7f53519a07ba6da8eead67734b5b8934cbbf6",
+      "size": 20069
+    },
+    {
+      "path": "storage/2026/07/Grid-Background-Gian-Media.mp4",
+      "sha256": "f69076c98f2e2e519618fc2790bc640cf0e9d0e7219c5320399f32fdb6337147",
+      "size": 4782890
+    },
+    {
+      "path": "storage/2026/07/bg-1.webp",
+      "sha256": "d9508cd65b4a7392fc014513e06e116fab97b4ce16bc99ed6b08cccd40afb559",
+      "size": 5618
+    },
+    {
+      "path": "storage/2026/07/cropped-Gian-Media-Group-Favicon.png",
+      "sha256": "89b1b207cbf466241c2c69784bd5c00299e4355eddf17c91b33966de7163ae4e",
+      "size": 16769
+    },
+    {
+      "path": "storage/2026/07/elementor/thumbs/GMG-Logo-Icon-rqobjj6hz9owe3p8lf4qbvtacnb9dojqstemykuc3u.png",
+      "sha256": "cb58eef6807dac814968215d2ee7f53519a07ba6da8eead67734b5b8934cbbf6",
+      "size": 20069
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-1053x2048.png",
+      "sha256": "56ec751e2f6f25eff3b824a7ad72c6b7bd5c8aba8a2af846331f7143ac159588",
+      "size": 412705
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-154x300.png",
+      "sha256": "81dac98073ebc9ccb9653c194188e2142c133aa95c435330ebff687da880f943",
+      "size": 20696
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-480x934.png",
+      "sha256": "90afeb462c8cc60fdf40afb9018430726beac1e1030f0e9c76a6c7c2108e2c83",
+      "size": 119734
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-526x1024.png",
+      "sha256": "facbd83f412026dd4e59a528cc885d16113edbf76f07a77093a7e0963202781c",
+      "size": 138929
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-768x1494.png",
+      "sha256": "a5b0de01701b08460ebe9ca6fa238bfc8304f45761068698a3148d24175402f9",
+      "size": 250504
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-789x1536.png",
+      "sha256": "0fb0b0ba807c39ddb654673025669605a769b56543229557f4e9c0fcc4cec39a",
+      "size": 262182
+    },
+    {
+      "path": "storage/2026/08/SEO-result-Spine-Clinic-Family-Holistic-scaled.png",
+      "sha256": "a330c645a1d829931ac95969c9bf7e6b58fca62cfc08f5b77cac16812131b353",
+      "size": 587008
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-180x180.png",
+      "sha256": "c8192c3192416ca5c5413de0a190cce74b12de35fb68aaee3bb7f02352428eee",
+      "size": 4504
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-192x192.png",
+      "sha256": "799dc0d012c9e70fd49e5c425ba64147f35a10ce536303749756496644af74fa",
+      "size": 4894
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-270x270.png",
+      "sha256": "d16dbe5a4bce51dcebc481652018a532c59c8f732d6a6961c24ce87a1d6c2c65",
+      "size": 8368
+    },
+    {
+      "path": "storage/2026/08/cropped-GMG-Black-32x32.png",
+      "sha256": "f7d0f28a0907a66b3e2f3e1aca43a8658bd9c4829ed103b642299079a8f5f291",
+      "size": 702
+    },
+    {
+      "path": "storage/2026/08/cubic-loop.webp",
+      "sha256": "d6e7db076c3452baac61242820b1d55216d498937fd632f086150d9a35ebe8ce",
+      "size": 1033404
+    },
+    {
+      "path": "storage/2026/09/3d-design.png",
+      "sha256": "3f0c2fd2e297e3c1746637ffff16d1d89ac147ff0807e00eab50203dc98a4f35",
+      "size": 481725
+    },
+    {
+      "path": "storage/2026/09/A1.webp",
+      "sha256": "d948b88e44c7d3c6663ab1cf5e0ef2c12b9ea3eb8e127d137a08c29dec7c87ef",
+      "size": 26614
+    },
+    {
+      "path": "storage/2026/09/A11.webp",
+      "sha256": "a88aaa7b7aa54573f22d64085503a1b99a9f76957375a4bb180a92c508e6f911",
+      "size": 32594
+    },
+    {
+      "path": "storage/2026/09/A2.webp",
+      "sha256": "2c8ae66ca946536734089d31ca6cc16ff968f81118f6bd922aa03301dd9b4419",
+      "size": 23938
+    },
+    {
+      "path": "storage/2026/09/A8.webp",
+      "sha256": "31f32c09390c29ff74ba03903083455ea251a172cb2fa36263d0c9d87746b2cf",
+      "size": 17528
+    },
+    {
+      "path": "storage/2026/09/A9.webp",
+      "sha256": "0473dbea200021559af9c8258ecae0e2d8dd52d239e6a3345f2210ef94b07402",
+      "size": 30512
+    },
+    {
+      "path": "storage/2026/09/V1.webp",
+      "sha256": "8f0dde10b80b6facc7a60ad505dc9d65e9b7300349ea2eaf67fef696b22219ba",
+      "size": 8262540
+    },
+    {
+      "path": "storage/2026/09/mediaventures.png",
+      "sha256": "ce04d1c1c72333688647efff70674d9b15cbbafeb87929d45c4933b0d3ea77d4",
+      "size": 749378
+    },
+    {
+      "path": "storage/2026/09/seo-service-239x300.webp",
+      "sha256": "9dda307b57a6cdca65919b78642be0a8976b9c60a2a0462e70447a75c1462b6d",
+      "size": 6232
+    },
+    {
+      "path": "storage/2026/09/seo-service.webp",
+      "sha256": "87965a06e43f24f353daef5e1c3894090c711adc05d87658cf1729dbf3fdeefb",
+      "size": 19566
+    },
+    {
+      "path": "storage/2026/09/seochart.png",
+      "sha256": "a3124c22ded5e556ebd274032c1adde837207bef6b4b77e4681a728da4e1cbd1",
+      "size": 335198
+    },
+    {
+      "path": "storage/2026/09/uiuxdesign-service-239x300.webp",
+      "sha256": "cb2fc0608dc40aed363bd81107fdfba06985f7f41788a43498be29c529bc257f",
+      "size": 4416
+    },
+    {
+      "path": "storage/2026/09/uiuxdesign-service.webp",
+      "sha256": "779249c2d0993972875d3fac52bd0c0a4f668c3b4b4fe335a11168dc7af00fcd",
+      "size": 17224
+    },
+    {
+      "path": "storage/2026/09/web-development-service-239x300.webp",
+      "sha256": "f2beb6b0606df8673a27caa6315e9794c596c35ea1a080f4ccec2fec835d7438",
+      "size": 10104
+    },
+    {
+      "path": "storage/2026/09/web-development-service.webp",
+      "sha256": "45f3bb430721aaaf08514e93215d17f70ce0dd7e796c55ccba981a503179789a",
+      "size": 44208
+    },
+    {
+      "path": "storage/2026/10/AEO-service-300x176.webp",
+      "sha256": "691aaacacea24904bf994fcc13bfcae4c65b0d94579a134b90b3d29ed15d908d",
+      "size": 4418
+    },
+    {
+      "path": "storage/2026/10/AEO-service-768x450.webp",
+      "sha256": "6aa8a937a3400fde259e5cd67faab12824e2f882842c962637973dcd07944888",
+      "size": 18180
+    },
+    {
+      "path": "storage/2026/10/AEO-service.webp",
+      "sha256": "7cc993b7670019d7e5036453f84900a4272a6d67808b3acdae0a9f7dd6c9689c",
+      "size": 35672
+    },
+    {
+      "path": "storage/2026/10/AI-SEO-Portfolio-Gian-Media.webp",
+      "sha256": "297d0754b843e55c6c9382202702909b8ac5257d878921054c7a1303b6baf624",
+      "size": 48172
+    },
+    {
+      "path": "storage/2026/10/Capron-1.webp",
+      "sha256": "cf689b5c23acaa22e968a338d8f2dc47f618ffad442e54f26cbcaadba1bb3f06",
+      "size": 36698
+    },
+    {
+      "path": "storage/2026/10/Capron-2-e1791392013543.webp",
+      "sha256": "1af3397a9658b93675c824dc1ecf095d0041452dc8f25cfb9407209307dfad7b",
+      "size": 30448
+    },
+    {
+      "path": "storage/2026/10/Capron-3.webp",
+      "sha256": "f659ce8702a0fe603a6d14b3dbb072cc855199056dba7f99dfb74c390dd5b659",
+      "size": 69650
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-154x300.webp",
+      "sha256": "da6c72a1fe6d6e59cc3279def802d854464c35c221d052868c1a7e4d62078c51",
+      "size": 7516
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-526x1024.webp",
+      "sha256": "7ea5093cdf396ffa31452b9d4487ae1f6f7a2753dd313b1e9a2bb0f7b381bddc",
+      "size": 43666
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-768x1494.webp",
+      "sha256": "75c453bb49b73ea37758a6a91955e11d5cd6b3d5e4b2307e4666c8ebc2adedfa",
+      "size": 74032
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1-789x1536.webp",
+      "sha256": "d4f915d00d8b91f2c689d5e50814554228877f036245a95239f7d2dceb4ec93d",
+      "size": 77292
+    },
+    {
+      "path": "storage/2026/10/Clinic-Website-scaled-1.webp",
+      "sha256": "bef326168b689438032b499c4389b32b7d3bace3a351849a140a33ff902cd11e",
+      "size": 142670
+    },
+    {
+      "path": "storage/2026/10/Foot.webp",
+      "sha256": "e8fdc467dbff057345ae4141919b3501072a702812dfe681d2cf6140ab3224a3",
+      "size": 188732
+    },
+    {
+      "path": "storage/2026/10/GIAN-1024x305.webp",
+      "sha256": "885a59f78fd4a1b4a834200a1f6d6234ce3400ba0a9b95e2badea08461a06bdf",
+      "size": 84932
+    },
+    {
+      "path": "storage/2026/10/GIAN-300x89.webp",
+      "sha256": "29e76ec8429fb1f4a278c968eb0c05386b8fa57cba078245a9481821fd38c685",
+      "size": 10168
+    },
+    {
+      "path": "storage/2026/10/GIAN-768x228.webp",
+      "sha256": "e6ec2776940871fdff8e780e0d315d97ab5d03747b468f64b7f3d6e9ff6378e4",
+      "size": 53046
+    },
+    {
+      "path": "storage/2026/10/GIAN.webp",
+      "sha256": "330a1acdcb696df483f6da9f34fdc11c84a083921bd4f48d41bce8c4ab057973",
+      "size": 153806
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-300x176.webp",
+      "sha256": "f78ecdf1d344a06bbd9667caea75a53a3431db314526c679d5c4e8bd935c32d1",
+      "size": 5808
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1-768x449.webp",
+      "sha256": "bb6fb37a6a8ec58fb546e0b49572a06d7da4c456342f259f952d17b0843457d8",
+      "size": 22066
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Client-Spine-Clinic-Family-Holistic-1.webp",
+      "sha256": "7510f7299f41c323ce48cea13eb5ec2f2cc0c9576cfae331ceab150cd60e9e96",
+      "size": 49766
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Drooling.mp4",
+      "sha256": "353d99b02dd5b7e4a9bfc6c4f5a8cb39e72e13b5fd1ebb30cc62cf5745eb33e9",
+      "size": 2110168
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Portfolio.webp",
+      "sha256": "1f2a06c22dbf6fff71151e9de392d132029134a2e361ebca30c16ae6df5aaf0e",
+      "size": 29382
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-1.webp",
+      "sha256": "32921835e2e8ef7c497c48b401132b5e70e4ac0b7272f3b83b070b30288d6ee1",
+      "size": 15388
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-2.webp",
+      "sha256": "c87b9f6ebe6812fa2669aa8ff1c50410685df3807c21304b8dc3ad35d4217f35",
+      "size": 56026
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio-SBP-3.webp",
+      "sha256": "fe46cab8480b75a8cffd2446ffd2bada963e97e4366ec0e3bcd1b3640aad9c4f",
+      "size": 27540
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-Portfolio.webp",
+      "sha256": "024f73b6e5b7570e3d92bf7f60026178b7bdd954931f9b5a218fc1797164b916",
+      "size": 82176
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab-2.webp",
+      "sha256": "008510cdbbbd5f7d8cc3666a522049c5abc88b0f3d90243fc09e49e2d90f5329",
+      "size": 51604
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab-3.webp",
+      "sha256": "c62258309cb747e8e8ae73746ff3507aadada3aafb9a2c6441ca8f314571d273",
+      "size": 66020
+    },
+    {
+      "path": "storage/2026/10/Gian-Media-Web-Design-ScolioRehab.webp",
+      "sha256": "913584b4d612952624bb167ca8c940f31cc5fae6038a7ffc9d49673b159b795b",
+      "size": 32788
+    },
+    {
+      "path": "storage/2026/10/Gian-Stavin-Gian-Media-Founder-150x150.webp",
+      "sha256": "d1e51605147dbea02e4a470614499747679df40f644bd907da150c244cdd43bd",
+      "size": 1506
+    },
+    {
+      "path": "storage/2026/10/Gian-Stavin-Gian-Media-Founder.webp",
+      "sha256": "cd26354cf42709584efcffd45d42b236d5aaaca5f0c9810986919e531ed8e2fe",
+      "size": 6522
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-1.webp",
+      "sha256": "74a586bfc4021465889fde6516daf6b3e810b03a35b105393588c84bb630c5c1",
+      "size": 12108
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-2.webp",
+      "sha256": "c8bdd0df2ce94d2c1d8f9295d547f29837a0194e436f1fa1095e05e37a36c84d",
+      "size": 23116
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-3.webp",
+      "sha256": "07b8855c63ed416d41d84ab19a6e17580f8dc25d73c274de53eae31bd12f3a22",
+      "size": 23906
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-4.webp",
+      "sha256": "ec0aff5e83f40a77fb38a76c2ee7cb22b735c9e092954a5deb9708e582af4a62",
+      "size": 26676
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-5.webp",
+      "sha256": "6e858c7ad0ba0491abaf6784df5c6e14b3b033ad8c62ce9045512ddd504c33ef",
+      "size": 27548
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-6.webp",
+      "sha256": "c8a6eef39f070166c8a107262554803cfb0cc2b4931ab08d500e86fba4bd1ebd",
+      "size": 18046
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-7.webp",
+      "sha256": "686bc3d9f2587b74f32ea87f24a765bfafdc60b40653d3e561a31e0e0e17588d",
+      "size": 20082
+    },
+    {
+      "path": "storage/2026/10/GianMedia-about-8.webp",
+      "sha256": "cadfe257e23560f5d52bda137012b5e33127b3ed341f686f3dbe4e817d2f167f",
+      "size": 16342
+    },
+    {
+      "path": "storage/2026/10/Koku.webp",
+      "sha256": "8953ee96bd6210418d9505ffc9587985d8328daca6ef35b009aa0b288ae4a6a3",
+      "size": 62222
+    },
+    {
+      "path": "storage/2026/10/Kokuuart-Gian-Media.webp",
+      "sha256": "54ead339487c37d57ce9f4e140cc7dcca8cca6804551e000937cd034b21196ef",
+      "size": 51656
+    },
+    {
+      "path": "storage/2026/10/Ortholife-Gian-Media.webp",
+      "sha256": "49f5810d286298d2e51f7d5debe0c57a5565617e5a5581d1a71ff9931751a0b0",
+      "size": 52396
+    },
+    {
+      "path": "storage/2026/10/Selected-Work-2-e1791040812822.webp",
+      "sha256": "b1ecc79fdbece482d913cc1006563dd2ff0756a7239631869fd58a08d83a9b74",
+      "size": 50918
+    },
+    {
+      "path": "storage/2026/10/Selected-Work.webp",
+      "sha256": "7c9ca945805e2110e05fd51d1b8ba1ef58a2583a09cc5a730ceeb7726c13d065",
+      "size": 97204
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media-300x176.webp",
+      "sha256": "b4ca486e035ee643039fa87e349b0f21cb4b21cc2f532662addbb5a54782a22c",
+      "size": 9372
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media-768x450.webp",
+      "sha256": "580ca518f9bcc315a81b6fb78cae853a0f508a90287199ad1511aa115e027c46",
+      "size": 37294
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-Project-Gian-Media.webp",
+      "sha256": "94b6c2fed6a27488f6dc428883b164f0ed3bbc37f16b082eac253ba1b4997009",
+      "size": 75346
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-150x150.webp",
+      "sha256": "e3761bcd8b7a8edad3ff1116b2d33a08ba07f3e070bc7794140ee591e7f1f552",
+      "size": 5478
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-300x300.webp",
+      "sha256": "77873a732d4153a4b8fb9afa945a1de16ba5bb3b4ed49f9662bf3c920c8637e7",
+      "size": 13518
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3-768x768.webp",
+      "sha256": "1e0b6fd5f8001c5debfcef920bdc9fcd71be32c9e08d5759ae1df574c22638a1",
+      "size": 49254
+    },
+    {
+      "path": "storage/2026/10/Spine-Clinic-page-3.webp",
+      "sha256": "88dc86838dfca3a95360f2981d01e29910c6baa4f0fb57ecc6331b99a69262b8",
+      "size": 98526
+    },
+    {
+      "path": "storage/2026/10/Web-management-239x300.webp",
+      "sha256": "d20853c46b09d16f32cad6edb293ee6475abe5f55fa9b32cecc204eb6e4a92f6",
+      "size": 4588
+    },
+    {
+      "path": "storage/2026/10/Web-management.webp",
+      "sha256": "80cbfd8f301af89d5e1326dec7b57779f06646aca7f78dad8d796f70e6cdb5ea",
+      "size": 18226
+    },
+    {
+      "path": "storage/2026/10/ortholife-web-design.webp",
+      "sha256": "6cb316ae4f3fdafa00e374957cf36a1be78e2f43cefb81d77a69ecb04747fd19",
+      "size": 5002468
+    },
+    {
+      "path": "storage/2026/10/ortholife-website-design-by-gian-media.webp",
+      "sha256": "3ec9e6e1c7c085576d3bd76d05890796fe2f01e979136e5c1387244e9e028e7f",
+      "size": 74660
+    },
+    {
+      "path": "storage/2026/10/overlay.webp",
+      "sha256": "0864e9555df5124b3dd4d8caf52bc613119c959d2770a95e7515d1081e01d97a",
+      "size": 99494
+    },
+    {
+      "path": "storage/elementor/css/post-12049.css",
+      "sha256": "45921ff218d305e3bf876b2f66ccaf7b1de51f4e10e9e46514a037313b6c30ba",
+      "size": 211944
+    },
+    {
+      "path": "storage/elementor/css/post-12051.css",
+      "sha256": "468a44ca154368c29f440c42783b99eb56a16950ee89c3056b517c41b792e5e2",
+      "size": 213654
+    },
+    {
+      "path": "storage/elementor/css/post-14211.css",
+      "sha256": "702257cd056d285055e5eb2808516a2bb26a6e427002e10a7e3d03e827c9091c",
+      "size": 232622
+    },
+    {
+      "path": "storage/elementor/css/post-15111.css",
+      "sha256": "09330ca1a014dd452bc958ef7f80d8bb9ae129254844bfa8ec1e78cc9022fb89",
+      "size": 185175
+    },
+    {
+      "path": "storage/elementor/css/post-3275.css",
+      "sha256": "ef2e4340d9127e8c258aee04c507b55f70c038b1bb22b8bb93205e42ec107d60",
+      "size": 1231
+    },
+    {
+      "path": "storage/elementor/css/post-3539.css",
+      "sha256": "61375c883de2877a44bf8c703d30fb23143960de733f087b039ba144e095eb7e",
+      "size": 69018
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkahkawzu.woff2",
+      "sha256": "900190befc0dfe4ae99fefcbe7f72425c48a61ebe3ff00bbe93b0287e0007c97",
+      "size": 22288
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkankawzu.woff2",
+      "sha256": "a5ee960e6273ecaa1787150604d18a2be3fad74cf76936f916ed8b235a4106bb",
+      "size": 24576
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbnka.woff2",
+      "sha256": "9ec9eb9108f1752c30ba316606858d685a112a609d8bef1fb3d5d32c8e0b6507",
+      "size": 44192
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkbxkawzu.woff2",
+      "sha256": "baac6db7ec159297d2fe9d313222d826e76b09fd72be43530b632059d482c02d",
+      "size": 18800
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkc3kawzu.woff2",
+      "sha256": "fbeb2620ecd7451cd9f27a70e7ec39e1597cb33fd36be9424bf97a18c0e2e786",
+      "size": 39456
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkchkawzu.woff2",
+      "sha256": "b9acf16c2906a6b95c31bf7cd8b417bfc32f83216a50d70c0cd41e57a1922f4a",
+      "size": 28536
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcnkawzu.woff2",
+      "sha256": "68ab4e107fc1d8d32d358b0e8c8182921e7934e4fc672f3805dfa9a16946a9fb",
+      "size": 4468
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkcxkawzu.woff2",
+      "sha256": "a0435a376ff703ac8ceedd566f18e3b025d91f35349b21968a09d65080fac0b6",
+      "size": 13888
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo5cnqeu92fr1mu53zec9_vu3r1gihoszmkenkawzu.woff2",
+      "sha256": "8754810078212d20cc4d3e96f6c4fd2d2252e06263617681ebd1cfae813b68b2",
+      "size": 44336
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3-ubgee.woff2",
+      "sha256": "31c5962274d8bd31cbf72f45aaa615f33f230088491b4ee5d9f544fef10c418e",
+      "size": 17628
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3cubgee.woff2",
+      "sha256": "d94ccab74005ea632c5680d33d34586634ded595035990fa2cfef2f1e1cccb55",
+      "size": 4340
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3gubgee.woff2",
+      "sha256": "3a8eee8312b77ac2ef2dc2e01fdddf8ede8a4f72bf1a08d40745d8b432386fdf",
+      "size": 35568
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3iubgee.woff2",
+      "sha256": "c06ca3fcbc5f7c37ebb7c86a69502009911ecd8183811bae02f9b1fbb0541ddb",
+      "size": 22796
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3kubgee.woff2",
+      "sha256": "884933fb5789b478d2da68a4cb0bd5cc138d995f1fea9a957ba29cb3c00f1bf7",
+      "size": 26428
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3oubgee.woff2",
+      "sha256": "38ca68052df6bb72126ff9cedd7d78d2afe62079e9149ddedf650ae8f4c744cf",
+      "size": 13004
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluama3yuba.woff2",
+      "sha256": "20b535fa80c8189e3b87d1803038389960203a886d502bc2ef1857affc2f38d2",
+      "size": 40128
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamawcubgee.woff2",
+      "sha256": "d758e85352971dffe51a5992405eb8f9b316b1bed82495445c328699ee400830",
+      "size": 40572
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/roboto-kfo7cnqeu92fr1me7ksn66agldtyluamaxkubgee.woff2",
+      "sha256": "e921785496ed2d98c2257c88a6f838afa6acbee05cb8467048501bfe2a301461",
+      "size": 20408
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufa5qw54a.woff2",
+      "sha256": "09b79394660831abe425de3d999cf89844c100f31a0da97d0c71f12a005afdbf",
+      "size": 32284
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufb5qw54a.woff2",
+      "sha256": "7361486c87055d07878f8e758c916db8576c579ed3bdc209c19fd43063dd8e27",
+      "size": 2184
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufc5qw54a.woff2",
+      "sha256": "4c2a824cab9799116baa8f7a85c7ca062fd67d1ee7b9bc6338ef3bcdae31fc16",
+      "size": 9872
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufd5qw54a.woff2",
+      "sha256": "c5c268299cdaa725aa32d248338b0e9beadc9808da1124720204bac9b215d018",
+      "size": 20760
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufj5qw54a.woff2",
+      "sha256": "b914dc874c479f977f20ff2ac7e5e75871a6b8119fe4b671065126d6873e93f0",
+      "size": 21272
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufn5qu.woff2",
+      "sha256": "a8e429611131e3fdc2018ec943a36100dbabb4aaa788c8dead6bdcf927917293",
+      "size": 34328
+    },
+    {
+      "path": "storage/elementor/google-fonts/fonts/robotoslab-bngmuxzytxpivibgjjsb6ufo5qw54a.woff2",
+      "sha256": "1c0fd8b50a6f78fbcc46b942912284c79b85962667b7b63a0e0b229327521287",
+      "size": 14852
+    },
+    {
+      "path": "studio/index.html",
+      "sha256": "65b6b2c20c26b0482e4b733e866f7d70f7864faec8227a095d78305b75c2d32f",
+      "size": 175525
+    },
+    {
+      "path": "webgl-fallback.js",
+      "sha256": "69a6933e2e0c9fd316fca57c6a66bae8e2910488d1169d962851bc0ce5a38df9",
+      "size": 3485
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4S9DQ.woff2",
+      "sha256": "4ba7d3d096695818fe0686be4f1e82c6b05134e18a22260336130335027462dd",
+      "size": 20156
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xms-HUzqDCFdgfMm4q9DbZs.woff2",
+      "sha256": "bf7828e2c258cffcfa50a048ee388a36b95bc16b452e8d36fa797635dbe15965",
+      "size": 10280
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GNAa5o_ik.woff2",
+      "sha256": "a0cc105b3241fe952fd58ba226633f8ba733b16fd5419affbda6c8cc5c627a0b",
+      "size": 10376
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/figtree/v9/_Xmu-HUzqDCFdgfMm4GND65o.woff2",
+      "sha256": "7242fa62d13d46172816b266f03c027999faa3755a52c2124bc2c440f6f4b983",
+      "size": 20928
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L0UUMJng.woff2",
+      "sha256": "39689184132e9fba8fb1066f429125d14445352a566f47f4edcae7c3c90e486d",
+      "size": 27380
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L1UUMJng.woff2",
+      "sha256": "787fc783f35c913334445a7c4502bb272f94a8328426578776eac5e4ebd03ba1",
+      "size": 12096
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L2UUMJng.woff2",
+      "sha256": "1991ed5832eb07f7523f22a843ca9a8aa83c51c8e87062ce77794855d2f5dee8",
+      "size": 10596
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L3UUMJng.woff2",
+      "sha256": "71254244ccb1ec21e14db3480fef6f6826d1136dc4aca1c7d3ca7ce31294fcce",
+      "size": 91900
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L5UUM.woff2",
+      "sha256": "7291b5970da2237441273c03b424a504b70b18f09791473fab99687dcc314720",
+      "size": 51832
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L6UUMJng.woff2",
+      "sha256": "29e273a42cac8240f37fbdd94c684f8a255e61c8076942d9b8f18a0e2c014991",
+      "size": 20484
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC53FwrK3iLTcvneQg7Ca725JhhKnNqk6L9UUMJng.woff2",
+      "sha256": "47d42151dff6d13f1c2b9a1f278290f625593c1f01c89612ee4ae7f063167f7a",
+      "size": 19980
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa0ZL7SUc.woff2",
+      "sha256": "71d5ee93cc1e9f1d520a3a8b66456de18c7879d8df09d57fcd2eaff75fef0075",
+      "size": 18748
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7.woff2",
+      "sha256": "3100e775e8616cd2611beecfa23a4263d7037586789b43f035236a2e6fbd4c62",
+      "size": 48256
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1pL7SUc.woff2",
+      "sha256": "1be3448e292fbf05ffe176fe1e43f135013d50b1e7d324ad1a558f623d3bb6f6",
+      "size": 18996
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7SUc.woff2",
+      "sha256": "34b9c504cab7a73e37b746343a449132e56cf7b5481af2cb81dc74dcff25c956",
+      "size": 85068
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2JL7SUc.woff2",
+      "sha256": "ca157063339ac4ad418f214f3abfed119b0798ab4d377386ce5c9e5a7a435ebd",
+      "size": 25960
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2ZL7SUc.woff2",
+      "sha256": "6e9e020a25f9b56d418f2c085b1d3c09725a4da23fe693a5b463064606732190",
+      "size": 11232
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa2pL7SUc.woff2",
+      "sha256": "5c66f9e07e90c6d4ac4922cc68d60de26c17b1858e677fb5e603fce3952b3ff2",
+      "size": 10252
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsD8ah8QA.woff2",
+      "sha256": "3937173d62f238179ca073aee632d53ebc088967ac841bf213211be05720881a",
+      "size": 16996
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsE8ah8QA.woff2",
+      "sha256": "815c54f4279b399a2afb93e99844e0ba6d9df2fc809eab372aa05e8b8d0847da",
+      "size": 22192
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsH8ag.woff2",
+      "sha256": "77fefe8ca19b9f69b5284832c519e0493127c1f091f0a8936884be7721c4e618",
+      "size": 44872
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsI8ah8QA.woff2",
+      "sha256": "88599e6f2f36551c98dd836df944179f0d4e31eefa620bb753c96069b53ac55a",
+      "size": 10480
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsJ8ah8QA.woff2",
+      "sha256": "fd9beddaaec644945809da574cf1caf342073c7e4b46a2ea5bd136c8cf1a9eca",
+      "size": 89800
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsK8ah8QA.woff2",
+      "sha256": "9bba92a871106008d89cc9734c218a3660b92ff647bdfb6879bf0440fba002c0",
+      "size": 26660
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSwv5HMAFg6IuGlBNMjxLsL8ah8QA.woff2",
+      "sha256": "83735bbea54cc7c4e7ee2af3ede4c2bc5e421ba5bdef4cd3ea2ec8d25b5afaa8",
+      "size": 11700
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwa5kRFe9.woff2",
+      "sha256": "f0b9617a2d27a8f7b106917fe097c22d4eb3f84266188d21e74ea50b93d3207d",
+      "size": 17856
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaRkRFe9.woff2",
+      "sha256": "bf45219d9e0a0727240389257be2c490248e933aed9a35eba211c22487b003c2",
+      "size": 95128
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaVkRFe9.woff2",
+      "sha256": "317b739e8d2e603651c42e6c886f3bbb5830c82a926b5fcd58a9b129bf7fb485",
+      "size": 10904
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwaZkRFe9.woff2",
+      "sha256": "c4eefe8a2e119ee412a93b895ccf7e32eca5becb3b1b3e3469510a4476adf5c7",
+      "size": 11912
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwadkRFe9.woff2",
+      "sha256": "ac99a8b36fdf616b32c51de703cd6c3d5a5579d111cd656d21b5b099fa2f9c66",
+      "size": 27916
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwalkRFe9.woff2",
+      "sha256": "a88929ea0ba743c17c617a4f24bf6db5bebb8abae0b5e44fa112737b6cc97636",
+      "size": 23380
+    },
+    {
+      "path": "wp-content/cache/fonts/1/google-fonts/fonts/s/intertight/v9/NGSyv5HMAFg6IuGlBNMjxLsCwapkRA.woff2",
+      "sha256": "26da6578cb17ad7922d0c6586697ab1c5de86a3cfd46057eec8a9e1f034ac965",
+      "size": 47912
+    },
+    {
+      "path": "wp-content/uploads/2026/07/bg-1.webp",
+      "sha256": "d9508cd65b4a7392fc014513e06e116fab97b4ce16bc99ed6b08cccd40afb559",
+      "size": 5618
+    },
+    {
+      "path": "wp-content/uploads/2026/08/cubic-loop.webp",
+      "sha256": "d6e7db076c3452baac61242820b1d55216d498937fd632f086150d9a35ebe8ce",
+      "size": 1033404
+    },
+    {
+      "path": "wp-content/uploads/2026/09/MobileWebd.webp",
+      "sha256": "1832655f2b81bbcd8e7ffcd0baa79e93c367dc4ab39c9cacd549215fdc08717e",
+      "size": 25602
+    },
+    {
+      "path": "wp-content/uploads/2026/09/Untitled-design.webp",
+      "sha256": "d32c766f27705085d21d05b52765ed5cd33178eb492768e4f8b684c8dfda6b8e",
+      "size": 103986
+    },
+    {
+      "path": "wp-content/uploads/2026/10/Shape-Conv.webp",
+      "sha256": "01fdf221f8f7c88c0490d38bc843dbe008c66ebe34cd3da7f9215cfc2ee95742",
+      "size": 258432
+    },
+    {
+      "path": "wp-content/uploads/2026/10/experience.webp",
+      "sha256": "1b941875add9d73ef91c59e37ea1d500dcc8c4177fd810e09f27d94dfa96f51b",
+      "size": 872294
+    },
+    {
+      "path": "wp-content/uploads/2026/10/overlay.webp",
+      "sha256": "0864e9555df5124b3dd4d8caf52bc613119c959d2770a95e7515d1081e01d97a",
+      "size": 99494
+    },
+    {
+      "path": "wp-content/uploads/2026/10/shape.webp",
+      "sha256": "a01b5b3d77ea3b366e8fb79072b96cf5a22dcd52c6baa894d81c08fa2731302e",
+      "size": 153480
+    }
+  ]
+}
