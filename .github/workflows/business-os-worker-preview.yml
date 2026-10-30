@@ -1,0 +1,88 @@
+name: Business OS Worker Preview - deploy verified code
+on:
+  push:
+    branches:
+      - deploy-business-os-preview
+    paths:
+      - ".github/workflows/business-os-worker-preview.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: business-os-worker-preview
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout reviewed Business OS source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: im-ulises/autonomous-business-os
+          ref: 014830d92e9e22a47bc77e9e372a9d7442176871
+          path: business-os
+          persist-credentials: false
+
+      - name: Verify immutable source commit
+        run: |
+          set -euo pipefail
+          test "$(git -C business-os rev-parse HEAD)" = "014830d92e9e22a47bc77e9e372a9d7442176871"
+          test -s business-os/wrangler.jsonc
+          grep -q 'autonomous-business-os-web' business-os/wrangler.jsonc
+
+      - name: Set up Node 22
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: "22"
+
+      - name: Install and typecheck (no Cloudflare secret)
+        working-directory: business-os
+        run: |
+          set -euo pipefail
+          npm install --no-audit --no-fund
+          npm run typecheck
+
+      - name: Build Worker (no Cloudflare secret)
+        working-directory: business-os
+        run: npm run build
+
+      - name: Deploy only the prebuilt Worker
+        working-directory: business-os
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: 756a510f19b5f736d154fac36ff12749
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          npx @vinext/cloudflare deploy --skip-build 2>&1 | tee /tmp/business-os-deploy.log
+
+      - name: Verify live UI and public demo APIs
+        run: |
+          set -euo pipefail
+          deploy_url=$(grep -Eo 'https://[a-zA-Z0-9.-]+\.workers\.dev/?' /tmp/business-os-deploy.log | tail -n 1 || true)
+          if [ -z "$deploy_url" ]; then
+            echo "Worker URL not found in deploy output"
+            exit 1
+          fi
+          echo "Checking $deploy_url"
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if curl -fLsS --max-time 15 "$deploy_url" -o /tmp/business-os-ui.html \
+               && grep -q "Autonomous Business OS" /tmp/business-os-ui.html \
+               && curl -fLsS --max-time 15 "${deploy_url%/}/api/docs?slug=overview" -o /tmp/business-os-docs.json \
+               && grep -q 'Autonomous Business OS' /tmp/business-os-docs.json \
+               && curl -fLsS --max-time 15 "${deploy_url%/}/api/crobi/status" -o /tmp/business-os-status.json \
+               && grep -q '"configured":false' /tmp/business-os-status.json; then
+              echo "Published and verified: $deploy_url"
+              echo "### Business OS Worker preview" >> "$GITHUB_STEP_SUMMARY"
+              echo "$deploy_url" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "The Worker deployed but did not pass live verification"
+          exit 1
