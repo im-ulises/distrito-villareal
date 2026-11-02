@@ -1,0 +1,72 @@
+name: Big Media CMS - Configure restricted Access
+
+on:
+  push:
+    branches:
+      - feat/bigmedia-cms-diagnostics
+    paths:
+      - .github/workflows/bigmedia-cms-access.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  configure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+    steps:
+      - name: Grant only the sole account owner editorial access, never public access
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          node - <<'NODE'
+          const token=process.env.CLOUDFLARE_API_TOKEN,account=process.env.CLOUDFLARE_ACCOUNT_ID;
+          const base='https://api.cloudflare.com/client/v4/accounts/'+account;
+          async function cf(method,path,data){
+            const response=await fetch(base+path,{method,headers:{Authorization:'Bearer '+token,'Content-Type':'application/json'},body:data===undefined?undefined:JSON.stringify(data)});
+            const j=await response.json().catch(()=>({}));
+            if(!response.ok||j.success!==true){console.error(method,path,'HTTP',response.status,'Cloudflare error codes',(j.errors||[]).map(e=>e.code).join(','));throw Error('Cloudflare API call denied');}
+            return j.result;
+          }
+          (async()=>{
+            const members=await cf('GET','/members?per_page=100');
+            const admins=members.filter(m=>Array.isArray(m.roles)&&m.roles.some(r=>String(r.name).toLowerCase().includes('super administrator')));
+            if(members.length!==1||admins.length!==1||!admins[0].user?.email)throw Error('No unique verified Cloudflare owner; refusing to create an Access policy');
+            const adminEmail=admins[0].user.email.toLowerCase();
+            const organization=await cf('GET','/access/organizations');
+            const teamDomain=String(organization?.auth_domain||'').replace(/^https?:\\/\\//,'').replace(/\\/.*$/,'');
+            if(!/^[a-z0-9-]+\\.cloudflareaccess\\.com$/i.test(teamDomain))throw Error('Access team domain unavailable');
+            const appName='Big Media Content Studio - Admin',domain='bigmedia-webpage.pages.dev/admin/*';
+            const apps=await cf('GET','/access/apps');
+            let app=apps.find(x=>x.name===appName&&x.domain===domain);
+            if(!app){
+              const policy={name:'Big Media sole administrator',decision:'allow',include:[{email:{email:adminEmail}}],precedence:1};
+              app=await cf('POST','/access/apps',{name:appName,type:'self_hosted',domain,session_duration:'24h',policies:[policy],app_launcher_visible:false});
+              console.log('Created Big Media Access application with owner-only policy');
+            }else console.log('Existing Big Media Access application found');
+            if(!app.id||!app.aud)throw Error('Access app AUD missing');
+            const policies=await cf('GET','/access/apps/'+app.id+'/policies');
+            if(!Array.isArray(policies)||!policies.some(p=>JSON.stringify(p.include||[]).includes(adminEmail)&&p.decision==='allow')){
+              await cf('POST','/access/apps/'+app.id+'/policies',{name:'Big Media sole administrator',decision:'allow',include:[{email:{email:adminEmail}}],precedence:1});
+              console.log('Created owner-only Access policy');
+            }else console.log('Owner-only Access policy verified');
+            const project=await cf('GET','/pages/projects/bigmedia-webpage');
+            if(project.name!=='bigmedia-webpage'||project.production_branch!=='main')throw Error('Unexpected Pages project');
+            const env={...(project.deployment_configs?.production?.env_vars||{})};
+            env.ACCESS_TEAM_DOMAIN={type:'plain_text',value:teamDomain};
+            env.ACCESS_AUD={type:'plain_text',value:app.aud};
+            env.CMS_EDITORS={type:'secret_text',value:adminEmail};
+            env.CMS_PUBLISHERS={type:'secret_text',value:adminEmail};
+            await cf('PATCH','/pages/projects/bigmedia-webpage',{deployment_configs:{production:{env_vars:env}}});
+            const updated=await cf('GET','/pages/projects/bigmedia-webpage');
+            for(const name of ['ACCESS_TEAM_DOMAIN','ACCESS_AUD','CMS_EDITORS','CMS_PUBLISHERS']){
+              if(!updated.deployment_configs?.production?.env_vars?.[name])throw Error('Missing CMS environment key '+name);
+            }
+            console.log('Verified Access policy and CMS environment keys in Pages production; no addresses or tokens printed');
+          })().catch(e=>{console.error(e.message);process.exitCode=1;});
+          NODE
