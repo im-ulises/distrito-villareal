@@ -44,3 +44,14 @@ jobs:
           NODE
             rm -f "$tempfile"
           done
+
+          for resource in "pages/projects/bigmedia-webpage" "access/apps"; do
+            tempfile="$(mktemp)"
+            curl --fail-with-body -sS --max-time 20 -o "$tempfile" -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/$resource"
+            RESOURCE="$resource" FILE="$tempfile" node - <<'NODE'
+          const fs=require('node:fs');const a=JSON.parse(fs.readFileSync(process.env.FILE,'utf8'));const p=a.result;
+          if(process.env.RESOURCE.startsWith('pages/'))console.log('Pages source:',p?.source?.type,'branch:',p?.production_branch,'D1:',Object.keys(p?.deployment_configs?.production?.d1_databases||{}),'R2:',Object.keys(p?.deployment_configs?.production?.r2_buckets||{}),'env keys:',Object.keys(p?.deployment_configs?.production?.env_vars||{}));
+          else {const matches=(p||[]).filter(x=>String(x.domain||'').includes('bigmedia')||String(x.name||'').toLowerCase().includes('big media'));console.log('Matching Access apps:',matches.map(x=>({name:x.name,domain:x.domain,type:x.type,hasAUD:!!x.aud,policyCount:x.policies?.length||0})));}
+          NODE
+            rm -f "$tempfile"
+          done
