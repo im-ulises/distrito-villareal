@@ -39,8 +39,8 @@ jobs:
             if(members.length!==1||admins.length!==1||!admins[0].user?.email)throw Error('No unique verified Cloudflare owner; refusing to create an Access policy');
             const adminEmail=admins[0].user.email.toLowerCase();
             const organization=await cf('GET','/access/organizations');
-            const teamDomain=String(organization?.auth_domain||'').replace(/^https?:\\/\\//,'').replace(/\\/.*$/,'');
-            if(!/^[a-z0-9-]+\\.cloudflareaccess\\.com$/i.test(teamDomain))throw Error('Access team domain unavailable');
+            const teamDomain=String(organization?.auth_domain||'').split('://').pop().split('/')[0];
+            if(!teamDomain.endsWith('.cloudflareaccess.com')||teamDomain.includes(' '))throw Error('Access team domain unavailable');
             const appName='Big Media Content Studio - Admin',domain='bigmedia-webpage.pages.dev/admin/*';
             const apps=await cf('GET','/access/apps');
             let app=apps.find(x=>x.name===appName&&x.domain===domain);
