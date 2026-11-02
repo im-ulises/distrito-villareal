@@ -35,12 +35,19 @@ jobs:
               console.log('Pages deployment:',JSON.stringify({id:d.id,environment:d.environment,branch:d.deployment_trigger?.metadata?.branch,commit:(d.deployment_trigger?.metadata?.commit_hash||'').slice(0,12),created_on:d.created_on,latest_stage:d.latest_stage?.name,status:d.latest_stage?.status,url:d.url}));
             }
             const root='https://bigmedia-webpage.pages.dev';
+            const observations={};
             for(const path of ['/api/cms/status','/api/editorial/published','/api/editorial/me','/admin/']){
               try{
                 const r=await fetch(root+path,{redirect:'manual',signal:AbortSignal.timeout(15000)});
                 const text=await r.text();let data={};try{data=JSON.parse(text)}catch{}
+                observations[path]={status:r.status,isJSON:(r.headers.get('content-type')||'').includes('application/json'),data};
                 console.log('LIVE',path,'HTTP',r.status,'content-type',r.headers.get('content-type')||'','configured',data.configured??'n/a','ok',data.ok??'n/a','entries',Array.isArray(data.entries)?data.entries.length:'n/a','redirect-login',r.status>=300&&r.status<400);
               }catch(e){console.log('LIVE',path,'fetch failed:',e.name);}
             }
+            if(observations['/api/cms/status']?.data?.configured!==true)throw Error('CMS configuration is not ready');
+            if(observations['/api/editorial/published']?.status!==200||!observations['/api/editorial/published']?.isJSON||observations['/api/editorial/published']?.data?.ok!==true)throw Error('Editorial public API is not responding with valid JSON');
+            if(observations['/api/editorial/me']?.status!==401)throw Error('Unauthenticated CMS identity should return HTTP 401');
+            if(observations['/admin/']?.status!==302)throw Error('Cloudflare Access must redirect unauthenticated admin users');
+            console.log('VERIFIED: published editorial JSON, anonymous auth denial, Access admin redirect and CMS configuration');
           })().catch(e=>{console.error(e.message);process.exitCode=1});
           NODE
