@@ -55,3 +55,13 @@ jobs:
           NODE
             rm -f "$tempfile"
           done
+
+          node - <<'NODE'
+          (async()=>{
+            const token=process.env.CLOUDFLARE_API_TOKEN,account=process.env.CLOUDFLARE_ACCOUNT_ID;
+            const r=await fetch('https://api.cloudflare.com/client/v4/accounts/'+account+'/members?per_page=100',{headers:{Authorization:'Bearer '+token}});
+            let j={};try{j=await r.json()}catch{}
+            const members=Array.isArray(j.result)?j.result:[];
+            console.log('Account member access:',r.status,'members:',members.length,'with-email:',members.filter(m=>m.user?.email).length,'owner-role:',members.filter(m=>JSON.stringify(m.roles||[]).toLowerCase().includes('super administrator')).length,'errors:',(j.errors||[]).map(e=>e.code).join(','));
+          })().catch(e=>{console.log('Member lookup unavailable');});
+          NODE
