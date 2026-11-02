@@ -1,0 +1,46 @@
+name: Big Media CMS - Cloudflare capability check
+
+on:
+  push:
+    branches:
+      - feat/bigmedia-cms-diagnostics
+    paths:
+      - .github/workflows/bigmedia-cms-diagnostics.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+    steps:
+      - name: Check Cloudflare API resources without exposing credentials
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo "Cloudflare token not available"; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo "Cloudflare account id not available"; exit 1; }
+          for resource in "pages/projects/bigmedia-webpage" "d1/database" "r2/buckets" "access/apps" "access/organizations"; do
+            tempfile="$(mktemp)"
+            http="$(curl -sS --max-time 20 -o "$tempfile" -w '%{http_code}' -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/$resource")"
+            RESOURCE="$resource" CODE="$http" FILE="$tempfile" node - <<'NODE'
+          const fs=require('node:fs');
+          const resource=process.env.RESOURCE;
+          const code=process.env.CODE;
+          let payload={};try{payload=JSON.parse(fs.readFileSync(process.env.FILE,'utf8'))}catch{}
+          const result=payload.result;
+          let match='unknown';
+          if(resource==='pages/projects/bigmedia-webpage')match=result?.name||'not_found';
+          else if(resource==='d1/database')match=(Array.isArray(result)?result:result?.databases||[]).some(x=>x.name==='bigmedia-cms')?'exists':'missing';
+          else if(resource==='r2/buckets')match=(Array.isArray(result?.buckets)?result.buckets:[]).some(x=>x.name==='bigmedia-cms-media')?'exists':'missing';
+          else if(resource==='access/apps')match=Array.isArray(result)?'list readable':'not readable';
+          else if(resource==='access/organizations')match=result?.auth_domain?'organization found':'not readable';
+          console.log(resource,'http='+code,'success='+String(payload.success===true),'state='+match,'errors='+(payload.errors||[]).map(x=>x.code).join(','));
+          NODE
+            rm -f "$tempfile"
+          done
