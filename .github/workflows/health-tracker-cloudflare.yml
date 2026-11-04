@@ -1,0 +1,83 @@
+name: Publish Health Tracker (Cloudflare Workers)
+on:
+  push:
+    branches: [main, deploy-health-tracker]
+    paths:
+      - ".github/workflows/health-tracker-cloudflare.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: health-tracker-cloudflare-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check read-only access to private Health Tracker
+        env:
+          HEALTH_TRACKER_READ_TOKEN: ${{ secrets.HEALTH_TRACKER_READ_TOKEN }}
+        run: |
+          if [ -z "$HEALTH_TRACKER_READ_TOKEN" ]; then
+            echo "::error::Health Tracker is private. Configure HEALTH_TRACKER_READ_TOKEN (fine-grained read-only access to im-ulises/health-tracker) in this repository's Actions secrets."
+            exit 1
+          fi
+
+      - name: Checkout private Health Tracker (do not commit personal data here)
+        uses: actions/checkout@v4
+        with:
+          repository: im-ulises/health-tracker
+          ref: main
+          path: health-tracker
+          token: ${{ secrets.HEALTH_TRACKER_READ_TOKEN }}
+          persist-credentials: false
+
+      - name: Validate nutrition app files
+        run: |
+          set -euo pipefail
+          test -s health-tracker/public/index.html
+          test -s health-tracker/wrangler.jsonc
+          grep -q "Health Tracker" health-tracker/public/index.html
+          grep -q "ulises-health-tracker" health-tracker/wrangler.jsonc
+
+      - name: Install Wrangler
+        run: npm install --global wrangler@4.133.0
+
+      - name: Deploy public Health Tracker using Distrito's Cloudflare secrets
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          cd health-tracker
+          wrangler deploy 2>&1 | tee /tmp/health-tracker-deployment.log
+          url="$(grep -Eo 'https://[A-Za-z0-9.-]+\.workers\.dev' /tmp/health-tracker-deployment.log | tail -n1 || true)"
+          if [ -n "$url" ]; then
+            echo "Published URL: $url"
+            echo "$url" > /tmp/health-tracker-public-url
+          else
+            echo "::warning::Wrangler did not report a workers.dev URL; inspect Cloudflare for any custom URL."
+          fi
+
+      - name: Verify public URL (when provided)
+        run: |
+          set -euo pipefail
+          if [ -f /tmp/health-tracker-public-url ]; then
+            url="$(cat /tmp/health-tracker-public-url)"
+            for i in 1 2 3 4 5 6; do
+              if curl -fsSL --max-time 15 "$url" -o /tmp/health-tracker-live.html && grep -q "Health Tracker" /tmp/health-tracker-live.html; then
+                echo "Verified public site: $url"
+                exit 0
+              fi
+              sleep 5
+            done
+            echo "::error::Deployment URL did not return the Health Tracker content."
+            exit 1
+          fi
+          echo "::warning::No public workers.dev URL provided; manual deployment verification needed."
