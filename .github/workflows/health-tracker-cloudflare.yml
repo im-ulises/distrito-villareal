@@ -18,13 +18,22 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
+      - name: Check read-only access to private Health Tracker
+        env:
+          HEALTH_TRACKER_READ_TOKEN: ${{ secrets.HEALTH_TRACKER_READ_TOKEN }}
+        run: |
+          if [ -z "$HEALTH_TRACKER_READ_TOKEN" ]; then
+            echo "::error::Health Tracker is private. Configure HEALTH_TRACKER_READ_TOKEN (fine-grained read-only access to im-ulises/health-tracker) in this repository's Actions secrets."
+            exit 1
+          fi
+
       - name: Checkout private Health Tracker (do not commit personal data here)
         uses: actions/checkout@v4
         with:
           repository: im-ulises/health-tracker
           ref: main
           path: health-tracker
-          token: ${{ secrets.HEALTH_TRACKER_READ_TOKEN || github.token }}
+          token: ${{ secrets.HEALTH_TRACKER_READ_TOKEN }}
           persist-credentials: false
 
       - name: Validate nutrition app files
