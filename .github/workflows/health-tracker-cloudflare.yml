@@ -1,7 +1,7 @@
 name: Publish Health Tracker (Cloudflare Workers)
 on:
   push:
-    branches: [deploy-health-tracker]
+    branches: [main, deploy-health-tracker]
     paths:
       - ".github/workflows/health-tracker-cloudflare.yml"
   workflow_dispatch:
