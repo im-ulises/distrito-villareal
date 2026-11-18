@@ -38,6 +38,34 @@ jobs:
             exit 1
           fi
 
+      - name: Stage verified pinned Glassy Liquid runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix /tmp/forge-glass --no-save --ignore-scripts --no-audit --no-fund --omit=optional \
+            glassy-liquid@0.1.0 playwright-core@1.56.1
+          cp /tmp/forge-glass/node_modules/glassy-liquid/dist/glassy-liquid.min.js \
+            staging/forge-chat-ui/glassy-liquid.min.js
+          test -s staging/forge-chat-ui/glassy-liquid.min.js
+          test -f /tmp/forge-glass/node_modules/glassy-liquid/LICENSE
+
+      - name: Mobile layout and functional glass smoke tests
+        shell: bash
+        env:
+          NODE_PATH: /tmp/forge-glass/node_modules
+          STAGING_TEST_URL: http://127.0.0.1:8787/
+        run: |
+          set -euo pipefail
+          python3 -m http.server 8787 --bind 127.0.0.1 \
+            --directory staging/forge-chat-ui >/tmp/forge-chat-preview.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid" 2>/dev/null || true' EXIT
+          for i in 1 2 3 4 5 6 7 8 9 10; do
+            if curl --silent --fail http://127.0.0.1:8787/ -o /dev/null; then break; fi
+            sleep 1
+          done
+          node staging/forge-chat-ui/mobile-smoke.cjs
+
       - name: Install pinned Wrangler
         run: npm install --global wrangler@4.133.0
 
@@ -83,6 +111,9 @@ jobs:
             if curl --fail --location --silent --show-error --max-time 15 \
               https://forge-chat-ui-staging.pages.dev/ -o /tmp/forge-chat-stage.html \
               && grep -q 'Forge Chat · UI Staging' /tmp/forge-chat-stage.html; then
+              curl --fail --location --silent --show-error --max-time 15 \
+                https://forge-chat-ui-staging.pages.dev/glassy-liquid.min.js -o /tmp/forge-chat-glass.js
+              test -s /tmp/forge-chat-glass.js
               echo "Verified staging UI: https://forge-chat-ui-staging.pages.dev/"
               exit 0
             fi
