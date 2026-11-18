@@ -31,7 +31,7 @@ const { chromium } = require('playwright-core');
     const ids = ['app','heading','thread','inner','compose','input','send'];
     const rects = {};
     for (const id of ids) {
-     const el=document.getElementById(id);
+     const el=id==='send'?document.querySelector('.send'):document.getElementById(id);
      if (!el) throw new Error('Element missing: '+id);
      const r=el.getBoundingClientRect();
      rects[id]={left:r.left,right:r.right,width:r.width};
