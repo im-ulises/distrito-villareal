@@ -18,15 +18,9 @@ const { chromium } = require('playwright-core');
    const ctx = await browser.newContext({viewport:{width:w,height:w>=768?900:844},deviceScaleFactor:w<768?2:1,isMobile:w<768,hasTouch:w<768});
    const page = await ctx.newPage();
    await page.goto(target,{waitUntil:'load'});
-   await page.waitForFunction(() => !!customElements.get('glass-button'),{timeout:15000});
-   const glass = await page.locator('#stop').evaluate(el => ({
-      upgraded:!!el.shadowRoot?.querySelector('gl-fx'),
-      engine:el.getAttribute('data-glass-engine'),
-      tag:el.tagName
-   }));
-   if(!glass.upgraded || glass.tag!=='GLASS-BUTTON')
-     throw new Error(w+': Glassy Liquid did not initialize '+JSON.stringify(glass));
-
+   const stopTag = await page.locator('#stop').evaluate(el => el.tagName);
+   if (stopTag !== 'BUTTON') throw new Error(w+': expected native Stop button, got '+stopTag);
+   if (await page.locator('glass-button').count() !== 0) throw new Error('Unexpected glass custom controls');
    const layout = await page.evaluate(() => {
     const ids = ['app','heading','thread','inner','compose','input','send'];
     const rects = {};
