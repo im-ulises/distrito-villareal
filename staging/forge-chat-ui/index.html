@@ -9,11 +9,14 @@
 <meta name="apple-mobile-web-app-title" content="Forge Staging">
 <meta name="robots" content="noindex,nofollow">
 <title>Forge Chat · UI Staging</title>
+<link rel="icon" href="/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/icon.svg">
+<link rel="manifest" href="/manifest.webmanifest">
 <style>
 :root{color-scheme:dark;--bg:#0b0c0e;--sheet:#121419;--card:#1d2027;--border:#292d35;--strong:#393f49;--txt:#f3f4f5;--sub:#a2aab5;--muted:#767e8c;--ice:#b9d2ec;--claude:#d6a28a;--codex:#c9dfd8;--grok:#b7c9e9;--safe-t:env(safe-area-inset-top,0px);--safe-b:env(safe-area-inset-bottom,0px)}
-*{box-sizing:border-box}html,body{height:100%;margin:0}body{background:var(--bg);color:var(--txt);font:400 16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
+*{box-sizing:border-box}[hidden]{display:none!important}html,body{height:100%;margin:0}body{background:var(--bg);color:var(--txt);font:400 16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased;overscroll-behavior:none}
 button,textarea,input{font:inherit;color:inherit}button{cursor:pointer;-webkit-tap-highlight-color:transparent}button:focus-visible,textarea:focus-visible,input:focus-visible{outline:2px solid var(--ice);outline-offset:3px}a{color:var(--ice)}
-svg{width:22px;height:22px;display:block}button{border:0;background:transparent}#app{position:fixed;inset:0;display:grid;grid-template-columns:276px minmax(0,1fr) 318px;height:100dvh;overflow:hidden}
+svg{width:22px;height:22px;display:block}button{border:0;background:transparent}#app{position:fixed;top:var(--vvt,0px);left:0;right:0;bottom:auto;display:grid;grid-template-columns:276px minmax(0,1fr) 318px;height:var(--vvh,100dvh);overflow:hidden}
 .left{min-height:0;display:flex;flex-direction:column;background:#111317;border-right:1px solid var(--border);padding:calc(20px + var(--safe-t)) 12px calc(15px + var(--safe-b))}
 .brand{display:flex;gap:11px;align-items:center;padding:0 11px 24px;font-size:18px;font-weight:680;letter-spacing:-.035em}.brand-icon{width:28px;height:28px;display:grid;place-items:center;border:1px solid #454952;border-radius:9px;font-size:17px;font-weight:750}.brand small{font-size:10px;letter-spacing:.1em;color:var(--ice);margin-left:auto}
 .new{width:100%;height:46px;border:1px solid var(--strong);background:#1c1e25;border-radius:14px;display:flex;gap:12px;align-items:center;padding:0 13px;text-align:left;font-weight:550}
@@ -129,7 +132,7 @@ $("new").onclick=()=>{$("heading").textContent="Nueva conversación";document.qu
 $("stop").onclick=()=>{const stop=$("stop");const stopped=stop.getAttribute("data-stopped")==="yes";stop.setAttribute("data-stopped",stopped?"no":"yes");stop.textContent=stopped?"Detener":"Reanudar";stop.setAttribute("aria-label",stopped?"Detener misión de demostración":"Reanudar misión de demostración");$("state").classList.toggle("stopped",!stopped);$("state").querySelector(".txt").textContent=stopped?"En curso":"Detenida";$("hint").textContent="Estado visual simulado · Sin conexión con misiones reales"};
 $("compose").onsubmit=e=>{e.preventDefault();const value=text.value.trim();if(!value)return;const msg=document.createElement("div");msg.className="msg owner";const bubble=document.createElement("div");bubble.className="bubble";bubble.textContent=value;msg.append(bubble);$("inner").append(msg);text.value="";text.style.height="auto";$("hint").textContent="Mensaje añadido solo a esta vista; no fue enviado a un agente.";thread.scrollTop=thread.scrollHeight};
 text.addEventListener("input",()=>{text.style.height="auto";text.style.height=Math.min(160,text.scrollHeight)+"px"});
-if(window.visualViewport){function fit(){document.documentElement.style.setProperty("--vvh",window.visualViewport.height+"px")}window.visualViewport.addEventListener("resize",fit);fit()}
+if(window.visualViewport){function fit(){document.documentElement.style.setProperty("--vvh",window.visualViewport.height+"px");document.documentElement.style.setProperty("--vvt",window.visualViewport.offsetTop+"px")}window.visualViewport.addEventListener("resize",fit);fit()}
 })();
 </script>
 </body>
