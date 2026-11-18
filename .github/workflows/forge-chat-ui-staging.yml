@@ -1,0 +1,92 @@
+name: Deploy Forge Chat UI Staging (isolated Cloudflare Pages)
+
+on:
+  push:
+    branches:
+      - feat/forge-chat-ui-staging
+    paths:
+      - ".github/workflows/forge-chat-ui-staging.yml"
+      - "staging/forge-chat-ui/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: forge-chat-ui-staging
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout staging-only branch
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Verify isolated, static demo
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s staging/forge-chat-ui/index.html
+          test -s staging/forge-chat-ui/_headers
+          test ! -L staging/forge-chat-ui/index.html
+          grep -q 'Forge Chat · UI Staging' staging/forge-chat-ui/index.html
+          grep -q 'Los mensajes no se envían a agentes reales' staging/forge-chat-ui/index.html
+          if grep -Ei 'api/chat/(missions|login)|admin.token|FORGE_AGENT_SECRET|FORGE_CHAT_PASSWORD' staging/forge-chat-ui/index.html; then
+            echo "Refusing to publish an asset that mentions real backend or credentials"
+            exit 1
+          fi
+
+      - name: Install pinned Wrangler
+        run: npm install --global wrangler@4.133.0
+
+      - name: Ensure isolated Cloudflare Pages project
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+        run: |
+          set -euo pipefail
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+          status=$(curl --silent --show-error --max-time 20 \
+            --output /tmp/forge-chat-pages-project.json --write-out '%{http_code}' \
+            --header "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects/forge-chat-ui-staging")
+          if [ "$status" = "404" ]; then
+            wrangler pages project create forge-chat-ui-staging --production-branch staging
+          elif [ "$status" = "200" ]; then
+            echo "Existing isolated Pages project detected."
+          else
+            echo "Cloudflare project lookup failed with HTTP $status"
+            exit 1
+          fi
+
+      - name: Deploy static UI preview (not production chat)
+        shell: bash
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets['api_cldflr'] }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets['CLFLR_AXLULISESFS'] }}
+        run: |
+          set -euo pipefail
+          wrangler pages deploy staging/forge-chat-ui \
+            --project-name forge-chat-ui-staging \
+            --branch staging \
+            --commit-hash "$GITHUB_SHA"
+
+      - name: Check live preview
+        shell: bash
+        run: |
+          set -euo pipefail
+          for attempt in 1 2 3 4 5 6 7 8; do
+            if curl --fail --location --silent --show-error --max-time 15 \
+              https://forge-chat-ui-staging.pages.dev/ -o /tmp/forge-chat-stage.html \
+              && grep -q 'Forge Chat · UI Staging' /tmp/forge-chat-stage.html; then
+              echo "Verified staging UI: https://forge-chat-ui-staging.pages.dev/"
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Cloudflare Pages preview is not yet verified."
+          exit 1
