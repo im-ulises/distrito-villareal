@@ -1,6 +1,6 @@
 {
-  "name": "Forge Chat UI Staging",
-  "short_name": "Forge Staging",
+  "name": "Forge Chat · Vista previa",
+  "short_name": "Forge Preview",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
