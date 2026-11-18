@@ -31,7 +31,7 @@ jobs:
           test -s staging/forge-chat-ui/index.html
           test -s staging/forge-chat-ui/_headers
           test ! -L staging/forge-chat-ui/index.html
-          grep -q 'Forge Chat · UI Staging' staging/forge-chat-ui/index.html
+          grep -q 'Forge Chat · Vista previa' staging/forge-chat-ui/index.html
           grep -q 'Los mensajes no se envían a agentes reales' staging/forge-chat-ui/index.html
           if grep -Ei 'api/chat/(missions|login)|admin.token|FORGE_AGENT_SECRET|FORGE_CHAT_PASSWORD' staging/forge-chat-ui/index.html; then
             echo "Refusing to publish an asset that mentions real backend or credentials"
@@ -102,7 +102,7 @@ jobs:
           for attempt in 1 2 3 4 5 6 7 8; do
             if curl --fail --location --silent --show-error --max-time 15 \
               https://forge-chat-ui-staging.pages.dev/ -o /tmp/forge-chat-stage.html \
-              && grep -q 'Forge Chat · UI Staging' /tmp/forge-chat-stage.html; then
+              && grep -q 'Forge Chat · Vista previa' /tmp/forge-chat-stage.html; then
               echo "Verified staging UI: https://forge-chat-ui-staging.pages.dev/"
               exit 0
             fi
