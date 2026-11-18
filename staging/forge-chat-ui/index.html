@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#0b0c0e">
+<meta name="theme-color" content="#0D0B0D">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Forge Staging">
@@ -49,6 +49,116 @@ textarea{display:block;width:100%;border:0;background:transparent;outline:none;r
 @media(max-width:850px){#app{grid-template-columns:1fr}.left{position:fixed;z-index:7;top:0;bottom:0;left:0;width:min(330px,86vw);box-shadow:20px 0 60px #0009;transform:translateX(-110%);transition:transform .2s ease}.left.open{transform:translateX(0)}#menu{display:grid}.top{padding:var(--safe-t) calc(9px + env(safe-area-inset-right,0px)) 0 calc(7px + env(safe-area-inset-left,0px));height:calc(62px + var(--safe-t));gap:4px}.top-title strong{font-size:15.5px}.top-title span{font-size:12px}.pill{padding:4px 7px;border:none}.pill .txt{display:none}.stop{width:40px;min-width:40px;height:40px;min-height:40px;font-size:0;padding:0;display:grid;place-items:center}.stop:before{content:"";width:12px;height:12px;background:#df8b8c;border-radius:3px}.thread-inner{padding:23px 16px 27px;gap:24px}.right{top:auto;bottom:0;left:0;width:100%;max-height:86dvh;border-radius:23px 23px 0 0;border-top:1px solid var(--strong);box-shadow:0 -20px 65px #0009;padding-top:20px}.message p{font-size:16px}.composer-outer{padding:9px calc(10px + env(safe-area-inset-right,0px)) calc(11px + var(--safe-b)) calc(10px + env(safe-area-inset-left,0px))}.composer{border-radius:21px;padding:10px 10px 8px 13px}.hint{font-size:11px;margin-top:6px}}
 @media(max-width:370px){.top-title strong{font-size:14px}.pill{padding:3px}.top .icon-btn{width:40px}.project{max-width:68%}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* FORGE / STUDIO EDITION — dark editorial, burgundy & Ferrari red.
+   Visual preview only. No production API, no live mission side effects. */
+:root{
+  --bg:#0d0b0d;
+  --sheet:#171316;
+  --card:#201b1e;
+  --border:#2f292d;
+  --strong:#4a3940;
+  --txt:#f5f0ed;
+  --sub:#b7abad;
+  --muted:#8b7e83;
+  --ice:#dfa3af;
+  --burgundy:#7a1f2b;
+  --ferrari:#df292a;
+  --claude:#e1b7a3;
+  --codex:#e9e6e0;
+  --grok:#e6cfd6;
+}
+body{background:var(--bg);color:var(--txt);font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;letter-spacing:-.018em}
+button,input,textarea{-webkit-tap-highlight-color:transparent}
+#app{background:var(--bg)}
+.left{background:#131013;border-right:1px solid #31292e}
+.brand{font-size:19px;font-weight:710;letter-spacing:-.065em;padding-bottom:27px}
+.brand-icon{border:0;background:#751e2d;box-shadow:inset 0 1px 0 #ae5064;transform:rotate(-5deg);border-radius:50%;font-size:17px;font-weight:750}
+.brand small{font-size:9px;color:#e6acb9;letter-spacing:.12em}
+.new{border:1px solid #45363d;background:linear-gradient(160deg,#302429,#241c20);border-radius:16px;color:#f7f1ec}
+.new:hover,.mission:hover{background:#2b2126}
+.search{background:#1b161a;border-color:#322930}
+.section-label{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#c4b2b7}
+.mission{border-radius:14px}
+.mission.active{background:#38252e;box-shadow:inset 3px 0 #a2374e}
+.mission strong{font-size:14.5px;letter-spacing:-.02em}
+.mission span{color:#af9fa6}
+.sidefooter{color:#95868f;border-color:#31282f}
+.top{background:rgba(13,11,13,.95);border-color:#30282d;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.top-title strong{font-size:16px;font-weight:700;letter-spacing:-.048em}
+.top-title span{color:#aa9ca3}
+.watermark{color:#d69ca9!important;letter-spacing:.06em}
+.icon-btn{border-radius:50%;color:#ece1e1}
+.icon-btn:hover{background:#302329}
+.pill{background:#321d25;color:#ead1d6;border:1px solid #54313d;font-size:12px;font-weight:550}
+.dot{background:var(--ferrari);box-shadow:0 0 0 3px rgba(223,41,42,.14)}
+.pill.stopped{background:#28171b;color:#eeafb0}
+.pill.stopped .dot{background:#af4c53}
+.stop{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-width:90px;padding:0 12px;border:1px solid #653139;border-radius:999px;background:linear-gradient(155deg,#401a26,#2b161c);color:#f5dadd;box-shadow:inset 0 1px 0 #673441;height:42px}
+.stop-glyph{display:block;flex:none;width:11px;height:11px;border-radius:2.5px;background:var(--ferrari);box-shadow:0 0 0 3px rgba(223,41,42,.12)}
+.stop-label{display:inline-block;line-height:1;font-size:13.5px;font-weight:600}
+.stop:active{transform:scale(.96)}
+.thread-inner{max-width:760px;gap:29px}
+.intro{color:#9c8c94;text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:650}
+.intro:before,.intro:after{background:#3e3038}
+.avatar{height:39px;width:39px;min-width:39px;border-radius:50%;background:#272025;border:1px solid #4a353c;box-shadow:inset 0 1px 0 rgba(255,255,255,.045)}
+.avatar svg{width:20px;height:20px}
+.avatar.claude{color:#e1b7a3;background:#332525}
+.avatar.codex{color:#f6eee8;background:#242125}
+.avatar.grok{color:#e6cfd6;background:#2b2029}
+.byline{margin-bottom:6px}
+.byline strong{font-size:15.5px;font-weight:670;letter-spacing:-.025em}
+.byline span{color:#a7969e}
+.message p{color:#f0e8e3;font-size:16px;line-height:1.7}
+.msg.owner .bubble{background:#292126;border:1px solid #46343d;color:#f9f0ea;border-radius:20px 20px 6px 20px;box-shadow:0 5px 20px #0002}
+.result{color:#b4ddbd;border-color:#3a5947;background:#213529}
+.delegation{background:#1d181d;border-color:#433139;border-radius:15px}
+.delegation summary{color:#eee0e3}
+.delegation .inside{border-color:#433139;color:#c7b6bb}
+.composer-outer{background:linear-gradient(180deg,transparent,#0d0b0d 14%)}
+.composer{background:#211b1f;border:1px solid #53363e;border-radius:24px;box-shadow:0 12px 36px #0005,inset 0 1px 0 rgba(255,255,255,.045);padding-top:13px}
+.composer:focus-within{border-color:#a94b61;box-shadow:0 0 0 3px rgba(122,31,43,.16),0 12px 36px #0005}
+textarea{color:#f7f0eb}
+.composer textarea::placeholder{color:#a08d96}
+.project{border-color:#4a363e;color:#c9bac0;background:#2b2227;border-radius:999px;padding:6px 12px}
+.project b{color:#f1e2e3}
+.send{background:#8c2738;color:#fff1ed;border-radius:50%;box-shadow:inset 0 1px 0 #ba5062}
+.send:hover{background:#a33145}
+.send:active{transform:scale(.95)}
+.hint{color:#978790}
+.right{background:#191417;border-color:#392930}
+.right-head h2{font-size:21px;font-weight:680;letter-spacing:-.055em}
+.agent{gap:12px;padding:10px 0}
+.agent .name{letter-spacing:-.025em}
+.agent small{color:#a99aa1;font-size:13.5px}
+.agent .chip{border:1px solid #5b3c48;color:#edc7cf;border-radius:999px;background:#302029}
+.aside-section{border-color:#3b2c32}
+.aside-section h3{font-size:15.5px;letter-spacing:-.03em}
+.activity:before{background:#48343c}
+.activity:after{background:#a84860}
+.activity span{color:#a99aa1}
+.link{color:#e2a2b1}
+@media(max-width:850px){
+ .top{gap:5px}
+ .top-title strong{font-size:15px}
+ .top-title span{font-size:12px}
+ .pill{background:transparent;border:0;padding:0 5px}
+ .stop{min-width:42px;width:42px;height:42px;min-height:42px;padding:0;border-radius:50%;font-size:inherit;gap:0;flex:none}
+ .stop:before{content:none}
+ .stop-label{display:none}
+ .stop-glyph{width:12px;height:12px;flex:none;display:block;transform:none}
+ .icon-btn{width:42px;height:42px;border-radius:50%}
+ .thread-inner{padding-left:17px;padding-right:17px}
+ .avatar{width:37px;height:37px;min-width:37px}
+ .right{background:#1b1519;border-color:#6a3b4b;border-radius:26px 26px 0 0}
+ .composer{border-radius:24px}
+}
+@media(max-width:370px){
+ .top{gap:1px}
+ .top-title strong{font-size:14px}
+ .stop{width:40px;min-width:40px;height:40px;min-height:40px}
+}
+
 </style>
 </head>
 <body>
@@ -71,8 +181,8 @@ textarea{display:block;width:100%;border:0;background:transparent;outline:none;r
       <button id="menu" class="icon-btn" aria-label="Abrir historial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
       <div class="top-title"><strong id="heading">Rediseño de experiencia móvil</strong><span id="subhead">Forge Link <span class="watermark">· STAGING</span></span></div>
       <div id="state" class="pill"><i class="dot"></i><span class="txt">En curso</span></div>
-      <button id="stop" class="stop" aria-label="Detener misión de demostración">Detener</button>
-      <button id="info" class="icon-btn mobile-info" aria-label="Abrir equipo y actividad"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M14.5 4v16"/></svg></button>
+      <button id="stop" class="stop" aria-label="Detener misión de demostración"><span class="stop-glyph" aria-hidden="true"></span><span class="stop-label">Detener</span></button>
+      <button id="info" class="icon-btn mobile-info" aria-label="Abrir equipo y actividad" title="Equipo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19v-1c0-3 2.3-4.8 5.5-4.8s5.5 1.8 5.5 4.8v1"/><path d="M16.5 5.5a3 3 0 0 1 0 5.8M17.5 14c2 .4 3.2 1.8 3.2 4v1"/></svg></button>
     </header>
     <div id="thread" class="thread">
       <div class="thread-inner" id="inner">
@@ -129,7 +239,7 @@ const titles=["Rediseño de experiencia móvil","Revisión del repositorio","Pru
 $("missions").onclick=e=>{const b=e.target.closest("[data-mission]");if(!b)return;document.querySelectorAll(".mission").forEach(m=>m.classList.remove("active"));b.classList.add("active");$("heading").textContent=titles[Number(b.dataset.mission)];closeAll()};
 $("filter").oninput=e=>document.querySelectorAll(".mission").forEach(x=>x.hidden=!x.textContent.toLowerCase().includes(e.target.value.toLowerCase()));
 $("new").onclick=()=>{$("heading").textContent="Nueva conversación";document.querySelectorAll(".mission").forEach(m=>m.classList.remove("active"));closeAll();text.focus()};
-$("stop").onclick=()=>{const stop=$("stop");const stopped=stop.getAttribute("data-stopped")==="yes";stop.setAttribute("data-stopped",stopped?"no":"yes");stop.textContent=stopped?"Detener":"Reanudar";stop.setAttribute("aria-label",stopped?"Detener misión de demostración":"Reanudar misión de demostración");$("state").classList.toggle("stopped",!stopped);$("state").querySelector(".txt").textContent=stopped?"En curso":"Detenida";$("hint").textContent="Estado visual simulado · Sin conexión con misiones reales"};
+$("stop").onclick=()=>{const stop=$("stop");const stopped=stop.getAttribute("data-stopped")==="yes";stop.setAttribute("data-stopped",stopped?"no":"yes");stop.querySelector(".stop-label").textContent=stopped?"Detener":"Reanudar";stop.setAttribute("aria-label",stopped?"Detener misión de demostración":"Reanudar misión de demostración");$("state").classList.toggle("stopped",!stopped);$("state").querySelector(".txt").textContent=stopped?"En curso":"Detenida";$("hint").textContent="Estado visual simulado · Sin conexión con misiones reales"};
 $("compose").onsubmit=e=>{e.preventDefault();const value=text.value.trim();if(!value)return;const msg=document.createElement("div");msg.className="msg owner";const bubble=document.createElement("div");bubble.className="bubble";bubble.textContent=value;msg.append(bubble);$("inner").append(msg);text.value="";text.style.height="auto";$("hint").textContent="Mensaje añadido solo a esta vista; no fue enviado a un agente.";thread.scrollTop=thread.scrollHeight};
 text.addEventListener("input",()=>{text.style.height="auto";text.style.height=Math.min(160,text.scrollHeight)+"px"});
 if(window.visualViewport){function fit(){document.documentElement.style.setProperty("--vvh",window.visualViewport.height+"px");document.documentElement.style.setProperty("--vvt",window.visualViewport.offsetTop+"px")}window.visualViewport.addEventListener("resize",fit);fit()}
