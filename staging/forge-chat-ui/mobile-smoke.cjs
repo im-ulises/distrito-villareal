@@ -9,7 +9,7 @@ const { chromium } = require('playwright-core');
  const executablePath = process.env.CHROME_BIN || candidates.find(x => fs.existsSync(x));
  if (!executablePath) throw new Error('Chrome browser missing from GitHub Actions runner');
  const browser = await chromium.launch({ executablePath, headless: true, args:['--no-sandbox'] });
- const dir = path.join(__dirname,'screenshots');
+ const dir = path.join(process.cwd(),'staging-screenshots');
  fs.mkdirSync(dir,{recursive:true});
  const target = 'file://' + path.join(__dirname,'index.html');
  let failures = 0;
