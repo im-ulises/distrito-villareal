@@ -11,13 +11,22 @@ const { chromium } = require('playwright-core');
  const browser = await chromium.launch({ executablePath, headless: true, args:['--no-sandbox'] });
  const dir = path.join(process.cwd(),'staging-screenshots');
  fs.mkdirSync(dir,{recursive:true});
- const target = 'file://' + path.join(__dirname,'index.html');
+ const target = process.env.STAGING_TEST_URL || 'http://127.0.0.1:8787/';
  let failures = 0;
  try {
   for (const w of [320,375,390,430,768,1280]) {
    const ctx = await browser.newContext({viewport:{width:w,height:w>=768?900:844},deviceScaleFactor:w<768?2:1,isMobile:w<768,hasTouch:w<768});
    const page = await ctx.newPage();
    await page.goto(target,{waitUntil:'load'});
+   await page.waitForFunction(() => !!customElements.get('glass-button'),{timeout:15000});
+   const glass = await page.locator('#stop').evaluate(el => ({
+      upgraded:!!el.shadowRoot?.querySelector('gl-fx'),
+      engine:el.getAttribute('data-glass-engine'),
+      tag:el.tagName
+   }));
+   if(!glass.upgraded || glass.tag!=='GLASS-BUTTON')
+     throw new Error(w+': Glassy Liquid did not initialize '+JSON.stringify(glass));
+
    const layout = await page.evaluate(() => {
     const ids = ['app','heading','thread','inner','compose','input','send'];
     const rects = {};
