@@ -266,6 +266,19 @@ body{font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Arial Nova",
  .top #menu,.top #info,.top .stop{width:40px;min-width:40px;max-width:40px;height:40px}
  .thread-inner{padding-left:13px;padding-right:13px}
 }
+
+/* iOS writing focus: remove browser rectangle around the message textarea.
+   Keep focus indicators on actual buttons / other interactive controls. */
+#input:focus,#input:focus-visible,.composer textarea:focus,.composer textarea:focus-visible{
+  outline:none!important;outline-offset:0!important;border:none!important;
+  box-shadow:none!important;-webkit-box-shadow:none!important;
+  -webkit-appearance:none;appearance:none;
+}
+.composer:focus-within{
+  outline:none!important;border-color:#454549!important;
+  box-shadow:0 12px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.05)!important;
+}
+
 </style>
 </head>
 <body>
