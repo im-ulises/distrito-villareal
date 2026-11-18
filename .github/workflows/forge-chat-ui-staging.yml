@@ -38,21 +38,13 @@ jobs:
             exit 1
           fi
 
-      - name: Stage verified pinned Glassy Liquid runtime
-        shell: bash
-        run: |
-          set -euo pipefail
-          npm install --prefix /tmp/forge-glass --no-save --ignore-scripts --no-audit --no-fund --omit=optional \
-            glassy-liquid@0.1.0 playwright-core@1.56.1
-          cp /tmp/forge-glass/node_modules/glassy-liquid/dist/glassy-liquid.min.js \
-            staging/forge-chat-ui/glassy-liquid.min.js
-          test -s staging/forge-chat-ui/glassy-liquid.min.js
-          test -f /tmp/forge-glass/node_modules/glassy-liquid/LICENSE
+      - name: Install mobile browser test driver
+        run: npm install --prefix /tmp/forge-e2e --no-save --ignore-scripts --no-audit --no-fund playwright-core@1.56.1
 
-      - name: Mobile layout and functional glass smoke tests
+      - name: Mobile layout and native control smoke tests
         shell: bash
         env:
-          NODE_PATH: /tmp/forge-glass/node_modules
+          NODE_PATH: /tmp/forge-e2e/node_modules
           STAGING_TEST_URL: http://127.0.0.1:8787/
         run: |
           set -euo pipefail
@@ -111,9 +103,6 @@ jobs:
             if curl --fail --location --silent --show-error --max-time 15 \
               https://forge-chat-ui-staging.pages.dev/ -o /tmp/forge-chat-stage.html \
               && grep -q 'Forge Chat · UI Staging' /tmp/forge-chat-stage.html; then
-              curl --fail --location --silent --show-error --max-time 15 \
-                https://forge-chat-ui-staging.pages.dev/glassy-liquid.min.js -o /tmp/forge-chat-glass.js
-              test -s /tmp/forge-chat-glass.js
               echo "Verified staging UI: https://forge-chat-ui-staging.pages.dev/"
               exit 0
             fi
