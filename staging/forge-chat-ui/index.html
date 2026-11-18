@@ -6,9 +6,9 @@
 <meta name="theme-color" content="#000000">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Forge Staging">
+<meta name="apple-mobile-web-app-title" content="Forge Preview">
 <meta name="robots" content="noindex,nofollow">
-<title>Forge Chat · UI Staging</title>
+<title>Forge Chat · Vista previa</title>
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/icon.svg">
 <link rel="manifest" href="/manifest.webmanifest">
@@ -326,13 +326,61 @@ body{font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Arial Nova",
 @media(max-width:370px){
  .top #menu,.top #info,.top #stop{width:40px;min-width:40px;max-width:40px;height:40px;min-height:40px}
 }
+
+/* v8 — editorial header hierarchy & solid matte controls. No staging badge. */
+.top{height:calc(72px + var(--safe-t));padding:var(--safe-t) 18px 0;gap:10px;align-items:center;overflow:hidden;background:#000}
+.top-title{min-width:0;flex:1 1 0;display:flex;flex-direction:column;justify-content:center;gap:3px;overflow:hidden}
+.top-title strong{display:block;font-size:17px;font-weight:700;line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;letter-spacing:-.04em}
+.top-title span{font-size:13px;line-height:1.25;color:#a8a8ab;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.top-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex:none;min-width:0}
+.top .pill{display:flex;align-items:center;gap:7px;min-height:24px;padding:0 4px;background:transparent;border:0;box-shadow:none}
+.top .pill .txt{font-size:12px;color:#b1b1b3}
+.top .pill .dot{flex:none;height:7px;width:7px;background:#df292a;box-shadow:none}
+button,.new,.mission,.project,.agent .chip{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+.top button.icon-btn,.top button.stop,.new,.mission,.project,.agent .chip,.right-head button,.search,.composer,.result,.delegation,.right button{background:#252527!important;background-image:none!important;box-shadow:none!important}
+.top button.icon-btn,.top button.stop{border:1px solid #39393c!important;width:42px;min-width:42px;max-width:42px;height:42px;min-height:42px;padding:0;border-radius:50%;color:#f4f4f2}
+.top button.icon-btn{display:grid;place-items:center}
+.top button.stop{display:flex;align-items:center;justify-content:center;gap:0}
+.top button.stop::before{content:none!important}
+.top button.stop .stop-label{display:none}
+.top button.stop .stop-glyph{display:block;width:11px;height:11px;margin:0;border-radius:2px;background:#df292a}
+.top button:hover,.new:hover,.mission:hover,.right-head button:hover{background:#333336!important}
+.new{border:1px solid #39393d!important}
+.mission{border:1px solid transparent!important}
+.mission.active{background:#323235!important;border-color:#3c3c40!important;box-shadow:none!important}
+.project{border:1px solid #3c3c40!important;border-radius:999px}
+.agent .chip,.result,.delegation{border:1px solid #404044!important}
+.send{background:#f4f4f1!important;color:#151517;box-shadow:none!important;border:0!important}
+.send:hover{background:#dfdfdc!important}
+.composer{background:#1d1d1f!important;border-color:#3d3d40!important}
+.composer:focus-within{background:#1d1d1f!important;border-color:#3d3d40!important;box-shadow:none!important}
+#input:focus,#input:focus-visible{outline:none!important;box-shadow:none!important}
+@media(max-width:1110px){.top .mobile-info{display:grid}}
+@media(max-width:850px){
+ .top{height:calc(68px + var(--safe-t));padding:var(--safe-t) 12px 0 11px;gap:8px}
+ .top-title{gap:3px}
+ .top-title strong{font-size:15.5px}
+ .top-title span{font-size:12px}
+ .top-actions{gap:7px}
+ .top .pill{padding:0 2px}
+ .top .pill .txt{display:none}
+ .top button.icon-btn,.top button.stop{width:40px;max-width:40px;min-width:40px;height:40px;min-height:40px}
+}
+@media(max-width:375px){
+ .top{gap:6px;padding-left:7px;padding-right:7px}
+ .top-actions{gap:5px}
+ .top-title strong{font-size:14.5px}
+ .top .pill{padding:0}
+ .top button.icon-btn,.top button.stop{width:39px;max-width:39px;min-width:39px;height:39px;min-height:39px}
+}
+
 </style>
 </head>
 <body>
 <div id="app">
   <div id="overlay"></div>
   <aside id="left" class="left" aria-label="Historial">
-    <div class="brand"><div class="brand-icon">F</div> Forge Chat <small>STAGING</small></div>
+    <div class="brand"><div class="brand-icon">F</div> Forge Chat</div>
     <button id="new" class="new"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>Nueva conversación</button>
     <label class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="6"/><path d="m15 15 5 5"/></svg><input id="filter" placeholder="Buscar misiones" aria-label="Buscar misiones"></label>
     <div class="section-label">Hoy</div>
@@ -346,10 +394,11 @@ body{font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Arial Nova",
   <main class="main">
     <header class="top">
       <button id="menu" class="icon-btn" type="button" aria-label="Abrir historial"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
-      <div class="top-title"><strong id="heading">Rediseño de experiencia móvil</strong><span id="subhead">Forge Link <span class="watermark">· STAGING</span></span></div>
-      <div id="state" class="pill"><i class="dot"></i><span class="txt">En curso</span></div>
+      <div class="top-title"><strong id="heading">Rediseño de experiencia móvil</strong><span id="subhead">Forge Link</span></div>
+      <div class="top-actions"><div id="state" class="pill" role="status" aria-label="Misión en curso"><i class="dot"></i><span class="txt">En curso</span></div>
       <button id="stop" class="stop" type="button" aria-label="Detener misión de demostración"><span class="stop-glyph" aria-hidden="true"></span><span class="stop-label">Detener</span></button>
       <button id="info" class="icon-btn mobile-info" type="button" aria-label="Abrir equipo y actividad" title="Equipo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3.5 19v-1c0-3 2.3-4.8 5.5-4.8s5.5 1.8 5.5 4.8v1"/><path d="M16.5 5.5a3 3 0 0 1 0 5.8M17.5 14c2 .4 3.2 1.8 3.2 4v1"/></svg></button>
+      </div>
     </header>
     <div id="thread" class="thread">
       <div class="thread-inner" id="inner">
@@ -380,7 +429,7 @@ body{font-family:"Helvetica Neue",-apple-system,BlinkMacSystemFont,"Arial Nova",
       <form id="compose" class="composer">
         <textarea id="input" rows="1" placeholder="Escribe un mensaje..." aria-label="Mensaje de prueba" maxlength="6000"></textarea>
         <div class="composer-row"><div class="project">Proyecto <b>· forge-link</b></div><span class="spacer"></span><button class="send" type="submit" aria-label="Añadir mensaje de prueba"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button></div>
-      </form><div class="hint" id="hint">STAGING visual · Los mensajes no se envían a agentes reales.</div>
+      </form><div class="hint" id="hint">Vista de demostración · Los mensajes no se envían a agentes reales.</div>
     </div>
   </main>
   <aside id="right" class="right" aria-label="Equipo y actividad">
