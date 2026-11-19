@@ -484,14 +484,14 @@ const $=id=>document.getElementById(id);
 const left=$("left"),right=$("right"),overlay=$("overlay"),text=$("input"),thread=$("thread");
 function closeAll(){
   left.classList.remove("open");right.classList.remove("open");overlay.classList.remove("show");
-  left.setAttribute("aria-hidden","true");right.setAttribute("aria-hidden","true");
+
 }
 function open(which){
   closeAll();
   // Always reopen the team sheet at its heading. Safari preserves scrollTop on hidden elements.
   if (which===right) right.scrollTop=0;
   which.classList.add("open");overlay.classList.add("show");
-  which.removeAttribute("aria-hidden");
+
   if (which===right) { right.scrollTop=0; requestAnimationFrame(()=>{right.scrollTop=0}); }
 }
 $("menu").onclick=()=>open(left);
