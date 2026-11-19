@@ -56,26 +56,34 @@ const { chromium } = require('playwright-core');
     if (!(await panel.evaluate(el=>el.classList.contains('open')))) throw new Error(w+': team panel did not open');
     async function assertPanel(stage) {
       const m=await panel.evaluate(el=>{
-        const a=el.getBoundingClientRect(), h=el.querySelector('.right-head').getBoundingClientRect();
-        return {top:a.top,bottom:a.bottom,height:a.height,headTop:h.top,headBottom:h.bottom,
-          scrollTop:el.scrollTop, viewportH:document.getElementById('app').getBoundingClientRect().height,
-          visibleHead:getComputedStyle(el.querySelector('.right-head')).visibility};
+        const a=el.getBoundingClientRect(), h=el.querySelector('.right-head').getBoundingClientRect(),
+        body=el.querySelector('#team-body'),b=body.getBoundingClientRect(),
+        app=document.getElementById('app').getBoundingClientRect(),cs=getComputedStyle(el);
+        return {top:a.top,bottom:a.bottom,left:a.left,right:a.right,
+          headTop:h.top,headBottom:h.bottom,bodyTop:b.top,bodyBottom:b.bottom,
+          sheetScroll:el.scrollTop,bodyScroll:body.scrollTop,bodyOverflow:body.scrollHeight>body.clientHeight+2,
+          bottomRadius:parseFloat(cs.borderBottomLeftRadius),topRadius:parseFloat(cs.borderTopLeftRadius),
+          appTop:app.top,appBottom:app.bottom,viewportH:app.height};
       });
-      if(m.top < -2 || m.bottom>m.viewportH+2 || m.headTop<m.top-3 || m.headBottom>m.bottom+2)
-        throw new Error(w+': panel clipping at '+stage+' '+JSON.stringify(m));
-      if(m.visibleHead!=='visible')throw new Error(w+': sheet heading invisible');
+      if(m.top < m.appTop+4 || m.bottom > m.appBottom-8 || m.headTop<m.top-3 || m.headBottom>m.bodyTop+2)
+        throw new Error(w+': floating sheet clipped at '+stage+' '+JSON.stringify(m));
+      if(m.left < 8 || m.right > w-8 || m.topRadius<20 || m.bottomRadius<20)
+        throw new Error(w+': sheet has no floating gutters/rounded bottom '+stage+' '+JSON.stringify(m));
+      if(m.bodyBottom>m.bottom+2 || m.sheetScroll>2)
+        throw new Error(w+': scrolling escaped inner body '+stage+' '+JSON.stringify(m));
       return m;
     }
     let metrics=await assertPanel('open');
-    if(metrics.scrollTop>2)throw new Error(w+': panel opened mid-scroll '+metrics.scrollTop);
+    if(metrics.bodyScroll>2)throw new Error(w+': panel opened mid-scroll '+metrics.bodyScroll);
     await page.screenshot({path:path.join(dir,'team-sheet-'+w+'.png'),fullPage:false});
-    await panel.evaluate(el=>{el.scrollTop=el.scrollHeight});
-    await assertPanel('scrolled');
-    // A second opening must show Equipo/Claude, never Grok halfway down.
+    await panel.locator('#team-body').evaluate(el=>{el.scrollTop=el.scrollHeight});
+    metrics=await assertPanel('scrolled');
+    if(metrics.bodyOverflow && metrics.bodyScroll<10)throw new Error(w+': content did not scroll internally');
+    // Reopen at the top: users must see Claude and heading, not the bottom of Activity.
     await page.getByRole('button',{name:'Cerrar panel'}).click();
     await page.getByRole('button',{name:'Abrir equipo y actividad'}).click();
     metrics=await assertPanel('reopen');
-    if(metrics.scrollTop>2)throw new Error(w+': team sheet preserved old scroll '+metrics.scrollTop);
+    if(metrics.bodyScroll>2)throw new Error(w+': team body retained old scroll '+metrics.bodyScroll);
     // Model keyboard/address-bar resizing: sheet stays within available visual viewport.
     await page.evaluate(()=>document.documentElement.style.setProperty('--vvh','510px'));
     metrics=await assertPanel('compact viewport');
