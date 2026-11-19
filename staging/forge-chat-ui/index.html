@@ -436,6 +436,7 @@ button,input,textarea,select{touch-action:manipulation}
     margin:0;background:#19191b;border-bottom:1px solid #343438;
   }
   #app .right .right-body{
+    overflow-anchor:none;
     flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;
     overscroll-behavior:contain;-webkit-overflow-scrolling:touch;
     padding:8px 18px calc(24px + env(safe-area-inset-bottom,0px));
@@ -530,9 +531,13 @@ function open(which){
   closeAll();
   // Safari can preserve old scroll offsets on hidden sheets.
   const body=$("team-body");
-  if (which===right && body) body.scrollTop=0;
   which.classList.add("open");overlay.classList.add("show");
-  if (which===right && body) requestAnimationFrame(()=>{body.scrollTop=0});
+  if (which===right && body) {
+    // Only reset after the card is displayed; hidden scroll containers cannot reliably reset.
+    body.style.scrollBehavior="auto";
+    body.scrollTop=0;
+    requestAnimationFrame(()=>{body.scrollTop=0});
+  }
 }
 $("menu").onclick=()=>open(left);
 $("info").onclick=()=>open(right);
