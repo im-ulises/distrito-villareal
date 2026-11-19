@@ -40,10 +40,47 @@ const { chromium } = require('playwright-core');
      throw new Error(w+': '+id+' outside viewport: '+JSON.stringify(rect)+' vs '+layout.vw);
    }
    if (w<768) {
+    const zoomConfig = await page.evaluate(() => ({
+      meta:document.querySelector('meta[name=viewport]')?.content||'',
+      textareaFont:parseFloat(getComputedStyle(document.querySelector('#input')).fontSize),
+      scale:window.visualViewport?.scale??1
+    }));
+    if (!/user-scalable=no/.test(zoomConfig.meta) || !/maximum-scale=1/.test(zoomConfig.meta))
+      throw new Error(w+': viewport still allows Safari pinch zoom '+zoomConfig.meta);
+    if (zoomConfig.textareaFont<16) throw new Error(w+': textarea can autozoom on focus');
+    if (Math.abs(zoomConfig.scale-1)>0.02) throw new Error(w+': unexpected initial zoom '+zoomConfig.scale);
     const stop=await page.locator('#stop').evaluate(el => {const a=el.getBoundingClientRect(),b=el.querySelector('.stop-glyph').getBoundingClientRect();return Math.abs((a.left+a.width/2)-(b.left+b.width/2))});
     if (stop>2) throw new Error(w+': Stop glyph misaligned '+stop);
     await page.getByRole('button',{name:'Abrir equipo y actividad'}).click();
-    if (!(await page.locator('#right').evaluate(el=>el.classList.contains('open')))) throw new Error(w+': team panel did not open');
+    const panel=page.locator('#right');
+    if (!(await panel.evaluate(el=>el.classList.contains('open')))) throw new Error(w+': team panel did not open');
+    async function assertPanel(stage) {
+      const m=await panel.evaluate(el=>{
+        const a=el.getBoundingClientRect(), h=el.querySelector('.right-head').getBoundingClientRect();
+        return {top:a.top,bottom:a.bottom,height:a.height,headTop:h.top,headBottom:h.bottom,
+          scrollTop:el.scrollTop, viewportH:document.getElementById('app').getBoundingClientRect().height,
+          visibleHead:getComputedStyle(el.querySelector('.right-head')).visibility};
+      });
+      if(m.top < -2 || m.bottom>m.viewportH+2 || m.headTop<m.top-3 || m.headBottom>m.bottom+2)
+        throw new Error(w+': panel clipping at '+stage+' '+JSON.stringify(m));
+      if(m.visibleHead!=='visible')throw new Error(w+': sheet heading invisible');
+      return m;
+    }
+    let metrics=await assertPanel('open');
+    if(metrics.scrollTop>2)throw new Error(w+': panel opened mid-scroll '+metrics.scrollTop);
+    await page.screenshot({path:path.join(dir,'team-sheet-'+w+'.png'),fullPage:false});
+    await panel.evaluate(el=>{el.scrollTop=el.scrollHeight});
+    await assertPanel('scrolled');
+    // A second opening must show Equipo/Claude, never Grok halfway down.
+    await page.getByRole('button',{name:'Cerrar panel'}).click();
+    await page.getByRole('button',{name:'Abrir equipo y actividad'}).click();
+    metrics=await assertPanel('reopen');
+    if(metrics.scrollTop>2)throw new Error(w+': team sheet preserved old scroll '+metrics.scrollTop);
+    // Model keyboard/address-bar resizing: sheet stays within available visual viewport.
+    await page.evaluate(()=>document.documentElement.style.setProperty('--vvh','510px'));
+    metrics=await assertPanel('compact viewport');
+    if(metrics.viewportH>511)throw new Error(w+': virtual viewport was not respected');
+    await page.evaluate(()=>{document.documentElement.style.removeProperty('--vvh')});
     await page.getByRole('button',{name:'Cerrar panel'}).click();
    }
    await page.locator('#input').fill('Una misión de prueba visual');
